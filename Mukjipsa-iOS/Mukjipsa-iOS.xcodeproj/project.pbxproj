@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A6343F929002DA1006E19E6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343F829002DA1006E19E6 /* RxCocoa */; };
+		4A6343FB29002DA1006E19E6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343FA29002DA1006E19E6 /* RxSwift */; };
+		4A6343FE29002DAC006E19E6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343FD29002DAC006E19E6 /* Then */; };
+		4A63440129002DB5006E19E6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4A63440029002DB5006E19E6 /* Kingfisher */; };
+		4A63440529002DCC006E19E6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4A63440429002DCC006E19E6 /* Alamofire */; };
 		4A90A2C82900207C006BC1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2C72900207C006BC1B2 /* AppDelegate.swift */; };
 		4A90A2CA2900207C006BC1B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2C92900207C006BC1B2 /* SceneDelegate.swift */; };
 		4A90A2CC2900207C006BC1B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2CB2900207C006BC1B2 /* ViewController.swift */; };
@@ -47,6 +52,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A63440529002DCC006E19E6 /* Alamofire in Frameworks */,
+				4A63440129002DB5006E19E6 /* Kingfisher in Frameworks */,
+				4A6343FB29002DA1006E19E6 /* RxSwift in Frameworks */,
+				4A6343FE29002DAC006E19E6 /* Then in Frameworks */,
+				4A6343F929002DA1006E19E6 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +245,13 @@
 			dependencies = (
 			);
 			name = "Mukjipsa-iOS";
+			packageProductDependencies = (
+				4A6343F829002DA1006E19E6 /* RxCocoa */,
+				4A6343FA29002DA1006E19E6 /* RxSwift */,
+				4A6343FD29002DAC006E19E6 /* Then */,
+				4A63440029002DB5006E19E6 /* Kingfisher */,
+				4A63440429002DCC006E19E6 /* Alamofire */,
+			);
 			productName = "Mukjipsa-iOS";
 			productReference = 4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -263,6 +280,13 @@
 				Base,
 			);
 			mainGroup = 4A90A2BB2900207C006BC1B2;
+			packageReferences = (
+				4A6343F729002DA1006E19E6 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				4A6343FC29002DAC006E19E6 /* XCRemoteSwiftPackageReference "Then" */,
+				4A6343FF29002DB5006E19E6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				4A63440229002DC1006E19E6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4A63440329002DCC006E19E6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 4A90A2C52900207C006BC1B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -508,6 +532,77 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4A6343F729002DA1006E19E6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		4A6343FC29002DAC006E19E6 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4A6343FF29002DB5006E19E6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4A63440229002DC1006E19E6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		4A63440329002DCC006E19E6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4A6343F829002DA1006E19E6 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A6343F729002DA1006E19E6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		4A6343FA29002DA1006E19E6 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A6343F729002DA1006E19E6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		4A6343FD29002DAC006E19E6 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A6343FC29002DAC006E19E6 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		4A63440029002DB5006E19E6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A6343FF29002DB5006E19E6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		4A63440429002DCC006E19E6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A63440329002DCC006E19E6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A90A2BC2900207C006BC1B2 /* Project object */;
 }
