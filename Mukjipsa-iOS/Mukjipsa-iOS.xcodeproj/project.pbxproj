@@ -12,6 +12,7 @@
 		4A6343FE29002DAC006E19E6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343FD29002DAC006E19E6 /* Then */; };
 		4A63440129002DB5006E19E6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4A63440029002DB5006E19E6 /* Kingfisher */; };
 		4A63440529002DCC006E19E6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4A63440429002DCC006E19E6 /* Alamofire */; };
+		4A634410290297CF006E19E6 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A63440F290297CF006E19E6 /* .swiftlint.yml */; };
 		4A90A2C82900207C006BC1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2C72900207C006BC1B2 /* AppDelegate.swift */; };
 		4A90A2CA2900207C006BC1B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2C92900207C006BC1B2 /* SceneDelegate.swift */; };
 		4A90A2CC2900207C006BC1B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2CB2900207C006BC1B2 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A63440F290297CF006E19E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mukjipsa-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A90A2C72900207C006BC1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A90A2C92900207C006BC1B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		4A90A2BB2900207C006BC1B2 = {
 			isa = PBXGroup;
 			children = (
+				4A63440F290297CF006E19E6 /* .swiftlint.yml */,
 				4A90A2C62900207C006BC1B2 /* Mukjipsa-iOS */,
 				4A90A2C52900207C006BC1B2 /* Products */,
 			);
@@ -236,6 +239,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A90A2D82900207D006BC1B2 /* Build configuration list for PBXNativeTarget "Mukjipsa-iOS" */;
 			buildPhases = (
+				4A63440A290294A2006E19E6 /* SwiftLint Script */,
 				4A90A2C02900207C006BC1B2 /* Sources */,
 				4A90A2C12900207C006BC1B2 /* Frameworks */,
 				4A90A2C22900207C006BC1B2 /* Resources */,
@@ -301,12 +305,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A634410290297CF006E19E6 /* .swiftlint.yml in Resources */,
 				4A90A2D42900207D006BC1B2 /* LaunchScreen.storyboard in Resources */,
 				4A90A2D12900207D006BC1B2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A63440A290294A2006E19E6 /* SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A90A2C02900207C006BC1B2 /* Sources */ = {
