@@ -21,14 +21,16 @@
 		4A90A2E5290024CF006BC1B2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2E4290024CF006BC1B2 /* Color.swift */; };
 		4A90A2E7290024D6006BC1B2 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2E6290024D6006BC1B2 /* Screen.swift */; };
 		4A90A2ED290024F0006BC1B2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2EC290024F0006BC1B2 /* DataModel.swift */; };
-		4A90A2EF290024FB006BC1B2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2EE290024FB006BC1B2 /* Service.swift */; };
 		4A90A2F129002507006BC1B2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2F029002507006BC1B2 /* API.swift */; };
-		4A90A2F32900250E006BC1B2 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2F22900250E006BC1B2 /* Base.swift */; };
 		4A90A2F82900252E006BC1B2 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2F72900252E006BC1B2 /* DesignSystem.swift */; };
 		4A90A2FC29002537006BC1B2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2FB29002537006BC1B2 /* Constant.swift */; };
 		4AF80C0D290D6E0600B084CA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C0C290D6E0600B084CA /* UIView+.swift */; };
 		4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C0E290D6F0C00B084CA /* UIScreen+.swift */; };
 		4AF80C11290D6F5000B084CA /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C10290D6F5000B084CA /* UIViewController+.swift */; };
+		4AF80C1B290D848C00B084CA /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C1A290D848C00B084CA /* APIConstants.swift */; };
+		4AF80C1D290D84B300B084CA /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C1C290D84B300B084CA /* NetworkResult.swift */; };
+		4AF80C1F290D850100B084CA /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C1E290D850100B084CA /* GeneralResponse.swift */; };
+		4AF80C21290D95E100B084CA /* GeneralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C20290D95E100B084CA /* GeneralService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,14 +45,16 @@
 		4A90A2E4290024CF006BC1B2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		4A90A2E6290024D6006BC1B2 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		4A90A2EC290024F0006BC1B2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		4A90A2EE290024FB006BC1B2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4A90A2F029002507006BC1B2 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		4A90A2F22900250E006BC1B2 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		4A90A2F72900252E006BC1B2 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		4A90A2FB29002537006BC1B2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		4AF80C0C290D6E0600B084CA /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		4AF80C0E290D6F0C00B084CA /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
 		4AF80C10290D6F5000B084CA /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		4AF80C1A290D848C00B084CA /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		4AF80C1C290D84B300B084CA /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		4AF80C1E290D850100B084CA /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		4AF80C20290D95E100B084CA /* GeneralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				4A90A2EB290024E9006BC1B2 /* Base */,
-				4A90A2EA290024E6006BC1B2 /* API */,
-				4A90A2E9290024E1006BC1B2 /* Service */,
+				4A90A2EA290024E6006BC1B2 /* APIService */,
 				4A90A2E8290024DB006BC1B2 /* DataModel */,
 			);
 			path = Network;
@@ -188,26 +191,21 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
-		4A90A2E9290024E1006BC1B2 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				4A90A2EE290024FB006BC1B2 /* Service.swift */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		4A90A2EA290024E6006BC1B2 /* API */ = {
+		4A90A2EA290024E6006BC1B2 /* APIService */ = {
 			isa = PBXGroup;
 			children = (
 				4A90A2F029002507006BC1B2 /* API.swift */,
 			);
-			path = API;
+			path = APIService;
 			sourceTree = "<group>";
 		};
 		4A90A2EB290024E9006BC1B2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				4A90A2F22900250E006BC1B2 /* Base.swift */,
+				4AF80C1A290D848C00B084CA /* APIConstants.swift */,
+				4AF80C1C290D84B300B084CA /* NetworkResult.swift */,
+				4AF80C1E290D850100B084CA /* GeneralResponse.swift */,
+				4AF80C20290D95E100B084CA /* GeneralService.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -346,18 +344,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A90A2ED290024F0006BC1B2 /* DataModel.swift in Sources */,
-				4A90A2EF290024FB006BC1B2 /* Service.swift in Sources */,
 				4AF80C11290D6F5000B084CA /* UIViewController+.swift in Sources */,
 				4A90A2E7290024D6006BC1B2 /* Screen.swift in Sources */,
 				4A90A2CC2900207C006BC1B2 /* ViewController.swift in Sources */,
 				4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */,
 				4A90A2E5290024CF006BC1B2 /* Color.swift in Sources */,
+				4AF80C1D290D84B300B084CA /* NetworkResult.swift in Sources */,
+				4AF80C1F290D850100B084CA /* GeneralResponse.swift in Sources */,
 				4A90A2C82900207C006BC1B2 /* AppDelegate.swift in Sources */,
+				4AF80C1B290D848C00B084CA /* APIConstants.swift in Sources */,
 				4A90A2F82900252E006BC1B2 /* DesignSystem.swift in Sources */,
-				4A90A2F32900250E006BC1B2 /* Base.swift in Sources */,
 				4A90A2F129002507006BC1B2 /* API.swift in Sources */,
 				4AF80C0D290D6E0600B084CA /* UIView+.swift in Sources */,
 				4A90A2CA2900207C006BC1B2 /* SceneDelegate.swift in Sources */,
+				4AF80C21290D95E100B084CA /* GeneralService.swift in Sources */,
 				4A90A2FC29002537006BC1B2 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
