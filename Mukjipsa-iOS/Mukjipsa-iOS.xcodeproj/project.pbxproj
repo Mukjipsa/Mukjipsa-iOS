@@ -19,7 +19,6 @@
 		4A90A2D12900207D006BC1B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A90A2D02900207D006BC1B2 /* Assets.xcassets */; };
 		4A90A2D42900207D006BC1B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A90A2D22900207D006BC1B2 /* LaunchScreen.storyboard */; };
 		4A90A2E5290024CF006BC1B2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2E4290024CF006BC1B2 /* Color.swift */; };
-		4A90A2E7290024D6006BC1B2 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2E6290024D6006BC1B2 /* Screen.swift */; };
 		4A90A2ED290024F0006BC1B2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2EC290024F0006BC1B2 /* DataModel.swift */; };
 		4A90A2F129002507006BC1B2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2F029002507006BC1B2 /* API.swift */; };
 		4A90A2F82900252E006BC1B2 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2F72900252E006BC1B2 /* DesignSystem.swift */; };
@@ -47,7 +46,6 @@
 		4A90A2D32900207D006BC1B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A90A2D52900207D006BC1B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A90A2E4290024CF006BC1B2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		4A90A2E6290024D6006BC1B2 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		4A90A2EC290024F0006BC1B2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		4A90A2F029002507006BC1B2 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4A90A2F72900252E006BC1B2 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				4AF80C2629111AD300B084CA /* TabBar */,
-				4A90A2E6290024D6006BC1B2 /* Screen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -398,7 +395,6 @@
 				4AF80C3229111CA500B084CA /* RecipeViewController.swift in Sources */,
 				4A90A2ED290024F0006BC1B2 /* DataModel.swift in Sources */,
 				4AF80C11290D6F5000B084CA /* UIViewController+.swift in Sources */,
-				4A90A2E7290024D6006BC1B2 /* Screen.swift in Sources */,
 				4A90A2CC2900207C006BC1B2 /* ViewController.swift in Sources */,
 				4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */,
 				4AF80C3429111CD800B084CA /* MyIngredientViewController.swift in Sources */,
