@@ -19,7 +19,6 @@
 		4A90A2D12900207D006BC1B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A90A2D02900207D006BC1B2 /* Assets.xcassets */; };
 		4A90A2D42900207D006BC1B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A90A2D22900207D006BC1B2 /* LaunchScreen.storyboard */; };
 		4A90A2E5290024CF006BC1B2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2E4290024CF006BC1B2 /* Color.swift */; };
-		4A90A2E7290024D6006BC1B2 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2E6290024D6006BC1B2 /* Screen.swift */; };
 		4A90A2ED290024F0006BC1B2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2EC290024F0006BC1B2 /* DataModel.swift */; };
 		4A90A2F129002507006BC1B2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2F029002507006BC1B2 /* API.swift */; };
 		4A90A2F82900252E006BC1B2 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2F72900252E006BC1B2 /* DesignSystem.swift */; };
@@ -31,6 +30,10 @@
 		4AF80C1D290D84B300B084CA /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C1C290D84B300B084CA /* NetworkResult.swift */; };
 		4AF80C1F290D850100B084CA /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C1E290D850100B084CA /* GeneralResponse.swift */; };
 		4AF80C21290D95E100B084CA /* GeneralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C20290D95E100B084CA /* GeneralService.swift */; };
+		4AF80C2A29111AF800B084CA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C2929111AF800B084CA /* TabBarController.swift */; };
+		4AF80C3029111C5300B084CA /* BookMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C2F29111C5300B084CA /* BookMarkViewController.swift */; };
+		4AF80C3229111CA500B084CA /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C3129111CA500B084CA /* RecipeViewController.swift */; };
+		4AF80C3429111CD800B084CA /* MyIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C3329111CD800B084CA /* MyIngredientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +46,6 @@
 		4A90A2D32900207D006BC1B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A90A2D52900207D006BC1B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A90A2E4290024CF006BC1B2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		4A90A2E6290024D6006BC1B2 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		4A90A2EC290024F0006BC1B2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		4A90A2F029002507006BC1B2 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4A90A2F72900252E006BC1B2 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
@@ -55,6 +57,10 @@
 		4AF80C1C290D84B300B084CA /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		4AF80C1E290D850100B084CA /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
 		4AF80C20290D95E100B084CA /* GeneralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralService.swift; sourceTree = "<group>"; };
+		4AF80C2929111AF800B084CA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4AF80C2F29111C5300B084CA /* BookMarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkViewController.swift; sourceTree = "<group>"; };
+		4AF80C3129111CA500B084CA /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		4AF80C3329111CD800B084CA /* MyIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngredientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +123,7 @@
 		4A90A2DC29002467006BC1B2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				4A90A2E6290024D6006BC1B2 /* Screen.swift */,
+				4AF80C2629111AD300B084CA /* TabBar */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -236,6 +242,49 @@
 			path = DesignSystem;
 			sourceTree = "<group>";
 		};
+		4AF80C2629111AD300B084CA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4AF80C2E29111C0F00B084CA /* TabBar */,
+				4AF80C2D29111B9C00B084CA /* BookMark */,
+				4AF80C2C29111B7700B084CA /* Recipe */,
+				4AF80C2B29111B3200B084CA /* MyIngredient */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		4AF80C2B29111B3200B084CA /* MyIngredient */ = {
+			isa = PBXGroup;
+			children = (
+				4AF80C3329111CD800B084CA /* MyIngredientViewController.swift */,
+			);
+			path = MyIngredient;
+			sourceTree = "<group>";
+		};
+		4AF80C2C29111B7700B084CA /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				4AF80C3129111CA500B084CA /* RecipeViewController.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		4AF80C2D29111B9C00B084CA /* BookMark */ = {
+			isa = PBXGroup;
+			children = (
+				4AF80C2F29111C5300B084CA /* BookMarkViewController.swift */,
+			);
+			path = BookMark;
+			sourceTree = "<group>";
+		};
+		4AF80C2E29111C0F00B084CA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4AF80C2929111AF800B084CA /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,15 +392,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AF80C3229111CA500B084CA /* RecipeViewController.swift in Sources */,
 				4A90A2ED290024F0006BC1B2 /* DataModel.swift in Sources */,
 				4AF80C11290D6F5000B084CA /* UIViewController+.swift in Sources */,
-				4A90A2E7290024D6006BC1B2 /* Screen.swift in Sources */,
 				4A90A2CC2900207C006BC1B2 /* ViewController.swift in Sources */,
 				4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */,
+				4AF80C3429111CD800B084CA /* MyIngredientViewController.swift in Sources */,
 				4A90A2E5290024CF006BC1B2 /* Color.swift in Sources */,
+				4AF80C2A29111AF800B084CA /* TabBarController.swift in Sources */,
 				4AF80C1D290D84B300B084CA /* NetworkResult.swift in Sources */,
 				4AF80C1F290D850100B084CA /* GeneralResponse.swift in Sources */,
 				4A90A2C82900207C006BC1B2 /* AppDelegate.swift in Sources */,
+				4AF80C3029111C5300B084CA /* BookMarkViewController.swift in Sources */,
 				4AF80C1B290D848C00B084CA /* APIConstants.swift in Sources */,
 				4A90A2F82900252E006BC1B2 /* DesignSystem.swift in Sources */,
 				4A90A2F129002507006BC1B2 /* API.swift in Sources */,
