@@ -14,6 +14,10 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         setTabBar()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setRootTabBar()
+    }
 }
 
 extension TabBarController {
@@ -63,5 +67,9 @@ extension TabBarController {
         tabBar.backgroundColor = .systemGray6
         tabBar.tintColor = .black
         tabBar.unselectedItemTintColor = .black
+    }
+    
+    private func setRootTabBar() {
+        self.selectedIndex = 1
     }
 }
