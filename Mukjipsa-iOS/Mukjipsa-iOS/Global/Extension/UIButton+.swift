@@ -16,7 +16,7 @@ extension UIButton {
             style.lineHeightMultiple = lineHieghtMultiple
             let attributes: [NSAttributedString.Key: Any] = [
                 .paragraphStyle: style,
-                .kern: lineHieghtMultiple
+                .kern: letterSpacing
             ]
             let attributedStr = NSMutableAttributedString(string: text,
                                                           attributes: attributes)

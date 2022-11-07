@@ -16,7 +16,7 @@ extension UITextField {
             style.lineHeightMultiple = lineHeightMultiple
             let attibutes: [NSAttributedString.Key: Any] = [
                 .paragraphStyle: style,
-                .kern: lineHeightMultiple
+                .kern: letterSpacing
             ]
             let attributedStr = NSMutableAttributedString(string: text,
                                                           attributes: attibutes)
