@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A05449E2914AB31000B6B1F /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449D2914AB31000B6B1F /* UIColor+.swift */; };
-		4A0544A02914B102000B6B1F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449F2914B102000B6B1F /* Image.swift */; };
 		3BC1D7452914A414007B2FA2 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1D7442914A414007B2FA2 /* UIFont+.swift */; };
 		3BC1D74C2914A7AC007B2FA2 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BC1D7492914A7AC007B2FA2 /* Pretendard-SemiBold.otf */; };
 		3BC1D74D2914A7AC007B2FA2 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BC1D74A2914A7AC007B2FA2 /* Pretendard-Regular.otf */; };
 		3BC1D74E2914A7AC007B2FA2 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BC1D74B2914A7AC007B2FA2 /* Pretendard-Medium.otf */; };
 		3BC1D7502914A821007B2FA2 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BC1D74F2914A821007B2FA2 /* Pretendard-Light.otf */; };
+		4A05449E2914AB31000B6B1F /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449D2914AB31000B6B1F /* UIColor+.swift */; };
+		4A0544A02914B102000B6B1F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449F2914B102000B6B1F /* Image.swift */; };
+		4A39D5032919451600554DF4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4A39D5022919451600554DF4 /* SnapKit */; };
+		4A39D5082919467500554DF4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39D5072919467500554DF4 /* BaseViewController.swift */; };
+		4A39D50B2919473400554DF4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39D50A2919473400554DF4 /* BaseView.swift */; };
 		4A6343F929002DA1006E19E6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343F829002DA1006E19E6 /* RxCocoa */; };
 		4A6343FB29002DA1006E19E6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343FA29002DA1006E19E6 /* RxSwift */; };
 		4A6343FE29002DAC006E19E6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343FD29002DAC006E19E6 /* Then */; };
@@ -44,13 +47,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A05449D2914AB31000B6B1F /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
-		4A05449F2914B102000B6B1F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3BC1D7442914A414007B2FA2 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		3BC1D7492914A7AC007B2FA2 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-SemiBold.otf"; path = "../../../../../../../../Downloads/Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		3BC1D74A2914A7AC007B2FA2 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Regular.otf"; path = "../../../../../../../../Downloads/Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		3BC1D74B2914A7AC007B2FA2 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Medium.otf"; path = "../../../../../../../../Downloads/Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		3BC1D74F2914A821007B2FA2 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Light.otf"; path = "../../../../../../MVVM+RxSwift/Readme-iOS/ReadMe-iOS/ReadMe-iOS/Global/Resources/Fonts/Pretendard-Light.otf"; sourceTree = "<group>"; };
+		4A05449D2914AB31000B6B1F /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		4A05449F2914B102000B6B1F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		4A39D5072919467500554DF4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "Mukjipsa-iOS/Global/BaseViewController.swift"; sourceTree = SOURCE_ROOT; };
+		4A39D50A2919473400554DF4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		4A63440F290297CF006E19E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mukjipsa-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A90A2C72900207C006BC1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +90,7 @@
 				4A63440529002DCC006E19E6 /* Alamofire in Frameworks */,
 				4A63440129002DB5006E19E6 /* Kingfisher in Frameworks */,
 				4A6343FB29002DA1006E19E6 /* RxSwift in Frameworks */,
+				4A39D5032919451600554DF4 /* SnapKit in Frameworks */,
 				4A6343FE29002DAC006E19E6 /* Then in Frameworks */,
 				4A6343F929002DA1006E19E6 /* RxCocoa in Frameworks */,
 			);
@@ -104,12 +110,29 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		4A39D5012919451600554DF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A39D5062919464700554DF4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4A39D5072919467500554DF4 /* BaseViewController.swift */,
+				4A39D50A2919473400554DF4 /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		4A90A2BB2900207C006BC1B2 = {
 			isa = PBXGroup;
 			children = (
 				4A63440F290297CF006E19E6 /* .swiftlint.yml */,
 				4A90A2C62900207C006BC1B2 /* Mukjipsa-iOS */,
 				4A90A2C52900207C006BC1B2 /* Products */,
+				4A39D5012919451600554DF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,6 +189,7 @@
 		4A90A2DE2900246F006BC1B2 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				4A39D5062919464700554DF4 /* Base */,
 				4A90A2F629002524006BC1B2 /* DesignSystem */,
 				4A90A2F52900251E006BC1B2 /* Extension */,
 				4A90A2F429002517006BC1B2 /* Constant */,
@@ -329,6 +353,7 @@
 				4A6343FD29002DAC006E19E6 /* Then */,
 				4A63440029002DB5006E19E6 /* Kingfisher */,
 				4A63440429002DCC006E19E6 /* Alamofire */,
+				4A39D5022919451600554DF4 /* SnapKit */,
 			);
 			productName = "Mukjipsa-iOS";
 			productReference = 4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */;
@@ -420,6 +445,7 @@
 				4AF80C3229111CA500B084CA /* RecipeViewController.swift in Sources */,
 				4A90A2ED290024F0006BC1B2 /* DataModel.swift in Sources */,
 				4AF80C11290D6F5000B084CA /* UIViewController+.swift in Sources */,
+				4A39D5082919467500554DF4 /* BaseViewController.swift in Sources */,
 				4A90A2CC2900207C006BC1B2 /* ViewController.swift in Sources */,
 				4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */,
 				4AF80C3429111CD800B084CA /* MyIngredientViewController.swift in Sources */,
@@ -431,6 +457,7 @@
 				4AF80C1F290D850100B084CA /* GeneralResponse.swift in Sources */,
 				4A90A2C82900207C006BC1B2 /* AppDelegate.swift in Sources */,
 				4AF80C3029111C5300B084CA /* BookMarkViewController.swift in Sources */,
+				4A39D50B2919473400554DF4 /* BaseView.swift in Sources */,
 				3BC1D7452914A414007B2FA2 /* UIFont+.swift in Sources */,
 				4AF80C1B290D848C00B084CA /* APIConstants.swift in Sources */,
 				4A90A2F82900252E006BC1B2 /* DesignSystem.swift in Sources */,
@@ -691,6 +718,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4A39D5022919451600554DF4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A63440229002DC1006E19E6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		4A6343F829002DA1006E19E6 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4A6343F729002DA1006E19E6 /* XCRemoteSwiftPackageReference "RxSwift" */;
