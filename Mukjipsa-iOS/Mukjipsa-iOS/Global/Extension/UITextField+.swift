@@ -12,10 +12,14 @@ extension UITextField {
     func setletterSpacingAndlineHeight(lineHeightMultiple: CGFloat = 1.5,
                                        letterSpacing: CGFloat = -0.02) {
         if let text = self.text {
-            let attributedStr = NSMutableAttributedString(string: text)
             let style = NSMutableParagraphStyle()
             style.lineHeightMultiple = lineHeightMultiple
-            attributedStr.addAttribute(NSAttributedString.Key.kern, value: letterSpacing, range: NSMakeRange(0, text.count))
+            let attibutes: [NSAttributedString.Key: Any] = [
+                .paragraphStyle: style,
+                .kern: lineHeightMultiple
+            ]
+            let attributedStr = NSMutableAttributedString(string: text,
+                                                          attributes: attibutes)
             self.attributedText = attributedStr
         }
     }

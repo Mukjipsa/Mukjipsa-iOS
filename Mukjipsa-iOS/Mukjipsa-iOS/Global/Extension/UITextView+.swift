@@ -21,7 +21,7 @@ extension UITextView {
             let attributedStr = NSMutableAttributedString(string: text)
             let style = NSMutableParagraphStyle()
             style.lineSpacing = linespaicing
-            attributedStr.addAttribute(NSAttributedString.Key.kern, value: style, range: NSMakeRange(0, attributedStr.length))
+            attributedStr.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSMakeRange(0, attributedStr.length))
             self.attributedText = attributedStr
         }
     }
@@ -30,10 +30,14 @@ extension UITextView {
     func setLineHeightAndletterSpacing(lineHeightMultiple: CGFloat = 1.5,
                                        letterSpacing: CGFloat = -0.02) {
         if let text = self.text {
-            let attributedStr = NSMutableAttributedString(string: text)
             let style = NSMutableParagraphStyle()
             style.lineHeightMultiple = lineHeightMultiple
-            attributedStr.addAttribute(NSMutableAttributedString.Key.kern, value: letterSpacing, range: NSMakeRange(0, attributedStr.length))
+            let attributes: [NSAttributedString.Key: Any] = [
+                .paragraphStyle: style,
+                .kern: letterSpacing
+            ]
+            let attributedStr = NSMutableAttributedString(string: text,
+                                                          attributes: attributes)
             self.attributedText = attributedStr
         }
     }

@@ -12,10 +12,14 @@ extension UIButton {
     func setletterSpacingAndlineHeight(lineHieghtMultiple: CGFloat = 1.5,
                                        letterSpacing: CGFloat = -0.02) {
         if let text = self.titleLabel?.text {
-            let attributedStr = NSMutableAttributedString(string: text)
             let style = NSMutableParagraphStyle()
             style.lineHeightMultiple = lineHieghtMultiple
-            attributedStr.addAttribute(NSAttributedString.Key.kern, value: letterSpacing, range: NSMakeRange(0, text.count))
+            let attributes: [NSAttributedString.Key: Any] = [
+                .paragraphStyle: style,
+                .kern: lineHieghtMultiple
+            ]
+            let attributedStr = NSMutableAttributedString(string: text,
+                                                          attributes: attributes)
             self.setAttributedTitle(attributedStr, for: .normal)
         }
     }
