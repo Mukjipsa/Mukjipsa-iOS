@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A39D5032919451600554DF4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4A39D5022919451600554DF4 /* SnapKit */; };
-		4A39D5082919467500554DF4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39D5072919467500554DF4 /* BaseViewController.swift */; };
-		4A39D50B2919473400554DF4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39D50A2919473400554DF4 /* BaseView.swift */; };
 		3B7CB5A42918D8C400EF73B9 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */; };
 		3B7CB5A62918D9B100EF73B9 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */; };
 		3B7CB5A82918EEBC00EF73B9 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */; };
@@ -22,6 +19,10 @@
 		3BC1D7452914A414007B2FA2 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1D7442914A414007B2FA2 /* UIFont+.swift */; };
 		4A05449E2914AB31000B6B1F /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449D2914AB31000B6B1F /* UIColor+.swift */; };
 		4A0544A02914B102000B6B1F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449F2914B102000B6B1F /* Image.swift */; };
+		4A0CEC1D291A50F900372D46 /* MJSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0CEC1C291A50F900372D46 /* MJSButton.swift */; };
+		4A39D5032919451600554DF4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4A39D5022919451600554DF4 /* SnapKit */; };
+		4A39D5082919467500554DF4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39D5072919467500554DF4 /* BaseViewController.swift */; };
+		4A39D50B2919473400554DF4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39D50A2919473400554DF4 /* BaseView.swift */; };
 		4A6343F929002DA1006E19E6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343F829002DA1006E19E6 /* RxCocoa */; };
 		4A6343FB29002DA1006E19E6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343FA29002DA1006E19E6 /* RxSwift */; };
 		4A6343FE29002DAC006E19E6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343FD29002DAC006E19E6 /* Then */; };
@@ -36,7 +37,6 @@
 		4A90A2E5290024CF006BC1B2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2E4290024CF006BC1B2 /* Color.swift */; };
 		4A90A2ED290024F0006BC1B2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2EC290024F0006BC1B2 /* DataModel.swift */; };
 		4A90A2F129002507006BC1B2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2F029002507006BC1B2 /* API.swift */; };
-		4A90A2F82900252E006BC1B2 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2F72900252E006BC1B2 /* DesignSystem.swift */; };
 		4A90A2FC29002537006BC1B2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2FB29002537006BC1B2 /* Constant.swift */; };
 		4AF80C0D290D6E0600B084CA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C0C290D6E0600B084CA /* UIView+.swift */; };
 		4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C0E290D6F0C00B084CA /* UIScreen+.swift */; };
@@ -52,8 +52,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A39D5072919467500554DF4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "Mukjipsa-iOS/Global/BaseViewController.swift"; sourceTree = SOURCE_ROOT; };
-		4A39D50A2919473400554DF4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
 		3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -66,6 +64,9 @@
 		3BC1D7442914A414007B2FA2 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		4A05449D2914AB31000B6B1F /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4A05449F2914B102000B6B1F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		4A0CEC1C291A50F900372D46 /* MJSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJSButton.swift; sourceTree = "<group>"; };
+		4A39D5072919467500554DF4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "Mukjipsa-iOS/Global/BaseViewController.swift"; sourceTree = SOURCE_ROOT; };
+		4A39D50A2919473400554DF4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		4A63440F290297CF006E19E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mukjipsa-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A90A2C72900207C006BC1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		4A90A2E4290024CF006BC1B2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		4A90A2EC290024F0006BC1B2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		4A90A2F029002507006BC1B2 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		4A90A2F72900252E006BC1B2 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		4A90A2FB29002537006BC1B2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		4AF80C0C290D6E0600B084CA /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		4AF80C0E290D6F0C00B084CA /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 		4A90A2F629002524006BC1B2 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				4A90A2F72900252E006BC1B2 /* DesignSystem.swift */,
+				4A0CEC1C291A50F900372D46 /* MJSButton.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -473,13 +473,13 @@
 				4AF80C1D290D84B300B084CA /* NetworkResult.swift in Sources */,
 				3BB2B38429194623004EE3C0 /* LetterSpacing.swift in Sources */,
 				4A05449E2914AB31000B6B1F /* UIColor+.swift in Sources */,
+				4A0CEC1D291A50F900372D46 /* MJSButton.swift in Sources */,
 				4AF80C1F290D850100B084CA /* GeneralResponse.swift in Sources */,
 				4A90A2C82900207C006BC1B2 /* AppDelegate.swift in Sources */,
 				4AF80C3029111C5300B084CA /* BookMarkViewController.swift in Sources */,
 				4A39D50B2919473400554DF4 /* BaseView.swift in Sources */,
 				3BC1D7452914A414007B2FA2 /* UIFont+.swift in Sources */,
 				4AF80C1B290D848C00B084CA /* APIConstants.swift in Sources */,
-				4A90A2F82900252E006BC1B2 /* DesignSystem.swift in Sources */,
 				3B7CB5A62918D9B100EF73B9 /* UILabel+.swift in Sources */,
 				4A90A2F129002507006BC1B2 /* API.swift in Sources */,
 				4AF80C0D290D6E0600B084CA /* UIView+.swift in Sources */,
@@ -740,7 +740,6 @@
 /* Begin XCSwiftPackageProductDependency section */
 		4A39D5022919451600554DF4 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4A63440229002DC1006E19E6 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 		4A6343F829002DA1006E19E6 /* RxCocoa */ = {
