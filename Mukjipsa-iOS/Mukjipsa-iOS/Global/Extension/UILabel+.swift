@@ -43,7 +43,7 @@ extension UILabel {
     }
     
     /// 자간과 lineHeight를 모두 조정하는 메서드
-    func setlineHeightAndletterSpacing(lineHeightMultiple: CGFloat = 1.5,
+    func setLineHeightAndletterSpacing(lineHeightMultiple: CGFloat = 1.5,
                                        letterSpacing: CGFloat = -0.02) {
         if let text = self.text {
             let style = NSMutableParagraphStyle()
