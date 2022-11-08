@@ -11,8 +11,8 @@ class BaseView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setHierarchy()
-        setConstraints()
+        setUI()
+        setLayout()
     }
 
     @available(*, unavailable)
@@ -20,6 +20,6 @@ class BaseView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setHierarchy() {}
-    func setConstraints() {}
+    func setUI() {}
+    func setLayout() {}
 }
