@@ -50,7 +50,7 @@ extension UILabel {
             style.lineHeightMultiple = lineHeightMultiple
             let attributes: [NSAttributedString.Key: Any] = [
                 .paragraphStyle: style,
-                .kern: letterSpacing
+                .kern: letterSpacing,
             ]
             let attributedStr = NSMutableAttributedString(string: text,
                                                           attributes: attributes)

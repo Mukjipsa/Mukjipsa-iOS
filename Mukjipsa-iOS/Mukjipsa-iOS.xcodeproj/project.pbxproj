@@ -33,6 +33,7 @@
 		4A0544A02914B102000B6B1F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449F2914B102000B6B1F /* Image.swift */; };
 		4A0CEC1D291A50F900372D46 /* MJSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0CEC1C291A50F900372D46 /* MJSButton.swift */; };
 		4A39D5032919451600554DF4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4A39D5022919451600554DF4 /* SnapKit */; };
+		4A39D5082919467500554DF4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39D5072919467500554DF4 /* BaseViewController.swift */; };
 		4A39D50B2919473400554DF4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39D50A2919473400554DF4 /* BaseView.swift */; };
 		4A6343F929002DA1006E19E6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343F829002DA1006E19E6 /* RxCocoa */; };
 		4A6343FB29002DA1006E19E6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343FA29002DA1006E19E6 /* RxSwift */; };
@@ -64,7 +65,6 @@
 
 /* Begin PBXFileReference section */
 		3B2C337B291B80420097A402 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Light.otf"; path = "../../../../../../../../Downloads/Pretendard-1.3.6/public/static/Pretendard-Light.otf"; sourceTree = "<group>"; };
-		3B2C337D291B84810097A402 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
 		3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -88,6 +88,7 @@
 		4A05449D2914AB31000B6B1F /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4A05449F2914B102000B6B1F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		4A0CEC1C291A50F900372D46 /* MJSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJSButton.swift; sourceTree = "<group>"; };
+		4A39D5072919467500554DF4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "Mukjipsa-iOS/Global/BaseViewController.swift"; sourceTree = SOURCE_ROOT; };
 		4A39D50A2919473400554DF4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		4A63440F290297CF006E19E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mukjipsa-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
