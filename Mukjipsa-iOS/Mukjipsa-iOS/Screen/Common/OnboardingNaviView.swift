@@ -11,18 +11,27 @@ import SnapKit
 import Then
 
 class OnboardingNaviView: BaseView {
+    // MARK: - View Style
+    enum ViewType {
+        case basic
+        case notBasic
+    }
+    
     //MARK: Properties
     var progress: Int = 0
+    var viewType: ViewType = .basic {
+        didSet {
+            setUI()
+        }
+    }
     
     //MARK: UIComponents
     private let naviView = UIView()
     private let backButton = UIButton()
     private let laterButton = UIButton()
-    private let progressView = UIView()
-    private let progressBarImageView = UIImageView()
-    private let progressLabel = UILabel()
     
     override func setUI() {
+        setLaterButton()
         backButton.do{
             $0.setImage(Constant.Image.backButton, for: .normal)
         }
@@ -33,30 +42,16 @@ class OnboardingNaviView: BaseView {
             $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.b2)
             $0.titleLabel?.textColor = .gray3
         }
-        
-        progressLabel.do{
-            $0.textColor = .gray2
-            $0.font = .b1
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.b1)
-            $0.text = "\(progress)/5"
-        }
     }
     
     override func setLayout() {
         naviView.addSubviews([backButton, laterButton])
-        progressView.addSubviews([progressBarImageView, progressLabel])
-        addSubviews([naviView, progressView])
+        addSubview(naviView)
         
         naviView.snp.makeConstraints{
-            $0.directionalVerticalEdges.equalToSuperview()
+            $0.directionalHorizontalEdges.equalToSuperview()
             $0.top.equalToSuperview()
             $0.height.equalTo(44)
-        }
-        
-        progressView.snp.makeConstraints{
-            $0.directionalVerticalEdges.equalToSuperview()
-            $0.top.equalTo(naviView.snp.bottom)
-            $0.height.equalTo(36)
         }
         
         backButton.snp.makeConstraints{
@@ -68,16 +63,16 @@ class OnboardingNaviView: BaseView {
             $0.centerY.equalToSuperview()
             $0.trailing.equalToSuperview().inset(16)
         }
-        
-        progressBarImageView.snp.makeConstraints{
-            $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview().inset(16)
+    }
+}
+
+extension OnboardingNaviView {
+    private func setLaterButton() {
+        switch viewType {
+        case .basic:
+            laterButton.isHidden = true
+        case .notBasic:
+            laterButton.isHidden = false
         }
-        
-        progressLabel.snp.makeConstraints{
-            $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().inset(16)
-        }
-        
     }
 }
