@@ -18,7 +18,6 @@ class OnboardingNaviView: BaseView {
     }
     
     //MARK: Properties
-    var progress: Int = 0
     var viewType: ViewType = .basic {
         didSet {
             setUI()
@@ -70,9 +69,9 @@ extension OnboardingNaviView {
     private func setLaterButton() {
         switch viewType {
         case .basic:
-            laterButton.isHidden = true
+            backButton.isHidden = true
         case .notBasic:
-            laterButton.isHidden = false
+            backButton.isHidden = false
         }
     }
 }

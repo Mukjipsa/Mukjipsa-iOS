@@ -7,23 +7,27 @@
 
 import UIKit
 
-class BasicIngredientViewController: UIViewController {
+import SnapKit
+import Then
 
+final class BasicIngredientViewController: BaseViewController {
+
+    //MARK: UIComponents
+    private let basicIngredientView = BasicIngredientView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setLayout()
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension BasicIngredientViewController {
+    private func setLayout() {
+        view.addSubview(basicIngredientView)
+        
+        basicIngredientView.snp.makeConstraints{
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
     }
-    */
-
 }
