@@ -11,5 +11,10 @@ extension Constant {
     struct Image {
         static let bookmark = UIImage(named: "bookmark")!
         static let bookmarkSelected = UIImage(named: "bookmarkSelected")!
+        
+        struct Auth {
+            static let logoImage = UIImage(named: "imgLogo")
+            static let kakaoLogin = UIImage(named: "kakaoLoginButton")
+        }
     }
 }
