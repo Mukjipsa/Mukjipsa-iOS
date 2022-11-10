@@ -44,5 +44,10 @@ extension Constant {
                                           """
             static let gotoMyRecipe = "맞춤 레시피 보러가기"
         }
+        
+        struct Recipe {
+            static let myIngredient = "나의 재료"
+            static let bookmark = "북마크"
+        }
     }
 }
