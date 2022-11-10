@@ -15,6 +15,7 @@ class OnboardingNaviView: BaseView {
     enum ViewType {
         case basic
         case notBasic
+        case finish
     }
     
     // MARK: - Properties
@@ -71,6 +72,9 @@ extension OnboardingNaviView {
         case .basic:
             backButton.isHidden = true
         case .notBasic:
+            backButton.isHidden = false
+        case .finish:
+            laterButton.isHidden = true
             backButton.isHidden = false
         }
     }
