@@ -14,6 +14,8 @@
 		3B52C52B291CC98400368728 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C52A291CC98400368728 /* Pretendard-Medium.otf */; };
 		3B52C52D291CC98F00368728 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C52C291CC98F00368728 /* Pretendard-Regular.otf */; };
 		3B52C52F291CC99A00368728 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C52E291CC99A00368728 /* Pretendard-SemiBold.otf */; };
+		3B52C531291CEA8000368728 /* MJSAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B52C530291CEA8000368728 /* MJSAlert.swift */; };
+		3B52C533291CED2E00368728 /* MJSCancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B52C532291CED2E00368728 /* MJSCancelButton.swift */; };
 		3B7CB5A42918D8C400EF73B9 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */; };
 		3B7CB5A62918D9B100EF73B9 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */; };
 		3B7CB5A82918EEBC00EF73B9 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */; };
@@ -48,7 +50,6 @@
 		4A634410290297CF006E19E6 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A63440F290297CF006E19E6 /* .swiftlint.yml */; };
 		4A90A2C82900207C006BC1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2C72900207C006BC1B2 /* AppDelegate.swift */; };
 		4A90A2CA2900207C006BC1B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2C92900207C006BC1B2 /* SceneDelegate.swift */; };
-		4A90A2CC2900207C006BC1B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2CB2900207C006BC1B2 /* ViewController.swift */; };
 		4A90A2D12900207D006BC1B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A90A2D02900207D006BC1B2 /* Assets.xcassets */; };
 		4A90A2D42900207D006BC1B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A90A2D22900207D006BC1B2 /* LaunchScreen.storyboard */; };
 		4A90A2E5290024CF006BC1B2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2E4290024CF006BC1B2 /* Color.swift */; };
@@ -75,6 +76,8 @@
 		3B52C52A291CC98400368728 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		3B52C52C291CC98F00368728 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		3B52C52E291CC99A00368728 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		3B52C530291CEA8000368728 /* MJSAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJSAlert.swift; sourceTree = "<group>"; };
+		3B52C532291CED2E00368728 /* MJSCancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJSCancelButton.swift; sourceTree = "<group>"; };
 		3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
 		3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -104,7 +107,6 @@
 		4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mukjipsa-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A90A2C72900207C006BC1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A90A2C92900207C006BC1B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4A90A2CB2900207C006BC1B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A90A2D02900207D006BC1B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A90A2D32900207D006BC1B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A90A2D52900207D006BC1B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -186,6 +188,29 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		3B52C536291CF7EA00368728 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3B52C538291CF7F700368728 /* ViewController */,
+				3B52C537291CF7F100368728 /* View */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		3B52C537291CF7F100368728 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B52C538291CF7F700368728 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		3B958DFB2919F97E00902A1D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,8 +224,8 @@
 		3B958DFC2919FB0300902A1D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				3B958E04291A10D300902A1D /* OnboardingNaviView.swift */,
-				3B958E0F291A4E4500902A1D /* OnboardingTitleView.swift */,
+				3BBE2F0E291CA48700C002E4 /* Alert */,
+				3BBE2F0D291CA47B00C002E4 /* Onboarding */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -298,6 +323,23 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		3BBE2F0D291CA47B00C002E4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				3B958E04291A10D300902A1D /* OnboardingNaviView.swift */,
+				3B958E0F291A4E4500902A1D /* OnboardingTitleView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		3BBE2F0E291CA48700C002E4 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				3B52C530291CEA8000368728 /* MJSAlert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		3BC6004B291B8F3700CAA317 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,7 +398,6 @@
 				4A90A2DD2900246B006BC1B2 /* Network */,
 				4A90A2DC29002467006BC1B2 /* Screen */,
 				4A90A2DB29002434006BC1B2 /* Resource */,
-				4A90A2CB2900207C006BC1B2 /* ViewController.swift */,
 			);
 			path = "Mukjipsa-iOS";
 			sourceTree = "<group>";
@@ -376,6 +417,7 @@
 		4A90A2DC29002467006BC1B2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				3B52C536291CF7EA00368728 /* Splash */,
 				3B958DFC2919FB0300902A1D /* Common */,
 				3B958DFB2919F97E00902A1D /* Onboarding */,
 				3B2A996E291BD22300479C86 /* Auth */,
@@ -499,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				4A0CEC1C291A50F900372D46 /* MJSButton.swift */,
+				3B52C532291CED2E00368728 /* MJSCancelButton.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -666,7 +709,6 @@
 				3BC6004D291B8FAD00CAA317 /* UICollectionViewRegisterable.swift in Sources */,
 				4A3336A1291C881A009BB692 /* BaseViewController.swift in Sources */,
 				4AF80C11290D6F5000B084CA /* UIViewController+.swift in Sources */,
-				4A90A2CC2900207C006BC1B2 /* ViewController.swift in Sources */,
 				3BC60052291B93B700CAA317 /* getClassName.swift in Sources */,
 				4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */,
 				3B8B25DD2918F4F200A46331 /* UITextField+.swift in Sources */,
@@ -685,6 +727,7 @@
 				3BB2B38429194623004EE3C0 /* LetterSpacing.swift in Sources */,
 				4A05449E2914AB31000B6B1F /* UIColor+.swift in Sources */,
 				4A0CEC1D291A50F900372D46 /* MJSButton.swift in Sources */,
+				3B52C533291CED2E00368728 /* MJSCancelButton.swift in Sources */,
 				4AF80C1F290D850100B084CA /* GeneralResponse.swift in Sources */,
 				3BBE2F0A291C999100C002E4 /* FinishOnboardingView.swift in Sources */,
 				3B2A9973291BD27E00479C86 /* LoginView.swift in Sources */,
@@ -696,6 +739,7 @@
 				4AF80C1B290D848C00B084CA /* APIConstants.swift in Sources */,
 				3B7CB5A62918D9B100EF73B9 /* UILabel+.swift in Sources */,
 				3BC6004F291B8FCB00CAA317 /* UITableViewRegisterable.swift in Sources */,
+				3B52C531291CEA8000368728 /* MJSAlert.swift in Sources */,
 				3BBE2F0C291C9DC700C002E4 /* FinishOnboardingViewController.swift in Sources */,
 				4A90A2F129002507006BC1B2 /* API.swift in Sources */,
 				4AF80C0D290D6E0600B084CA /* UIView+.swift in Sources */,
