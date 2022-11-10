@@ -42,7 +42,7 @@ extension UIFont {
     }
     
     class var sh1: UIFont {
-        return UIFont(name: "Pretendard-Regular", size: 25.0)!
+        return UIFont(name: "Pretendard-Light", size: 25.0)!
     }
     
     class var sh2: UIFont {
