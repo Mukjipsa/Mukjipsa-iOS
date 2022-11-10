@@ -10,10 +10,10 @@ import UIKit
 import SnapKit
 import Then
 
-
 class BasicIngredientView: BaseView {
     
-    //MARK: UIComponents
+    // MARK: - UIComponents
+    
     private let naviView = OnboardingNaviView()
     private let basicTitleLabel = UILabel()
     private let basicSubTitleLabel = UILabel()
@@ -23,7 +23,7 @@ class BasicIngredientView: BaseView {
     }()
     private let finishButton = MJSButton()
     
-    //MARK: - Life Cycle
+    // MARK: - Life Cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         registerCell()
@@ -33,14 +33,14 @@ class BasicIngredientView: BaseView {
     override func setUI() {
         naviView.viewType = .basic
         
-        basicTitleLabel.do{
+        basicTitleLabel.do {
             $0.text = Constant.String.Onboarding.selectMessage
             $0.font = .sh1
             $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh1)
             $0.textColor = .black
         }
         
-        basicSubTitleLabel.do{
+        basicSubTitleLabel.do {
             $0.text = Constant.String.Onboarding.subSelectMessage
             $0.font = .sh2
             $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh2)
@@ -48,7 +48,7 @@ class BasicIngredientView: BaseView {
             $0.numberOfLines = 2
         }
         
-        finishButton.do{
+        finishButton.do {
             $0.setTitle(Constant.String.Onboarding.finishButton, for: .normal)
         }
     }
@@ -56,29 +56,29 @@ class BasicIngredientView: BaseView {
     override func setLayout() {
         addSubviews([naviView, basicTitleLabel, basicSubTitleLabel, ingredientCollectionView, finishButton])
         
-        naviView.snp.makeConstraints{
+        naviView.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide)
             $0.directionalHorizontalEdges.equalToSuperview()
             $0.height.equalTo(44)
         }
         
-        basicTitleLabel.snp.makeConstraints{
+        basicTitleLabel.snp.makeConstraints {
             $0.top.equalTo(naviView.snp.bottom).offset(24)
             $0.leading.equalToSuperview().inset(16)
         }
         
-        basicSubTitleLabel.snp.makeConstraints{
+        basicSubTitleLabel.snp.makeConstraints {
             $0.top.equalTo(basicTitleLabel.snp.bottom).offset(8)
             $0.leading.equalTo(basicTitleLabel.snp.leading)
         }
         
-        ingredientCollectionView.snp.makeConstraints{
+        ingredientCollectionView.snp.makeConstraints {
             $0.top.equalTo(basicSubTitleLabel.snp.bottom).offset(48)
             $0.directionalHorizontalEdges.equalToSuperview().inset(16)
             $0.bottom.equalTo(finishButton.snp.top).offset(72)
         }
 
-        finishButton.snp.makeConstraints{
+        finishButton.snp.makeConstraints {
             $0.directionalHorizontalEdges.equalToSuperview().inset(16)
             $0.height.equalTo(56)
             $0.bottom.equalToSuperview().inset(8)

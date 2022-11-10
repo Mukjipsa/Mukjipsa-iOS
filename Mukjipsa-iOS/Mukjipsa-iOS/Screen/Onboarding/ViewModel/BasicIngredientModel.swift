@@ -23,5 +23,5 @@ var basicIngredientModelList: [BasicIngredientModel] = [
     BasicIngredientModel(category: "소스/조미료", ingredientName: "설탕"),
     BasicIngredientModel(category: "알류", ingredientName: "계란"),
     BasicIngredientModel(category: "기타", ingredientName: "김치"),
-    BasicIngredientModel(category: "곡류", ingredientName: "즉석밥"),
+    BasicIngredientModel(category: "곡류", ingredientName: "즉석밥")
 ]

@@ -14,7 +14,7 @@ final class RecipeViewController: UIViewController {
     // MARK: - Property
     
     // MARK: - UI Property
-    private let testLabel = UILabel().then{
+    private let testLabel = UILabel().then {
         $0.text = "안녕하세요 테스트 중"
     }
     

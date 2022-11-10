@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 class LoginView: BaseView {
-    //MARK: - UI Components
+    // MARK: - UI Components
     private let logoImageView = UIImageView()
     private let kakaoLoginButton = UIButton()
     
@@ -23,12 +23,12 @@ class LoginView: BaseView {
     override func setLayout() {
         addSubviews([logoImageView, kakaoLoginButton])
         
-        logoImageView.snp.makeConstraints{
+        logoImageView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(271)
             $0.directionalHorizontalEdges.equalToSuperview().inset(16)
         }
         
-        kakaoLoginButton.snp.makeConstraints{
+        kakaoLoginButton.snp.makeConstraints {
             $0.directionalHorizontalEdges.equalToSuperview().inset(16)
             $0.bottom.equalToSuperview().inset(8)
         }

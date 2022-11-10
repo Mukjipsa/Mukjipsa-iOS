@@ -12,7 +12,7 @@ import Then
 
 final class BasicIngredientViewController: BaseViewController {
 
-    //MARK: UIComponents
+    // MARK: UIComponents
     private let basicIngredientView = BasicIngredientView()
     
     override func viewDidLoad() {
@@ -26,7 +26,7 @@ extension BasicIngredientViewController {
     private func setLayout() {
         view.addSubview(basicIngredientView)
         
-        basicIngredientView.snp.makeConstraints{
+        basicIngredientView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
     }
