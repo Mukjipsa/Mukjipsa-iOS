@@ -15,9 +15,11 @@ final class RecipeTableViewCell: UITableViewCell, UITableViewRegisterable {
     static var isFromNib: Bool = false
     
     private let recipeImage = UIView().then {
-        $0.backgroundColor = .dark
+        $0.backgroundColor = .blue
     }
-    private let recipeContainerView = UIView()
+    private let recipeContainerView = UIView().then {
+        $0.backgroundColor = .primary
+    }
     private let recipeName = UILabel().then {
         $0.text = "수제버거"
         $0.font = .h1
@@ -25,7 +27,9 @@ final class RecipeTableViewCell: UITableViewCell, UITableViewRegisterable {
         $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.h1)
     }
     
-    private let recipeIc = UIView()
+    private let recipeIc = UIView().then {
+        $0.backgroundColor = .primary
+    }
     private let channelName = UILabel().then {
         $0.text = "채널 이름"
         $0.font = .b3
@@ -43,6 +47,9 @@ final class RecipeTableViewCell: UITableViewCell, UITableViewRegisterable {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setLayout()
+        
+        self.contentView.layer.cornerRadius = 20
+        self.contentView.layer.masksToBounds = true
     }
     
     @available(*, unavailable)
@@ -61,7 +68,7 @@ final class RecipeTableViewCell: UITableViewCell, UITableViewRegisterable {
         
         recipeContainerView.snp.makeConstraints {
             $0.top.equalTo(recipeImage.snp.bottom)
-            $0.leading.equalToSuperview().inset(16)
+            $0.leading.trailing.equalToSuperview().inset(16)
         }
         
         recipeName.snp.makeConstraints {
@@ -70,9 +77,10 @@ final class RecipeTableViewCell: UITableViewCell, UITableViewRegisterable {
         }
         
         recipeIc.snp.makeConstraints {
-            $0.top.equalTo(recipeName.snp.bottom).offset(2)
+            $0.top.equalTo(recipeName.snp.bottom).offset(3)
             $0.leading.equalTo(recipeContainerView.snp.leading)
-            $0.bottom.equalTo(recipeContainerView.snp.bottom)
+            $0.width.height.equalTo(18)
+            $0.bottom.equalTo(recipeContainerView.snp.bottom).inset(86)
         }
         
         channelName.snp.makeConstraints {
