@@ -368,10 +368,7 @@
 		4A90A2DB29002434006BC1B2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< Updated upstream
 				3B52C527291CC93300368728 /* Font */,
-=======
->>>>>>> Stashed changes
 				4A90A2E3290024AD006BC1B2 /* Color */,
 				4A90A2E2290024A8006BC1B2 /* Support */,
 				4A90A2E1290024A1006BC1B2 /* Storyboard */,
@@ -628,13 +625,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A634410290297CF006E19E6 /* .swiftlint.yml in Resources */,
-<<<<<<< Updated upstream
 				3B52C52D291CC98F00368728 /* Pretendard-Regular.otf in Resources */,
 				3B52C52F291CC99A00368728 /* Pretendard-SemiBold.otf in Resources */,
 				3B52C52B291CC98400368728 /* Pretendard-Medium.otf in Resources */,
 				3B52C529291CC96000368728 /* Pretendard-Light.otf in Resources */,
-=======
->>>>>>> Stashed changes
 				4A90A2D42900207D006BC1B2 /* LaunchScreen.storyboard in Resources */,
 				4A90A2D12900207D006BC1B2 /* Assets.xcassets in Resources */,
 			);
