@@ -44,5 +44,18 @@ extension Constant {
                                           """
             static let gotoMyRecipe = "맞춤 레시피 보러가기"
         }
+        
+        struct Alert {
+            static let laterTitle = "나중에 하실건가요?"
+            static let laterExplain = "지금, 더 간단한 식재료 입력을 도와드려요!"
+            static let laterButton = "나중에 하기"
+            static let finishBasicTitle = "계속해볼까요?"
+            static let finishBasicExplain = """
+                                            기본 재료 입력을 완료했어요!
+                                            계속해서 더 간단한 식재료를 입력해요
+                                            """
+            static let doitNowButton = "지금 하기"
+            static let continueButton = "계속 하기"
+        }
     }
 }

@@ -14,6 +14,8 @@
 		3B52C52B291CC98400368728 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C52A291CC98400368728 /* Pretendard-Medium.otf */; };
 		3B52C52D291CC98F00368728 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C52C291CC98F00368728 /* Pretendard-Regular.otf */; };
 		3B52C52F291CC99A00368728 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C52E291CC99A00368728 /* Pretendard-SemiBold.otf */; };
+		3B52C531291CEA8000368728 /* MJSAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B52C530291CEA8000368728 /* MJSAlert.swift */; };
+		3B52C533291CED2E00368728 /* MJSCancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B52C532291CED2E00368728 /* MJSCancelButton.swift */; };
 		3B7CB5A42918D8C400EF73B9 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */; };
 		3B7CB5A62918D9B100EF73B9 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */; };
 		3B7CB5A82918EEBC00EF73B9 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */; };
@@ -74,6 +76,8 @@
 		3B52C52A291CC98400368728 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		3B52C52C291CC98F00368728 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		3B52C52E291CC99A00368728 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		3B52C530291CEA8000368728 /* MJSAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJSAlert.swift; sourceTree = "<group>"; };
+		3B52C532291CED2E00368728 /* MJSCancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJSCancelButton.swift; sourceTree = "<group>"; };
 		3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
 		3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -308,6 +312,7 @@
 		3BBE2F0E291CA48700C002E4 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
+				3B52C530291CEA8000368728 /* MJSAlert.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				4A0CEC1C291A50F900372D46 /* MJSButton.swift */,
+				3B52C532291CED2E00368728 /* MJSCancelButton.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -697,6 +703,7 @@
 				3BB2B38429194623004EE3C0 /* LetterSpacing.swift in Sources */,
 				4A05449E2914AB31000B6B1F /* UIColor+.swift in Sources */,
 				4A0CEC1D291A50F900372D46 /* MJSButton.swift in Sources */,
+				3B52C533291CED2E00368728 /* MJSCancelButton.swift in Sources */,
 				4AF80C1F290D850100B084CA /* GeneralResponse.swift in Sources */,
 				3BBE2F0A291C999100C002E4 /* FinishOnboardingView.swift in Sources */,
 				3B2A9973291BD27E00479C86 /* LoginView.swift in Sources */,
@@ -708,6 +715,7 @@
 				4AF80C1B290D848C00B084CA /* APIConstants.swift in Sources */,
 				3B7CB5A62918D9B100EF73B9 /* UILabel+.swift in Sources */,
 				3BC6004F291B8FCB00CAA317 /* UITableViewRegisterable.swift in Sources */,
+				3B52C531291CEA8000368728 /* MJSAlert.swift in Sources */,
 				3BBE2F0C291C9DC700C002E4 /* FinishOnboardingViewController.swift in Sources */,
 				4A90A2F129002507006BC1B2 /* API.swift in Sources */,
 				4AF80C0D290D6E0600B084CA /* UIView+.swift in Sources */,
