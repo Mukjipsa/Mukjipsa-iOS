@@ -21,4 +21,3 @@ extension UICollectionViewRegisterable where Self: UICollectionViewCell {
         }
     }
 }
-

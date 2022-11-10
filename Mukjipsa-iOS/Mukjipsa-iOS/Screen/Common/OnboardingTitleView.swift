@@ -32,14 +32,14 @@ class OnboardingTitleView: BaseView {
         }
     }
     
-    //MARK: Properties
+    // MARK: - Properties
     var viewType: ViewType = .meat {
         didSet {
             setText()
         }
     }
     
-    //MARK: UIComponents
+    // MARK: - UIComponents
     private let titleView = UIView()
     private let titleLabel = UILabel()
     
@@ -61,13 +61,13 @@ class OnboardingTitleView: BaseView {
         titleView.addSubview(titleLabel)
         addSubview(titleView)
         
-        titleView.snp.makeConstraints{
+        titleView.snp.makeConstraints {
             $0.edges.equalToSuperview()
             $0.height.equalTo(35)
             $0.width.greaterThanOrEqualTo(titleLabel.snp.width).offset(20)
         }
         
-        titleLabel.snp.makeConstraints{
+        titleLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
         }
     }

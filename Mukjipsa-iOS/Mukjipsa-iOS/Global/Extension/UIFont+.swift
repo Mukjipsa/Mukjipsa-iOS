@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIFont {
-    //MARK: - Pretendard
+    // MARK: - Pretendard
     
     public enum PretendardType: String {
         case light = "Light"
@@ -22,7 +22,7 @@ extension UIFont {
     }
 }
 
-//MARK: - Font StyleGuide
+// MARK: - Font StyleGuide
 extension UIFont {
     // Title & Heading
     class var t1: UIFont {

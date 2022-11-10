@@ -11,10 +11,10 @@ import SnapKit
 import Then
 
 class IngredientCollectionViewCell: UICollectionViewCell, UICollectionViewRegisterable {
-    //MARK: Properties
+    // MARK: - Properties
     static var isFromNib: Bool = false
     
-    //MARK: UIComponents
+    // MARK: - UIComponents
     private let ingredientImageView = UIView()
     private let categoryLabel = UILabel()
     private let ingredientLabel = UILabel()
@@ -34,24 +34,24 @@ class IngredientCollectionViewCell: UICollectionViewCell, UICollectionViewRegist
 
 extension IngredientCollectionViewCell {
     private func setUI() {
-        contentView.do{
+        contentView.do {
             $0.layer.cornerRadius = 16
             $0.layer.borderWidth = 1.0
             $0.layer.borderColor = UIColor.dark.cgColor
         }
         
-        ingredientImageView.do{
+        ingredientImageView.do {
             $0.backgroundColor = .dark
         }
         
-        categoryLabel.do{
+        categoryLabel.do {
             $0.text = "육류"
             $0.textColor = .dark
             $0.font = .b2
             $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.b2)
         }
         
-        ingredientLabel.do{
+        ingredientLabel.do {
             $0.text = "소고기"
             $0.textColor = .dark
             $0.font = .h1
@@ -62,18 +62,18 @@ extension IngredientCollectionViewCell {
     private func setLayout() {
         contentView.addSubviews([ingredientImageView, categoryLabel, ingredientLabel])
 
-        ingredientImageView.snp.makeConstraints{
+        ingredientImageView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(15.5)
             $0.leading.equalToSuperview().inset(24)
             $0.size.equalTo(18)
         }
 
-        categoryLabel.snp.makeConstraints{
+        categoryLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(14)
             $0.leading.equalTo(ingredientImageView.snp.trailing).offset(6)
         }
 
-        ingredientLabel.snp.makeConstraints{
+        ingredientLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(24)
             $0.bottom.equalToSuperview().inset(10)
         }

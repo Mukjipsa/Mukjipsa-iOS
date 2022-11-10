@@ -12,7 +12,7 @@ import Then
 
 final class LoginViewController: BaseViewController {
     
-    //MARK: UI Components
+    // MARK: - UI Components
     private let loginView = LoginView()
 
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ extension LoginViewController {
     private func setLayout() {
         view.addSubview(loginView)
         
-        loginView.snp.makeConstraints{
+        loginView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
     }

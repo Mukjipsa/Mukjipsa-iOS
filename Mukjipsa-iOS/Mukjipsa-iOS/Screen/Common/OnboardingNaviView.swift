@@ -15,27 +15,28 @@ class OnboardingNaviView: BaseView {
     enum ViewType {
         case basic
         case notBasic
+        case finish
     }
     
-    //MARK: Properties
+    // MARK: - Properties
     var viewType: ViewType = .basic {
         didSet {
             setUI()
         }
     }
     
-    //MARK: UIComponents
+    // MARK: - UIComponents
     private let naviView = UIView()
     private let backButton = UIButton()
     private let laterButton = UIButton()
     
     override func setUI() {
         setLaterButton()
-        backButton.do{
+        backButton.do {
             $0.setImage(Constant.Image.backButton, for: .normal)
         }
         
-        laterButton.do{
+        laterButton.do {
             $0.titleLabel?.text = Constant.String.Onboarding.doItLater
             $0.titleLabel?.font = .b2
             $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.b2)
@@ -47,18 +48,18 @@ class OnboardingNaviView: BaseView {
         naviView.addSubviews([backButton, laterButton])
         addSubview(naviView)
         
-        naviView.snp.makeConstraints{
+        naviView.snp.makeConstraints {
             $0.directionalHorizontalEdges.equalToSuperview()
             $0.top.equalToSuperview()
             $0.height.equalTo(44)
         }
         
-        backButton.snp.makeConstraints{
+        backButton.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.equalToSuperview().inset(16)
         }
         
-        laterButton.snp.makeConstraints{
+        laterButton.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.trailing.equalToSuperview().inset(16)
         }
@@ -71,6 +72,9 @@ extension OnboardingNaviView {
         case .basic:
             backButton.isHidden = true
         case .notBasic:
+            backButton.isHidden = false
+        case .finish:
+            laterButton.isHidden = true
             backButton.isHidden = false
         }
     }

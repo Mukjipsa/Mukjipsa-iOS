@@ -12,11 +12,10 @@ extension Constant {
         struct Onboarding {
             static let doItLater = "나중에 할게요"
             static let selectMessage = "기본 재료를 선택해요!"
-            static let subSelectMessage =
-            """
-            기본적인 재료 10가지를 먼저 보여드릴게요
-            내가 가진 재료만 선택해볼까요?
-            """
+            static let subSelectMessage = """
+                                          기본적인 재료 10가지를 먼저 보여드릴게요
+                                          내가 가진 재료만 선택해볼까요?
+                                          """
             
             static let basic = "기본 재료"
             static let meatAndSeafood = "육류/해산물"
@@ -26,6 +25,24 @@ extension Constant {
             
             static let nextButton = "다음"
             static let finishButton = "완료"
+            
+            static let guideMessage = """
+                                      내가 가진 재료로
+                                      어떤 요리를 할 수 있을까요?
+                                      """
+            static let subGuideMessage = """
+                                         먹집사는 나의 냉장고 안의 식재료로
+                                         만들 수 있는 요리를 추천해드려요
+                                         """
+            static let gotoMessage = "그럼, 식재료를 입력하러 가볼까요?"
+            static let gotoButton = "간단한 식재료 입력하기"
+            
+            static let finishMessage = "재료를 모두 입력했어요!"
+            static let subFinishMessage = """
+                                          나의 재료로 바로 요리할 수 있는
+                                          맞춤 레시피를 알려드릴게요
+                                          """
+            static let gotoMyRecipe = "맞춤 레시피 보러가기"
         }
     }
 }
