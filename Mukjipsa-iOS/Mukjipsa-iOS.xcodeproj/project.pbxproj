@@ -49,7 +49,6 @@
 		4A634410290297CF006E19E6 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A63440F290297CF006E19E6 /* .swiftlint.yml */; };
 		4A90A2C82900207C006BC1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2C72900207C006BC1B2 /* AppDelegate.swift */; };
 		4A90A2CA2900207C006BC1B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2C92900207C006BC1B2 /* SceneDelegate.swift */; };
-		4A90A2CC2900207C006BC1B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2CB2900207C006BC1B2 /* ViewController.swift */; };
 		4A90A2D12900207D006BC1B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A90A2D02900207D006BC1B2 /* Assets.xcassets */; };
 		4A90A2D42900207D006BC1B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A90A2D22900207D006BC1B2 /* LaunchScreen.storyboard */; };
 		4A90A2E5290024CF006BC1B2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2E4290024CF006BC1B2 /* Color.swift */; };
@@ -106,7 +105,6 @@
 		4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mukjipsa-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A90A2C72900207C006BC1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A90A2C92900207C006BC1B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4A90A2CB2900207C006BC1B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A90A2D02900207D006BC1B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A90A2D32900207D006BC1B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A90A2D52900207D006BC1B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -359,7 +357,6 @@
 				4A90A2DD2900246B006BC1B2 /* Network */,
 				4A90A2DC29002467006BC1B2 /* Screen */,
 				4A90A2DB29002434006BC1B2 /* Resource */,
-				4A90A2CB2900207C006BC1B2 /* ViewController.swift */,
 			);
 			path = "Mukjipsa-iOS";
 			sourceTree = "<group>";
@@ -670,7 +667,6 @@
 				3BC6004D291B8FAD00CAA317 /* UICollectionViewRegisterable.swift in Sources */,
 				4A3336A1291C881A009BB692 /* BaseViewController.swift in Sources */,
 				4AF80C11290D6F5000B084CA /* UIViewController+.swift in Sources */,
-				4A90A2CC2900207C006BC1B2 /* ViewController.swift in Sources */,
 				3BC60052291B93B700CAA317 /* getClassName.swift in Sources */,
 				4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */,
 				3B8B25DD2918F4F200A46331 /* UITextField+.swift in Sources */,

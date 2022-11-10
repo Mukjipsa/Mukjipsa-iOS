@@ -21,7 +21,7 @@ class OnboardingNaviView: BaseView {
     // MARK: - Properties
     var viewType: ViewType = .basic {
         didSet {
-            setUI()
+            setLaterButton()
         }
     }
     
@@ -31,7 +31,6 @@ class OnboardingNaviView: BaseView {
     private let laterButton = UIButton()
     
     override func setUI() {
-        setLaterButton()
         backButton.do {
             $0.setImage(Constant.Image.backButton, for: .normal)
         }
