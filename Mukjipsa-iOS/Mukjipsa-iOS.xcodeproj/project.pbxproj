@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B2C337C291B80420097A402 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B2C337B291B80420097A402 /* Pretendard-Light.otf */; };
-		3B2C337E291B84810097A402 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C337D291B84810097A402 /* BaseViewController.swift */; };
 		3B2A9973291BD27E00479C86 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A9972291BD27E00479C86 /* LoginView.swift */; };
 		3B2A9975291BD30500479C86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A9974291BD30500479C86 /* LoginViewController.swift */; };
+		3B2C337E291B84810097A402 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		3B7CB5A42918D8C400EF73B9 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */; };
 		3B7CB5A62918D9B100EF73B9 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */; };
 		3B7CB5A82918EEBC00EF73B9 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */; };
@@ -34,8 +33,8 @@
 		4A05449E2914AB31000B6B1F /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449D2914AB31000B6B1F /* UIColor+.swift */; };
 		4A0544A02914B102000B6B1F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449F2914B102000B6B1F /* Image.swift */; };
 		4A0CEC1D291A50F900372D46 /* MJSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0CEC1C291A50F900372D46 /* MJSButton.swift */; };
+		4A3336A1291C881A009BB692 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3336A0291C881A009BB692 /* BaseViewController.swift */; };
 		4A39D5032919451600554DF4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4A39D5022919451600554DF4 /* SnapKit */; };
-		4A39D5082919467500554DF4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39D5072919467500554DF4 /* BaseViewController.swift */; };
 		4A39D50B2919473400554DF4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39D50A2919473400554DF4 /* BaseView.swift */; };
 		4A6343F929002DA1006E19E6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343F829002DA1006E19E6 /* RxCocoa */; };
 		4A6343FB29002DA1006E19E6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343FA29002DA1006E19E6 /* RxSwift */; };
@@ -66,7 +65,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B2C337B291B80420097A402 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Light.otf"; path = "../../../../../../../../Downloads/Pretendard-1.3.6/public/static/Pretendard-Light.otf"; sourceTree = "<group>"; };
 		3B2A9972291BD27E00479C86 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B2A9974291BD30500479C86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
@@ -92,7 +90,8 @@
 		4A05449D2914AB31000B6B1F /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4A05449F2914B102000B6B1F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		4A0CEC1C291A50F900372D46 /* MJSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJSButton.swift; sourceTree = "<group>"; };
-		4A39D5072919467500554DF4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "Mukjipsa-iOS/Global/BaseViewController.swift"; sourceTree = SOURCE_ROOT; };
+		4A33369F291C8803009BB692 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Light.otf"; path = "../../../../../../../../Downloads/Pretendard-Light.otf"; sourceTree = "<group>"; };
+		4A3336A0291C881A009BB692 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4A39D50A2919473400554DF4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		4A63440F290297CF006E19E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mukjipsa-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +135,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B2A996E291BD22300479C86 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3B2A996F291BD22A00479C86 /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		3B2A996F291BD22A00479C86 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3B2A9971291BD26100479C86 /* ViewController */,
+				3B2A9970291BD25900479C86 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3B2A9970291BD25900479C86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B2A9972291BD27E00479C86 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B2A9971291BD26100479C86 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B2A9974291BD30500479C86 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		3B958DFB2919F97E00902A1D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,43 +220,10 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		3B2A996E291BD22300479C86 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				3B2A996F291BD22A00479C86 /* Login */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		3B2A996F291BD22A00479C86 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				3B2A9971291BD26100479C86 /* ViewController */,
-				3B2A9970291BD25900479C86 /* View */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		3B2A9970291BD25900479C86 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3B2A9972291BD27E00479C86 /* LoginView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		3B2A9971291BD26100479C86 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				3B2A9974291BD30500479C86 /* LoginViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		3BC1D7482914A79C007B2FA2 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				3B2C337B291B80420097A402 /* Pretendard-Light.otf */,
+				4A33369F291C8803009BB692 /* Pretendard-Light.otf */,
 				3BB2B37E2919425D004EE3C0 /* Pretendard-Regular.otf */,
 				3BB2B37D2919425D004EE3C0 /* Pretendard-SemiBold.otf */,
 				3BB2B37F2919425D004EE3C0 /* Pretendard-Thin.otf */,
@@ -260,8 +259,8 @@
 		4A39D5062919464700554DF4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				3B2C337D291B84810097A402 /* BaseViewController.swift */,
 				4A39D50A2919473400554DF4 /* BaseView.swift */,
+				4A3336A0291C881A009BB692 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -556,7 +555,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A634410290297CF006E19E6 /* .swiftlint.yml in Resources */,
-				3B2C337C291B80420097A402 /* Pretendard-Light.otf in Resources */,
 				3BB2B3812919425D004EE3C0 /* Pretendard-Regular.otf in Resources */,
 				3BB2B3822919425D004EE3C0 /* Pretendard-Thin.otf in Resources */,
 				4A90A2D42900207D006BC1B2 /* LaunchScreen.storyboard in Resources */,
@@ -599,12 +597,13 @@
 				4A90A2ED290024F0006BC1B2 /* DataModel.swift in Sources */,
 				3B958E0E291A419300902A1D /* BasicIngredientViewController.swift in Sources */,
 				3BC6004D291B8FAD00CAA317 /* UICollectionViewRegisterable.swift in Sources */,
+				4A3336A1291C881A009BB692 /* BaseViewController.swift in Sources */,
 				4AF80C11290D6F5000B084CA /* UIViewController+.swift in Sources */,
 				4A90A2CC2900207C006BC1B2 /* ViewController.swift in Sources */,
 				3BC60052291B93B700CAA317 /* getClassName.swift in Sources */,
 				4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */,
 				3B8B25DD2918F4F200A46331 /* UITextField+.swift in Sources */,
-				3B2C337E291B84810097A402 /* BaseViewController.swift in Sources */,
+				3B2C337E291B84810097A402 /* (null) in Sources */,
 				3B7CB5A42918D8C400EF73B9 /* UITextView+.swift in Sources */,
 				4AF80C3429111CD800B084CA /* MyIngredientViewController.swift in Sources */,
 				3BC6004A291B8C2000CAA317 /* IngredientCollectionViewCell.swift in Sources */,
