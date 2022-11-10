@@ -188,6 +188,29 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		3B52C536291CF7EA00368728 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3B52C538291CF7F700368728 /* ViewController */,
+				3B52C537291CF7F100368728 /* View */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		3B52C537291CF7F100368728 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B52C538291CF7F700368728 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		3B958DFB2919F97E00902A1D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +417,7 @@
 		4A90A2DC29002467006BC1B2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				3B52C536291CF7EA00368728 /* Splash */,
 				3B958DFC2919FB0300902A1D /* Common */,
 				3B958DFB2919F97E00902A1D /* Onboarding */,
 				3B2A996E291BD22300479C86 /* Auth */,
