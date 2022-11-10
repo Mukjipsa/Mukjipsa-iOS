@@ -33,7 +33,7 @@ final class RecipeViewController: UIViewController {
     private func setUI() {
         testLabel.do {
             $0.font = .t1
-            $0.setlineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.t1)
+            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.t1)
         }
     }
 }
