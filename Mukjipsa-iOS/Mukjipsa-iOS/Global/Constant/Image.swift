@@ -12,5 +12,10 @@ extension Constant {
         static let bookmark = UIImage(named: "bookmark")!
         static let bookmarkSelected = UIImage(named: "bookmarkSelected")!
         static let backButton = UIImage(named: "icBack")
+        
+        struct Auth {
+            static let logoImage = UIImage(named: "imgLogo")
+            static let kakaoLogin = UIImage(named: "kakaoLoginButton")
+        }
     }
 }
