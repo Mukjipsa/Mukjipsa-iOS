@@ -24,5 +24,6 @@ final class MJSButton: UIButton {
         self.titleLabel?.font = .bu1
         self.layer.cornerRadius = 16
         self.titleLabel?.textAlignment = .center
+        setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.bu1)
     }
 }
