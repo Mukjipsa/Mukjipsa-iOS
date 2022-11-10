@@ -8,5 +8,5 @@
 import Foundation
 
 struct APIConstants {
-    // MARKL - Base URL
+    // MARK: - Base URL
 }
