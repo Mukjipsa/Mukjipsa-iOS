@@ -24,6 +24,9 @@
 		3BB2B3812919425D004EE3C0 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BB2B37E2919425D004EE3C0 /* Pretendard-Regular.otf */; };
 		3BB2B3822919425D004EE3C0 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BB2B37F2919425D004EE3C0 /* Pretendard-Thin.otf */; };
 		3BB2B38429194623004EE3C0 /* LetterSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2B38329194623004EE3C0 /* LetterSpacing.swift */; };
+		3BBE2EFD291C8F5800C002E4 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BBE2EFC291C8F5800C002E4 /* Pretendard-Light.otf */; };
+		3BBE2F03291C90DF00C002E4 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE2F02291C90DF00C002E4 /* GuideView.swift */; };
+		3BBE2F05291C969100C002E4 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE2F04291C969100C002E4 /* GuideViewController.swift */; };
 		3BC1D7452914A414007B2FA2 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1D7442914A414007B2FA2 /* UIFont+.swift */; };
 		3BC6004A291B8C2000CAA317 /* IngredientCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC60049291B8C2000CAA317 /* IngredientCollectionViewCell.swift */; };
 		3BC6004D291B8FAD00CAA317 /* UICollectionViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC6004C291B8FAD00CAA317 /* UICollectionViewRegisterable.swift */; };
@@ -81,6 +84,9 @@
 		3BB2B37E2919425D004EE3C0 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Regular.otf"; path = "../../../../../../../../Downloads/Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		3BB2B37F2919425D004EE3C0 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Thin.otf"; path = "../../../../../../../../Downloads/Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		3BB2B38329194623004EE3C0 /* LetterSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterSpacing.swift; sourceTree = "<group>"; };
+		3BBE2EFC291C8F5800C002E4 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Light.otf"; path = "../../../../../../../../Downloads/Pretendard-1.3.6/public/static/Pretendard-Light.otf"; sourceTree = "<group>"; };
+		3BBE2F02291C90DF00C002E4 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		3BBE2F04291C969100C002E4 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		3BC1D7442914A414007B2FA2 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		3BC60049291B8C2000CAA317 /* IngredientCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BC6004C291B8FAD00CAA317 /* UICollectionViewRegisterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewRegisterable.swift; sourceTree = "<group>"; };
@@ -90,7 +96,6 @@
 		4A05449D2914AB31000B6B1F /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4A05449F2914B102000B6B1F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		4A0CEC1C291A50F900372D46 /* MJSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJSButton.swift; sourceTree = "<group>"; };
-		4A33369F291C8803009BB692 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Light.otf"; path = "../../../../../../../../Downloads/Pretendard-Light.otf"; sourceTree = "<group>"; };
 		4A3336A0291C881A009BB692 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4A39D50A2919473400554DF4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		4A63440F290297CF006E19E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -171,10 +176,8 @@
 		3B958DFB2919F97E00902A1D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				3B958E002919FB1F00902A1D /* Cells */,
-				3B958DFF2919FB1700902A1D /* ViewModel */,
-				3B958DFE2919FB1000902A1D /* ViewControllers */,
-				3B958DFD2919FB0B00902A1D /* Views */,
+				3BBE2EFF291C904B00C002E4 /* BasicIngredient */,
+				3BBE2EFE291C902500C002E4 /* Guide */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -188,20 +191,20 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		3B958DFD2919FB0B00902A1D /* Views */ = {
+		3B958DFD2919FB0B00902A1D /* View */ = {
 			isa = PBXGroup;
 			children = (
 				3B958E022919FB9C00902A1D /* BasicIngredientView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		3B958DFE2919FB1000902A1D /* ViewControllers */ = {
+		3B958DFE2919FB1000902A1D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				3B958E0D291A419300902A1D /* BasicIngredientViewController.swift */,
 			);
-			path = ViewControllers;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		3B958DFF2919FB1700902A1D /* ViewModel */ = {
@@ -220,10 +223,46 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		3BBE2EFE291C902500C002E4 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				3BBE2F01291C907C00C002E4 /* ViewController */,
+				3BBE2F00291C907700C002E4 /* View */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		3BBE2EFF291C904B00C002E4 /* BasicIngredient */ = {
+			isa = PBXGroup;
+			children = (
+				3B958E002919FB1F00902A1D /* Cells */,
+				3B958DFF2919FB1700902A1D /* ViewModel */,
+				3B958DFE2919FB1000902A1D /* ViewController */,
+				3B958DFD2919FB0B00902A1D /* View */,
+			);
+			path = BasicIngredient;
+			sourceTree = "<group>";
+		};
+		3BBE2F00291C907700C002E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BBE2F02291C90DF00C002E4 /* GuideView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BBE2F01291C907C00C002E4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3BBE2F04291C969100C002E4 /* GuideViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		3BC1D7482914A79C007B2FA2 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				4A33369F291C8803009BB692 /* Pretendard-Light.otf */,
+				3BBE2EFC291C8F5800C002E4 /* Pretendard-Light.otf */,
 				3BB2B37E2919425D004EE3C0 /* Pretendard-Regular.otf */,
 				3BB2B37D2919425D004EE3C0 /* Pretendard-SemiBold.otf */,
 				3BB2B37F2919425D004EE3C0 /* Pretendard-Thin.otf */,
@@ -555,6 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A634410290297CF006E19E6 /* .swiftlint.yml in Resources */,
+				3BBE2EFD291C8F5800C002E4 /* Pretendard-Light.otf in Resources */,
 				3BB2B3812919425D004EE3C0 /* Pretendard-Regular.otf in Resources */,
 				3BB2B3822919425D004EE3C0 /* Pretendard-Thin.otf in Resources */,
 				4A90A2D42900207D006BC1B2 /* LaunchScreen.storyboard in Resources */,
@@ -594,6 +634,7 @@
 			files = (
 				3BC60054291B9A1000CAA317 /* BasicIngredientModel.swift in Sources */,
 				4AF80C3229111CA500B084CA /* RecipeViewController.swift in Sources */,
+				3BBE2F03291C90DF00C002E4 /* GuideView.swift in Sources */,
 				4A90A2ED290024F0006BC1B2 /* DataModel.swift in Sources */,
 				3B958E0E291A419300902A1D /* BasicIngredientViewController.swift in Sources */,
 				3BC6004D291B8FAD00CAA317 /* UICollectionViewRegisterable.swift in Sources */,
@@ -608,6 +649,7 @@
 				4AF80C3429111CD800B084CA /* MyIngredientViewController.swift in Sources */,
 				3BC6004A291B8C2000CAA317 /* IngredientCollectionViewCell.swift in Sources */,
 				4A90A2E5290024CF006BC1B2 /* Color.swift in Sources */,
+				3BBE2F05291C969100C002E4 /* GuideViewController.swift in Sources */,
 				4A0544A02914B102000B6B1F /* Image.swift in Sources */,
 				3B958E10291A4E4500902A1D /* OnboardingTitleView.swift in Sources */,
 				3B7CB5A82918EEBC00EF73B9 /* UIButton+.swift in Sources */,

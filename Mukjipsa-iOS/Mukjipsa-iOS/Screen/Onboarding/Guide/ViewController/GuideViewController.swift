@@ -7,23 +7,22 @@
 
 import UIKit
 
-class GuideViewController: UIViewController {
+class GuideViewController: BaseViewController {
+    // MARK: - UI Components
+    private let guideView = GuideView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setLayout()
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension GuideViewController {
+    private func setLayout() {
+        view.addSubview(guideView)
+        
+        guideView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
     }
-    */
-
 }
