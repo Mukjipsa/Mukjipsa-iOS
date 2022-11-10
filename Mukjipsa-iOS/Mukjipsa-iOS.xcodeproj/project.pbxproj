@@ -24,7 +24,6 @@
 		3BB2B3812919425D004EE3C0 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BB2B37E2919425D004EE3C0 /* Pretendard-Regular.otf */; };
 		3BB2B3822919425D004EE3C0 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BB2B37F2919425D004EE3C0 /* Pretendard-Thin.otf */; };
 		3BB2B38429194623004EE3C0 /* LetterSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2B38329194623004EE3C0 /* LetterSpacing.swift */; };
-		3BBE2EFD291C8F5800C002E4 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BBE2EFC291C8F5800C002E4 /* Pretendard-Light.otf */; };
 		3BBE2F03291C90DF00C002E4 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE2F02291C90DF00C002E4 /* GuideView.swift */; };
 		3BBE2F05291C969100C002E4 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE2F04291C969100C002E4 /* GuideViewController.swift */; };
 		3BBE2F0A291C999100C002E4 /* FinishOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE2F09291C999100C002E4 /* FinishOnboardingView.swift */; };
@@ -86,7 +85,6 @@
 		3BB2B37E2919425D004EE3C0 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Regular.otf"; path = "../../../../../../../../Downloads/Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		3BB2B37F2919425D004EE3C0 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Thin.otf"; path = "../../../../../../../../Downloads/Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		3BB2B38329194623004EE3C0 /* LetterSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterSpacing.swift; sourceTree = "<group>"; };
-		3BBE2EFC291C8F5800C002E4 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Light.otf"; path = "../../../../../../../../Downloads/Pretendard-1.3.6/public/static/Pretendard-Light.otf"; sourceTree = "<group>"; };
 		3BBE2F02291C90DF00C002E4 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		3BBE2F04291C969100C002E4 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		3BBE2F09291C999100C002E4 /* FinishOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishOnboardingView.swift; sourceTree = "<group>"; };
@@ -101,6 +99,7 @@
 		4A05449F2914B102000B6B1F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		4A0CEC1C291A50F900372D46 /* MJSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJSButton.swift; sourceTree = "<group>"; };
 		4A3336A0291C881A009BB692 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4A3336A8291CA3A6009BB692 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Light.otf"; path = "../../../../../../../../Downloads/Pretendard-Light.otf"; sourceTree = "<group>"; };
 		4A39D50A2919473400554DF4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		4A63440F290297CF006E19E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mukjipsa-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,7 +291,7 @@
 		3BC1D7482914A79C007B2FA2 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				3BBE2EFC291C8F5800C002E4 /* Pretendard-Light.otf */,
+				4A3336A8291CA3A6009BB692 /* Pretendard-Light.otf */,
 				3BB2B37E2919425D004EE3C0 /* Pretendard-Regular.otf */,
 				3BB2B37D2919425D004EE3C0 /* Pretendard-SemiBold.otf */,
 				3BB2B37F2919425D004EE3C0 /* Pretendard-Thin.otf */,
@@ -624,7 +623,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A634410290297CF006E19E6 /* .swiftlint.yml in Resources */,
-				3BBE2EFD291C8F5800C002E4 /* Pretendard-Light.otf in Resources */,
 				3BB2B3812919425D004EE3C0 /* Pretendard-Regular.otf in Resources */,
 				3BB2B3822919425D004EE3C0 /* Pretendard-Thin.otf in Resources */,
 				4A90A2D42900207D006BC1B2 /* LaunchScreen.storyboard in Resources */,
