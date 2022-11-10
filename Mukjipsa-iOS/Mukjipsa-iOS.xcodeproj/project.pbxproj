@@ -10,6 +10,10 @@
 		3B2A9973291BD27E00479C86 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A9972291BD27E00479C86 /* LoginView.swift */; };
 		3B2A9975291BD30500479C86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A9974291BD30500479C86 /* LoginViewController.swift */; };
 		3B2C337E291B84810097A402 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		3B52C529291CC96000368728 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C528291CC96000368728 /* Pretendard-Light.otf */; };
+		3B52C52B291CC98400368728 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C52A291CC98400368728 /* Pretendard-Medium.otf */; };
+		3B52C52D291CC98F00368728 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C52C291CC98F00368728 /* Pretendard-Regular.otf */; };
+		3B52C52F291CC99A00368728 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C52E291CC99A00368728 /* Pretendard-SemiBold.otf */; };
 		3B7CB5A42918D8C400EF73B9 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */; };
 		3B7CB5A62918D9B100EF73B9 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */; };
 		3B7CB5A82918EEBC00EF73B9 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */; };
@@ -66,6 +70,10 @@
 /* Begin PBXFileReference section */
 		3B2A9972291BD27E00479C86 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B2A9974291BD30500479C86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3B52C528291CC96000368728 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		3B52C52A291CC98400368728 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		3B52C52C291CC98F00368728 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		3B52C52E291CC99A00368728 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
 		3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -163,6 +171,17 @@
 				3B2A9974291BD30500479C86 /* LoginViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3B52C527291CC93300368728 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				3B52C52E291CC99A00368728 /* Pretendard-SemiBold.otf */,
+				3B52C52C291CC98F00368728 /* Pretendard-Regular.otf */,
+				3B52C52A291CC98400368728 /* Pretendard-Medium.otf */,
+				3B52C528291CC96000368728 /* Pretendard-Light.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		3B958DFB2919F97E00902A1D /* Onboarding */ = {
@@ -358,6 +377,7 @@
 		4A90A2DB29002434006BC1B2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3B52C527291CC93300368728 /* Font */,
 				4A90A2E3290024AD006BC1B2 /* Color */,
 				4A90A2E2290024A8006BC1B2 /* Support */,
 				4A90A2E1290024A1006BC1B2 /* Storyboard */,
@@ -614,6 +634,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A634410290297CF006E19E6 /* .swiftlint.yml in Resources */,
+				3B52C52D291CC98F00368728 /* Pretendard-Regular.otf in Resources */,
+				3B52C52F291CC99A00368728 /* Pretendard-SemiBold.otf in Resources */,
+				3B52C52B291CC98400368728 /* Pretendard-Medium.otf in Resources */,
+				3B52C529291CC96000368728 /* Pretendard-Light.otf in Resources */,
 				4A90A2D42900207D006BC1B2 /* LaunchScreen.storyboard in Resources */,
 				4A90A2D12900207D006BC1B2 /* Assets.xcassets in Resources */,
 			);
