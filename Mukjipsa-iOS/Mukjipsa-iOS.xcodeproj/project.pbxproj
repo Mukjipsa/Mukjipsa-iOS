@@ -210,9 +210,9 @@
 		3B958DFC2919FB0300902A1D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4AD553D5291ED48700225005 /* NaviView */,
 				3BBE2F0E291CA48700C002E4 /* Alert */,
 				3BBE2F0D291CA47B00C002E4 /* Onboarding */,
-				4A142DB7291CA436008A477F /* RecipeNaviView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -575,6 +575,22 @@
 			path = DesignSystem;
 			sourceTree = "<group>";
 		};
+		4AD553D5291ED48700225005 /* NaviView */ = {
+			isa = PBXGroup;
+			children = (
+				4A142DB7291CA436008A477F /* RecipeNaviView.swift */,
+			);
+			path = NaviView;
+			sourceTree = "<group>";
+		};
+		4AD553D6291ED52A00225005 /* RecipeModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A8321B3291D5C0200A0EDBF /* RecipeModel.swift */,
+			);
+			path = RecipeModel;
+			sourceTree = "<group>";
+		};
 		4AF80C2629111AD300B084CA /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,7 +613,7 @@
 		4AF80C2C29111B7700B084CA /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
-				4A8321B3291D5C0200A0EDBF /* RecipeModel.swift */,
+				4AD553D6291ED52A00225005 /* RecipeModel */,
 				4A34607A291D03F400374CD3 /* MyIngredientRecipe */,
 			);
 			path = Recipe;
