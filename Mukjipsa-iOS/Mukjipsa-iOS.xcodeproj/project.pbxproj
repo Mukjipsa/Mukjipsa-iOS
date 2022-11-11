@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3B2A9973291BD27E00479C86 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A9972291BD27E00479C86 /* LoginView.swift */; };
 		3B2A9975291BD30500479C86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A9974291BD30500479C86 /* LoginViewController.swift */; };
-		3B2C337E291B84810097A402 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		3B52C529291CC96000368728 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C528291CC96000368728 /* Pretendard-Light.otf */; };
 		3B52C52B291CC98400368728 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C52A291CC98400368728 /* Pretendard-Medium.otf */; };
 		3B52C52D291CC98F00368728 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B52C52C291CC98F00368728 /* Pretendard-Regular.otf */; };
@@ -41,7 +40,6 @@
 		4A0CEC1D291A50F900372D46 /* MJSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0CEC1C291A50F900372D46 /* MJSButton.swift */; };
 		4A142DB8291CA436008A477F /* RecipeNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A142DB7291CA436008A477F /* RecipeNaviView.swift */; };
 		4A3336A1291C881A009BB692 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3336A0291C881A009BB692 /* BaseViewController.swift */; };
-		4A3336A7291C93C9009BB692 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		4A39D5032919451600554DF4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4A39D5022919451600554DF4 /* SnapKit */; };
 		4A39D50B2919473400554DF4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39D50A2919473400554DF4 /* BaseView.swift */; };
 		4A6343F929002DA1006E19E6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343F829002DA1006E19E6 /* RxCocoa */; };
@@ -50,6 +48,8 @@
 		4A63440129002DB5006E19E6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4A63440029002DB5006E19E6 /* Kingfisher */; };
 		4A63440529002DCC006E19E6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4A63440429002DCC006E19E6 /* Alamofire */; };
 		4A634410290297CF006E19E6 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A63440F290297CF006E19E6 /* .swiftlint.yml */; };
+		4A8321B4291D5C0200A0EDBF /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8321B3291D5C0200A0EDBF /* RecipeModel.swift */; };
+		4A8321B6291D5DB400A0EDBF /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8321B5291D5DB400A0EDBF /* RecipeTableViewCell.swift */; };
 		4A90A2C82900207C006BC1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2C72900207C006BC1B2 /* AppDelegate.swift */; };
 		4A90A2CA2900207C006BC1B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2C92900207C006BC1B2 /* SceneDelegate.swift */; };
 		4A90A2D12900207D006BC1B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A90A2D02900207D006BC1B2 /* Assets.xcassets */; };
@@ -58,6 +58,7 @@
 		4A90A2ED290024F0006BC1B2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2EC290024F0006BC1B2 /* DataModel.swift */; };
 		4A90A2F129002507006BC1B2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2F029002507006BC1B2 /* API.swift */; };
 		4A90A2FC29002537006BC1B2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2FB29002537006BC1B2 /* Constant.swift */; };
+		4AD553D2291E970000225005 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD553D1291E970000225005 /* CALayer+.swift */; };
 		4AF80C0D290D6E0600B084CA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C0C290D6E0600B084CA /* UIView+.swift */; };
 		4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C0E290D6F0C00B084CA /* UIScreen+.swift */; };
 		4AF80C11290D6F5000B084CA /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C10290D6F5000B084CA /* UIViewController+.swift */; };
@@ -67,7 +68,7 @@
 		4AF80C21290D95E100B084CA /* GeneralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C20290D95E100B084CA /* GeneralService.swift */; };
 		4AF80C2A29111AF800B084CA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C2929111AF800B084CA /* TabBarController.swift */; };
 		4AF80C3029111C5300B084CA /* BookMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C2F29111C5300B084CA /* BookMarkViewController.swift */; };
-		4AF80C3229111CA500B084CA /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C3129111CA500B084CA /* RecipeViewController.swift */; };
+		4AF80C3229111CA500B084CA /* MyIngredientRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C3129111CA500B084CA /* MyIngredientRecipeViewController.swift */; };
 		4AF80C3429111CD800B084CA /* MyIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C3329111CD800B084CA /* MyIngredientViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,8 @@
 		4A3336A0291C881A009BB692 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4A39D50A2919473400554DF4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		4A63440F290297CF006E19E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		4A8321B3291D5C0200A0EDBF /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		4A8321B5291D5DB400A0EDBF /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mukjipsa-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A90A2C72900207C006BC1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A90A2C92900207C006BC1B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 		4A90A2EC290024F0006BC1B2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		4A90A2F029002507006BC1B2 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4A90A2FB29002537006BC1B2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		4AD553D1291E970000225005 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		4AF80C0C290D6E0600B084CA /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		4AF80C0E290D6F0C00B084CA /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
 		4AF80C10290D6F5000B084CA /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -126,7 +130,7 @@
 		4AF80C20290D95E100B084CA /* GeneralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralService.swift; sourceTree = "<group>"; };
 		4AF80C2929111AF800B084CA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4AF80C2F29111C5300B084CA /* BookMarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkViewController.swift; sourceTree = "<group>"; };
-		4AF80C3129111CA500B084CA /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		4AF80C3129111CA500B084CA /* MyIngredientRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngredientRecipeViewController.swift; sourceTree = "<group>"; };
 		4AF80C3329111CD800B084CA /* MyIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngredientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -338,6 +342,17 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		4A34607A291D03F400374CD3 /* MyIngredientRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				4A8321B7291D69C200A0EDBF /* View */,
+				4A8321B2291D5BC800A0EDBF /* ViewController */,
+				4A8321B0291D5AD700A0EDBF /* ViewModel */,
+				4A8321B1291D5ADE00A0EDBF /* Cell */,
+			);
+			path = MyIngredientRecipe;
+			sourceTree = "<group>";
+		};
 		4A39D5012919451600554DF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +367,36 @@
 				4A3336A0291C881A009BB692 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		4A8321B0291D5AD700A0EDBF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4A8321B1291D5ADE00A0EDBF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4A8321B5291D5DB400A0EDBF /* RecipeTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4A8321B2291D5BC800A0EDBF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AF80C3129111CA500B084CA /* MyIngredientRecipeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4A8321B7291D69C200A0EDBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4A90A2BB2900207C006BC1B2 = {
@@ -398,7 +443,6 @@
 		4A90A2DC29002467006BC1B2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				3B52C536291CF7EA00368728 /* Splash */,
 				3B958DFC2919FB0300902A1D /* Common */,
 				3B958DFB2919F97E00902A1D /* Onboarding */,
 				3B2A996E291BD22300479C86 /* Auth */,
@@ -514,6 +558,7 @@
 				3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */,
 				3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */,
 				3B8B25DC2918F4F200A46331 /* UITextField+.swift */,
+				4AD553D1291E970000225005 /* CALayer+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -549,7 +594,8 @@
 		4AF80C2C29111B7700B084CA /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
-				4AF80C3129111CA500B084CA /* RecipeViewController.swift */,
+				4A8321B3291D5C0200A0EDBF /* RecipeModel.swift */,
+				4A34607A291D03F400374CD3 /* MyIngredientRecipe */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
@@ -684,7 +730,7 @@
 			files = (
 				4A142DB8291CA436008A477F /* RecipeNaviView.swift in Sources */,
 				3BC60054291B9A1000CAA317 /* BasicIngredientModel.swift in Sources */,
-				4AF80C3229111CA500B084CA /* RecipeViewController.swift in Sources */,
+				4AF80C3229111CA500B084CA /* MyIngredientRecipeViewController.swift in Sources */,
 				3BBE2F03291C90DF00C002E4 /* GuideView.swift in Sources */,
 				4A90A2ED290024F0006BC1B2 /* DataModel.swift in Sources */,
 				3B958E0E291A419300902A1D /* BasicIngredientViewController.swift in Sources */,
@@ -694,15 +740,15 @@
 				3BC60052291B93B700CAA317 /* getClassName.swift in Sources */,
 				4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */,
 				3B8B25DD2918F4F200A46331 /* UITextField+.swift in Sources */,
-				3B2C337E291B84810097A402 /* (null) in Sources */,
 				3B7CB5A42918D8C400EF73B9 /* UITextView+.swift in Sources */,
 				4AF80C3429111CD800B084CA /* MyIngredientViewController.swift in Sources */,
 				3BC6004A291B8C2000CAA317 /* IngredientCollectionViewCell.swift in Sources */,
-				4A3336A7291C93C9009BB692 /* (null) in Sources */,
 				4A90A2E5290024CF006BC1B2 /* Color.swift in Sources */,
 				3BBE2F05291C969100C002E4 /* GuideViewController.swift in Sources */,
 				4A0544A02914B102000B6B1F /* Image.swift in Sources */,
 				3B958E10291A4E4500902A1D /* OnboardingTitleView.swift in Sources */,
+				4AD553D2291E970000225005 /* CALayer+.swift in Sources */,
+				4A8321B6291D5DB400A0EDBF /* RecipeTableViewCell.swift in Sources */,
 				3B7CB5A82918EEBC00EF73B9 /* UIButton+.swift in Sources */,
 				4AF80C2A29111AF800B084CA /* TabBarController.swift in Sources */,
 				3B2A9975291BD30500479C86 /* LoginViewController.swift in Sources */,
@@ -719,6 +765,7 @@
 				4A39D50B2919473400554DF4 /* BaseView.swift in Sources */,
 				3BC1D7452914A414007B2FA2 /* UIFont+.swift in Sources */,
 				3B958E032919FB9C00902A1D /* BasicIngredientView.swift in Sources */,
+				4A8321B4291D5C0200A0EDBF /* RecipeModel.swift in Sources */,
 				4AF80C1B290D848C00B084CA /* APIConstants.swift in Sources */,
 				3B7CB5A62918D9B100EF73B9 /* UILabel+.swift in Sources */,
 				3BC6004F291B8FCB00CAA317 /* UITableViewRegisterable.swift in Sources */,
@@ -869,6 +916,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5UBGNBDYX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mukjipsa-iOS/Resource/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -896,6 +944,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5UBGNBDYX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mukjipsa-iOS/Resource/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
