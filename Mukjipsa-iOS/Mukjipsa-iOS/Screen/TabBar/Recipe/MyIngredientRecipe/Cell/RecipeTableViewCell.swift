@@ -15,7 +15,7 @@ final class RecipeTableViewCell: UITableViewCell, UITableViewRegisterable {
     static var isFromNib: Bool = false
     
     private let recipeImage = UIView().then {
-        $0.backgroundColor = .blue
+        $0.backgroundColor = .green
     }
     private let recipeContainerView = UIView().then {
         $0.backgroundColor = .primary
@@ -47,9 +47,7 @@ final class RecipeTableViewCell: UITableViewCell, UITableViewRegisterable {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setLayout()
-        
-        self.contentView.layer.cornerRadius = 20
-        self.contentView.layer.masksToBounds = true
+        setCellEffect()
     }
     
     @available(*, unavailable)
@@ -57,8 +55,13 @@ final class RecipeTableViewCell: UITableViewCell, UITableViewRegisterable {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func setCellEffect() {
+        self.contentView.layer.cornerRadius = 20
+        self.contentView.layer.masksToBounds = true
+    }
+    
     private func setLayout() {
-        addSubviews([recipeImage, recipeContainerView])
+        contentView.addSubviews([recipeImage, recipeContainerView])
         recipeContainerView.addSubviews([recipeName, recipeIc, channelName, channelSite])
         
         recipeImage.snp.makeConstraints {
@@ -68,17 +71,17 @@ final class RecipeTableViewCell: UITableViewCell, UITableViewRegisterable {
         
         recipeContainerView.snp.makeConstraints {
             $0.top.equalTo(recipeImage.snp.bottom)
-            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.leading.bottom.trailing.equalToSuperview()
         }
         
         recipeName.snp.makeConstraints {
             $0.top.equalTo(recipeContainerView.snp.top)
-            $0.leading.equalTo(recipeContainerView.snp.leading)
+            $0.leading.equalTo(recipeContainerView.snp.leading).inset(16)
         }
         
         recipeIc.snp.makeConstraints {
             $0.top.equalTo(recipeName.snp.bottom).offset(3)
-            $0.leading.equalTo(recipeContainerView.snp.leading)
+            $0.leading.equalTo(recipeContainerView.snp.leading).inset(16)
             $0.width.height.equalTo(18)
             $0.bottom.equalTo(recipeContainerView.snp.bottom).inset(86)
         }
