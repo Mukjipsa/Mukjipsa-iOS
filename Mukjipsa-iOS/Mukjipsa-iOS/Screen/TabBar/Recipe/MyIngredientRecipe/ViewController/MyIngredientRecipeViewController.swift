@@ -14,15 +14,16 @@ final class MyRecipeViewController: BaseViewController {
     
     // MARK: - Property
     
+    // MARK: - UI Property
+    
     private let mainNaviView = RecipeNaviView(frame: CGRect(), mode: .mainRecipe)
     private lazy var recipeTableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         return tableView
     }()
-    
-    // MARK: - UI Property
     
     // MARK: - Life Cycle
     
@@ -33,8 +34,6 @@ final class MyRecipeViewController: BaseViewController {
         registerCell()
         setDelegate()
     }
-    
-    // MARK: - @objc
     
     // MARK: - Custom Method
     private func setLayout() {
@@ -55,6 +54,10 @@ final class MyRecipeViewController: BaseViewController {
     private func registerCell() {
         RecipeTableViewCell.register(target: recipeTableView)
     }
+    
+    private func registerSectionHeader() {
+        recipeTableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: RecipeHeaderView.className)
+    }
 
     private func setDelegate() {
         recipeTableView.delegate = self
@@ -65,6 +68,7 @@ final class MyRecipeViewController: BaseViewController {
 }
 
 extension MyRecipeViewController: UITableViewDelegate {
+    
 }
 
 extension MyRecipeViewController: UITableViewDataSource {
@@ -79,5 +83,9 @@ extension MyRecipeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 355
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return RecipeHeaderView(reuseIdentifier: RecipeHeaderView.className, mode: .totalRecipe)
     }
 }
