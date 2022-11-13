@@ -42,6 +42,7 @@ class OnboardingTitleView: BaseView {
     // MARK: - UIComponents
     private let titleView = UIView()
     private let titleLabel = UILabel()
+    private let explainLabel = UILabel()
     
     override func setUI() {
         titleView.do {
@@ -55,10 +56,17 @@ class OnboardingTitleView: BaseView {
             $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.h2)
             $0.text = viewType.setText
         }
+        
+        explainLabel.do {
+            $0.textColor = .gray1
+            $0.font = .sh2
+            $0.text = Constant.String.Onboarding.selectHaveIngredient
+            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh2)
+        }
     }
     
     override func setLayout() {
-        titleView.addSubview(titleLabel)
+        titleView.addSubviews([titleLabel, explainLabel])
         addSubview(titleView)
         
         titleView.snp.makeConstraints {
@@ -69,6 +77,11 @@ class OnboardingTitleView: BaseView {
         
         titleLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
+        }
+        
+        explainLabel.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(6)
+            $0.directionalHorizontalEdges.equalToSuperview()
         }
     }
 }
