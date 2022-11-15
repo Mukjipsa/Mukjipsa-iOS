@@ -18,6 +18,8 @@
 		3B52C533291CED2E00368728 /* MJSCancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B52C532291CED2E00368728 /* MJSCancelButton.swift */; };
 		3B52C541291D00F000368728 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B52C540291D00F000368728 /* SplashView.swift */; };
 		3B52C543291D030400368728 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B52C542291D030400368728 /* SplashViewController.swift */; };
+		3B52C548291D0B0400368728 /* MeatAndSeaFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B52C547291D0B0400368728 /* MeatAndSeaFoodView.swift */; };
+		3B52C54B291D26E200368728 /* ProgressBarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B52C54A291D26E200368728 /* ProgressBarImageView.swift */; };
 		3B7CB5A42918D8C400EF73B9 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */; };
 		3B7CB5A62918D9B100EF73B9 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */; };
 		3B7CB5A82918EEBC00EF73B9 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */; };
@@ -33,11 +35,15 @@
 		3BBE2F0A291C999100C002E4 /* FinishOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE2F09291C999100C002E4 /* FinishOnboardingView.swift */; };
 		3BBE2F0C291C9DC700C002E4 /* FinishOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE2F0B291C9DC700C002E4 /* FinishOnboardingViewController.swift */; };
 		3BC1D7452914A414007B2FA2 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1D7442914A414007B2FA2 /* UIFont+.swift */; };
-		3BC6004A291B8C2000CAA317 /* IngredientCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC60049291B8C2000CAA317 /* IngredientCollectionViewCell.swift */; };
+		3BC6004A291B8C2000CAA317 /* BasicIngredientCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC60049291B8C2000CAA317 /* BasicIngredientCollectionViewCell.swift */; };
 		3BC6004D291B8FAD00CAA317 /* UICollectionViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC6004C291B8FAD00CAA317 /* UICollectionViewRegisterable.swift */; };
 		3BC6004F291B8FCB00CAA317 /* UITableViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC6004E291B8FCB00CAA317 /* UITableViewRegisterable.swift */; };
 		3BC60052291B93B700CAA317 /* getClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC60051291B93B700CAA317 /* getClassName.swift */; };
 		3BC60054291B9A1000CAA317 /* BasicIngredientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC60053291B9A1000CAA317 /* BasicIngredientModel.swift */; };
+		3BD0B3EA291FF3400084D624 /* MeatAndSeaFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0B3E9291FF3400084D624 /* MeatAndSeaFoodViewController.swift */; };
+		3BD0B3EC2920051B0084D624 /* MeatAndSeaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0B3EB2920051B0084D624 /* MeatAndSeaModel.swift */; };
+		3BD0B3F429200C520084D624 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0B3F329200C520084D624 /* OnboardingCollectionViewCell.swift */; };
+		3BDE3421292295A8009FB7C6 /* OnboardingCollectionViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE3420292295A8009FB7C6 /* OnboardingCollectionViewSectionHeader.swift */; };
 		4A05449E2914AB31000B6B1F /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449D2914AB31000B6B1F /* UIColor+.swift */; };
 		4A0544A02914B102000B6B1F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449F2914B102000B6B1F /* Image.swift */; };
 		4A0CEC1D291A50F900372D46 /* MJSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0CEC1C291A50F900372D46 /* MJSButton.swift */; };
@@ -82,6 +88,8 @@
 		3B52C532291CED2E00368728 /* MJSCancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJSCancelButton.swift; sourceTree = "<group>"; };
 		3B52C540291D00F000368728 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3B52C542291D030400368728 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3B52C547291D0B0400368728 /* MeatAndSeaFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatAndSeaFoodView.swift; sourceTree = "<group>"; };
+		3B52C54A291D26E200368728 /* ProgressBarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarImageView.swift; sourceTree = "<group>"; };
 		3B7CB5A32918D8C400EF73B9 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
 		3B7CB5A52918D9B100EF73B9 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		3B7CB5A72918EEBC00EF73B9 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -97,11 +105,15 @@
 		3BBE2F09291C999100C002E4 /* FinishOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishOnboardingView.swift; sourceTree = "<group>"; };
 		3BBE2F0B291C9DC700C002E4 /* FinishOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishOnboardingViewController.swift; sourceTree = "<group>"; };
 		3BC1D7442914A414007B2FA2 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
-		3BC60049291B8C2000CAA317 /* IngredientCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BC60049291B8C2000CAA317 /* BasicIngredientCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicIngredientCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BC6004C291B8FAD00CAA317 /* UICollectionViewRegisterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewRegisterable.swift; sourceTree = "<group>"; };
 		3BC6004E291B8FCB00CAA317 /* UITableViewRegisterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRegisterable.swift; sourceTree = "<group>"; };
 		3BC60051291B93B700CAA317 /* getClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getClassName.swift; sourceTree = "<group>"; };
 		3BC60053291B9A1000CAA317 /* BasicIngredientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicIngredientModel.swift; sourceTree = "<group>"; };
+		3BD0B3E9291FF3400084D624 /* MeatAndSeaFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatAndSeaFoodViewController.swift; sourceTree = "<group>"; };
+		3BD0B3EB2920051B0084D624 /* MeatAndSeaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatAndSeaModel.swift; sourceTree = "<group>"; };
+		3BD0B3F329200C520084D624 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BDE3420292295A8009FB7C6 /* OnboardingCollectionViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewSectionHeader.swift; sourceTree = "<group>"; };
 		4A05449D2914AB31000B6B1F /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4A05449F2914B102000B6B1F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		4A0CEC1C291A50F900372D46 /* MJSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJSButton.swift; sourceTree = "<group>"; };
@@ -217,9 +229,44 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		3B52C544291D0A8D00368728 /* MeatAndSeaFood */ = {
+			isa = PBXGroup;
+			children = (
+				3B52C549291D25D800368728 /* ViewModel */,
+				3B52C546291D0AA800368728 /* ViewConstroller */,
+				3B52C545291D0AA300368728 /* View */,
+			);
+			path = MeatAndSeaFood;
+			sourceTree = "<group>";
+		};
+		3B52C545291D0AA300368728 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B52C547291D0B0400368728 /* MeatAndSeaFoodView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B52C546291D0AA800368728 /* ViewConstroller */ = {
+			isa = PBXGroup;
+			children = (
+				3BD0B3E9291FF3400084D624 /* MeatAndSeaFoodViewController.swift */,
+			);
+			path = ViewConstroller;
+			sourceTree = "<group>";
+		};
+		3B52C549291D25D800368728 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3BD0B3EB2920051B0084D624 /* MeatAndSeaModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3B958DFB2919F97E00902A1D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				3B52C544291D0A8D00368728 /* MeatAndSeaFood */,
 				3BBE2F06291C995B00C002E4 /* FinishOnboarding */,
 				3BBE2EFF291C904B00C002E4 /* BasicIngredient */,
 				3BBE2EFE291C902500C002E4 /* Guide */,
@@ -263,7 +310,7 @@
 		3B958E002919FB1F00902A1D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3BC60049291B8C2000CAA317 /* IngredientCollectionViewCell.swift */,
+				3BC60049291B8C2000CAA317 /* BasicIngredientCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -332,8 +379,8 @@
 		3BBE2F0D291CA47B00C002E4 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				3B958E04291A10D300902A1D /* OnboardingNaviView.swift */,
-				3B958E0F291A4E4500902A1D /* OnboardingTitleView.swift */,
+				3BD0B3F02920073D0084D624 /* Cells */,
+				3BD0B3EF2920072D0084D624 /* Views */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -361,6 +408,25 @@
 				3BC60051291B93B700CAA317 /* getClassName.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3BD0B3EF2920072D0084D624 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B958E04291A10D300902A1D /* OnboardingNaviView.swift */,
+				3B958E0F291A4E4500902A1D /* OnboardingTitleView.swift */,
+				3B52C54A291D26E200368728 /* ProgressBarImageView.swift */,
+				3BDE3420292295A8009FB7C6 /* OnboardingCollectionViewSectionHeader.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3BD0B3F02920073D0084D624 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3BD0B3F329200C520084D624 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		4A39D5012919451600554DF4 /* Frameworks */ = {
@@ -718,10 +784,11 @@
 				3BC60052291B93B700CAA317 /* getClassName.swift in Sources */,
 				4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */,
 				3B8B25DD2918F4F200A46331 /* UITextField+.swift in Sources */,
+				3B52C54B291D26E200368728 /* ProgressBarImageView.swift in Sources */,
 				3B2C337E291B84810097A402 /* (null) in Sources */,
 				3B7CB5A42918D8C400EF73B9 /* UITextView+.swift in Sources */,
 				4AF80C3429111CD800B084CA /* MyIngredientViewController.swift in Sources */,
-				3BC6004A291B8C2000CAA317 /* IngredientCollectionViewCell.swift in Sources */,
+				3BC6004A291B8C2000CAA317 /* BasicIngredientCollectionViewCell.swift in Sources */,
 				4A90A2E5290024CF006BC1B2 /* Color.swift in Sources */,
 				3BBE2F05291C969100C002E4 /* GuideViewController.swift in Sources */,
 				3B52C541291D00F000368728 /* SplashView.swift in Sources */,
@@ -729,6 +796,7 @@
 				3B52C543291D030400368728 /* SplashViewController.swift in Sources */,
 				3B958E10291A4E4500902A1D /* OnboardingTitleView.swift in Sources */,
 				3B7CB5A82918EEBC00EF73B9 /* UIButton+.swift in Sources */,
+				3BD0B3EA291FF3400084D624 /* MeatAndSeaFoodViewController.swift in Sources */,
 				4AF80C2A29111AF800B084CA /* TabBarController.swift in Sources */,
 				3B2A9975291BD30500479C86 /* LoginViewController.swift in Sources */,
 				4AF80C1D290D84B300B084CA /* NetworkResult.swift in Sources */,
@@ -750,12 +818,16 @@
 				3B52C531291CEA8000368728 /* MJSAlert.swift in Sources */,
 				3BBE2F0C291C9DC700C002E4 /* FinishOnboardingViewController.swift in Sources */,
 				4A90A2F129002507006BC1B2 /* API.swift in Sources */,
+				3BDE3421292295A8009FB7C6 /* OnboardingCollectionViewSectionHeader.swift in Sources */,
+				3BD0B3EC2920051B0084D624 /* MeatAndSeaModel.swift in Sources */,
 				4AF80C0D290D6E0600B084CA /* UIView+.swift in Sources */,
 				3B958E05291A10D300902A1D /* OnboardingNaviView.swift in Sources */,
 				4A90A2CA2900207C006BC1B2 /* SceneDelegate.swift in Sources */,
 				4AF80C21290D95E100B084CA /* GeneralService.swift in Sources */,
 				3B958E0C291A372700902A1D /* String.swift in Sources */,
 				4A90A2FC29002537006BC1B2 /* Constant.swift in Sources */,
+				3B52C548291D0B0400368728 /* MeatAndSeaFoodView.swift in Sources */,
+				3BD0B3F429200C520084D624 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,6 +966,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 665TA4D5B9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mukjipsa-iOS/Resource/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -921,6 +994,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 665TA4D5B9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mukjipsa-iOS/Resource/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

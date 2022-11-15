@@ -33,7 +33,7 @@ class OnboardingTitleView: BaseView {
     }
     
     // MARK: - Properties
-    var viewType: ViewType = .meat {
+    var viewType: ViewType = .saurce {
         didSet {
             setText()
         }
@@ -43,6 +43,15 @@ class OnboardingTitleView: BaseView {
     private let titleView = UIView()
     private let titleLabel = UILabel()
     private let explainLabel = UILabel()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func setUI() {
         titleView.do {
@@ -66,21 +75,22 @@ class OnboardingTitleView: BaseView {
     }
     
     override func setLayout() {
-        titleView.addSubviews([titleLabel, explainLabel])
-        addSubview(titleView)
+        titleView.addSubview(titleLabel)
+        addSubviews([titleView, explainLabel])
         
         titleView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
             $0.height.equalTo(35)
+            $0.top.leading.equalToSuperview()
             $0.width.greaterThanOrEqualTo(titleLabel.snp.width).offset(20)
         }
         
         titleLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
+            $0.centerX.equalToSuperview()
         }
         
         explainLabel.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(6)
+            $0.top.equalTo(titleView.snp.bottom).offset(6)
             $0.directionalHorizontalEdges.equalToSuperview()
         }
     }
