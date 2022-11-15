@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class IngredientCollectionViewCell: UICollectionViewCell, UICollectionViewRegisterable {
+class BasicIngredientCollectionViewCell: UICollectionViewCell, UICollectionViewRegisterable {
     // MARK: - Properties
     static var isFromNib: Bool = false
     
@@ -32,7 +32,7 @@ class IngredientCollectionViewCell: UICollectionViewCell, UICollectionViewRegist
     
 }
 
-extension IngredientCollectionViewCell {
+extension BasicIngredientCollectionViewCell {
     private func setUI() {
         contentView.do {
             $0.layer.cornerRadius = 16
