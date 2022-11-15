@@ -7,23 +7,24 @@
 
 import UIKit
 
-class MeatAndSeaFoodViewController: UIViewController {
-
+class MeatAndSeaFoodViewController: BaseViewController {
+    // MARK: - UI Components
+    private let meatAndSeaFoodView = MeatAndSeaFoodView()
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setLayout()
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension MeatAndSeaFoodViewController {
+    private func setLayout() {
+        view.addSubview(meatAndSeaFoodView)
+        
+        meatAndSeaFoodView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
     }
-    */
-
 }
