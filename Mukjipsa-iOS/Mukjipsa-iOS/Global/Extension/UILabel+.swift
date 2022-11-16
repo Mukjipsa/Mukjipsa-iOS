@@ -11,7 +11,7 @@ extension UILabel {
     /// 자간 조정 메서드
     func setletterSpacing(_ spacing: CGFloat) {
         let attributedStr = NSMutableAttributedString(string: self.text ?? "")
-        attributedStr.addAttribute(NSAttributedString.Key.kern, value: spacing, range: NSMakeRange(0, attributedStr.length))
+        attributedStr.addAttribute(NSAttributedString.Key.kern, value: spacing, range: NSRange(location: 0, length: attributedStr.length))
         self.attributedText = attributedStr
     }
     
@@ -21,7 +21,7 @@ extension UILabel {
             let attributedStr = NSMutableAttributedString(string: text)
             let style = NSMutableParagraphStyle()
             style.lineSpacing = lineSpacing
-            attributedStr.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSMakeRange(0, attributedStr.length))
+            attributedStr.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSRange(location: 0, length: attributedStr.length))
             self.attributedText = attributedStr
         }
     }
@@ -43,7 +43,7 @@ extension UILabel {
     }
     
     /// 자간과 lineHeight를 모두 조정하는 메서드
-    func setlineHeightAndletterSpacing(lineHeightMultiple: CGFloat = 1.5,
+    func setLineHeightAndletterSpacing(lineHeightMultiple: CGFloat = 1.5,
                                        letterSpacing: CGFloat = -0.02) {
         if let text = self.text {
             let style = NSMutableParagraphStyle()

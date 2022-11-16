@@ -11,7 +11,7 @@ extension UITextView {
     /// 자간 설정 메서드
     func setletterSpacing(spacing: CGFloat) {
         let attributedStr = NSMutableAttributedString(string: self.text ?? "")
-        attributedStr.addAttribute(NSAttributedString.Key.kern, value: spacing, range: NSMakeRange(0, attributedStr.length))
+        attributedStr.addAttribute(NSAttributedString.Key.kern, value: spacing, range: NSRange(location: 0, length: attributedStr.length))
         self.attributedText = attributedStr
     }
     
@@ -21,7 +21,7 @@ extension UITextView {
             let attributedStr = NSMutableAttributedString(string: text)
             let style = NSMutableParagraphStyle()
             style.lineSpacing = linespaicing
-            attributedStr.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSMakeRange(0, attributedStr.length))
+            attributedStr.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSRange(location: 0, length: attributedStr.length))
             self.attributedText = attributedStr
         }
     }

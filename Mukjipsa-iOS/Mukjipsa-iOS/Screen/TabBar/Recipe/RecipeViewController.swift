@@ -14,7 +14,7 @@ final class RecipeViewController: UIViewController {
     // MARK: - Property
     
     // MARK: - UI Property
-    private let testLabel = UILabel().then{
+    private let testLabel = UILabel().then {
         $0.text = "안녕하세요 테스트 중"
     }
     
@@ -33,7 +33,7 @@ final class RecipeViewController: UIViewController {
     private func setUI() {
         testLabel.do {
             $0.font = .t1
-            $0.setlineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.t1)
+            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.t1)
         }
     }
 }

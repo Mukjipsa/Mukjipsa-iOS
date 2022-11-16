@@ -9,7 +9,7 @@ import UIKit
 
 extension UIButton {
     /// 자간과 lineHeight를 모두 조정하는 메서드
-    func setletterSpacingAndlineHeight(lineHieghtMultiple: CGFloat = 1.5,
+    func setLineHeightAndletterSpacing(lineHieghtMultiple: CGFloat = 1.5,
                                        letterSpacing: CGFloat = -0.02) {
         if let text = self.titleLabel?.text {
             let style = NSMutableParagraphStyle()
