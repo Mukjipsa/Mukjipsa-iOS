@@ -48,14 +48,14 @@ extension IngredientCollectionViewCell {
             $0.text = "육류"
             $0.textColor = .dark
             $0.font = .b2
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.b2)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.b2, Constant.LetterSpacing.b2)
         }
         
         ingredientLabel.do {
             $0.text = "소고기"
             $0.textColor = .dark
             $0.font = .h1
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.h1)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.h1, Constant.LetterSpacing.h1)
         }
     }
     
