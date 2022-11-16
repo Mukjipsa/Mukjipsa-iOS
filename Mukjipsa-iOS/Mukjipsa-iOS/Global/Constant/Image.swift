@@ -17,5 +17,9 @@ extension Constant {
             static let logoImage = UIImage(named: "imgLogo")
             static let kakaoLogin = UIImage(named: "kakaoLoginButton")
         }
+        
+        struct Splash {
+            static let MJSlogo = UIImage(named: "MJSlogo")
+        }
     }
 }

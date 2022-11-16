@@ -38,7 +38,7 @@ class OnboardingNaviView: BaseView {
         laterButton.do {
             $0.titleLabel?.text = Constant.String.Onboarding.doItLater
             $0.titleLabel?.font = .b2
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.b2)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.b2, Constant.LetterSpacing.b2)
             $0.titleLabel?.textColor = .gray3
         }
     }

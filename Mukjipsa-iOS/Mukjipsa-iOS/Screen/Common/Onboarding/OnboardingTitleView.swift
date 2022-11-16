@@ -52,7 +52,7 @@ class OnboardingTitleView: BaseView {
         titleLabel.do {
             $0.textColor = .primary
             $0.font = .h2
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.h2)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.h2, Constant.LetterSpacing.h2)
             $0.text = viewType.setText
         }
     }
