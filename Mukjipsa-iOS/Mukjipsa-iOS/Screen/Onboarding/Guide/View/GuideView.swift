@@ -28,7 +28,7 @@ class GuideView: BaseView {
             $0.text = Constant.String.Onboarding.guideMessage
             $0.textColor = .dark
             $0.numberOfLines = 2
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh1)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.sh1, Constant.LetterSpacing.sh1)
             $0.font = .sh1
             $0.textAlignment = .center
         }
@@ -37,7 +37,7 @@ class GuideView: BaseView {
             $0.text = Constant.String.Onboarding.subGuideMessage
             $0.textColor = .gray2
             $0.numberOfLines = 2
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh2)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.sh2, Constant.LetterSpacing.sh2)
             $0.font = .sh2
             $0.textAlignment = .center
         }
@@ -46,7 +46,7 @@ class GuideView: BaseView {
             $0.text = Constant.String.Onboarding.gotoMessage
             $0.textColor = .gray2
             $0.numberOfLines = 2
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh2)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.sh2, Constant.LetterSpacing.sh2)
             $0.font = .sh2
             $0.textAlignment = .center
         }

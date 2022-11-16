@@ -50,10 +50,9 @@ extension UILabel {
             let attributes: [NSAttributedString.Key: Any] = [
                 .paragraphStyle: style,
                 .kern: letterSpacing,
-                .baselineOffset: (fontSize * Constant.lineHeight - fontSize) / 4
+                .baselineOffset: (fontSize * Constant.lineHeight - fontSize) / 2 - font.leading
             ]
             
-            print(style.maximumLineHeight, fontSize, "ZZ")
             let attributedStr = NSMutableAttributedString(string: text,
                                                           attributes: attributes)
             

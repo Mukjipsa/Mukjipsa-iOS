@@ -45,14 +45,14 @@ class MJSAlert: BaseView {
             $0.textAlignment = .center
             $0.textColor = .dark
             $0.font = .h2
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.h2)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.h2, Constant.LetterSpacing.h2)
         }
         
         explainLabel.do {
             $0.textAlignment = .center
             $0.textColor = .gray2
             $0.font = .b2
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.b2)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.b2, Constant.LetterSpacing.b2)
         }
         
         cancelButton.do {

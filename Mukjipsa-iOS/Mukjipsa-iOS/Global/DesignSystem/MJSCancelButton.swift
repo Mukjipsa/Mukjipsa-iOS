@@ -28,6 +28,6 @@ extension MJSCancelButton {
         setTitleColor(.gray3, for: .normal)
         titleLabel?.font = .bu1
         titleLabel?.textAlignment = .center
-        setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.bu1)
+        setLineHeightAndletterSpacing(Constant.fontSize.bu1, Constant.LetterSpacing.bu1)
     }
 }

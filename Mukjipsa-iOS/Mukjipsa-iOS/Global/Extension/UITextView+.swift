@@ -37,7 +37,6 @@ extension UITextView {
                 .baselineOffset: (fontSize * Constant.lineHeight - fontSize) / 4
             ]
             
-            print(style.maximumLineHeight, fontSize, "ZZ")
             let attributedStr = NSMutableAttributedString(string: text,
                                                           attributes: attributes)
             
