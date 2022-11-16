@@ -15,7 +15,13 @@ class MeatAndSeaFoodView: BaseView, UICollectionViewDelegate {
     private let naviView = OnboardingNaviView()
     private let progressBarImageView = ProgressBarImageView()
     private var titleView = OnboardingTitleView()
-//    private var collectionViewSectionHeader = OnboardingCollectionViewSectionHeader()
+    private var collectionViewSectionMeat = OnboardingCollectionViewSectionHeader().then {
+        $0.viewType = .meat
+    }
+    private var collectionViewSectionSea = OnboardingCollectionViewSectionHeader().then {
+        $0.viewType = .sea
+    }
+    private var collectionViewSectionFooter = OnboardingCollectionViewSectionFooter()
     private lazy var ingredientCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createSectionLayout())
         return collectionView
@@ -58,7 +64,7 @@ class MeatAndSeaFoodView: BaseView, UICollectionViewDelegate {
         
         ingredientCollectionView.snp.makeConstraints {
             $0.top.equalTo(titleView.snp.bottom).offset(28)
-            $0.directionalHorizontalEdges.equalToSuperview()
+            $0.directionalHorizontalEdges.equalToSuperview().inset(16)
             $0.bottom.equalTo(nextButton.snp.top).offset(-52)
         }
         
@@ -73,6 +79,14 @@ class MeatAndSeaFoodView: BaseView, UICollectionViewDelegate {
 extension MeatAndSeaFoodView {
     private func registerCell() {
         OnboardingCollectionViewCell.register(target: ingredientCollectionView)
+        ingredientCollectionView.register(
+            OnboardingCollectionViewSectionHeader.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: OnboardingCollectionViewSectionHeader.className)
+        ingredientCollectionView.register(
+            OnboardingCollectionViewSectionFooter.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+            withReuseIdentifier: OnboardingCollectionViewSectionFooter.className)
     }
     
     private func setDelegate() {
@@ -84,10 +98,8 @@ extension MeatAndSeaFoodView {
         return UICollectionViewCompositionalLayout { (sectionNum, _) -> NSCollectionLayoutSection? in
             switch sectionNum {
             case 0:
-//                self.collectionViewSectionHeader.configure(.meat)
                 return self.createLayout()
             case 1:
-//                self.collectionViewSectionHeader.configure(.sea)
                 return self.createLayout()
             default:
                 return self.createLayout()
@@ -103,7 +115,7 @@ extension MeatAndSeaFoodView {
             widthDimension: .estimated(ingredientCellWidth),
             heightDimension: .absolute(ingredientCellHeight))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.edgeSpacing = NSCollectionLayoutEdgeSpacing(leading: .fixed(8), top: nil, trailing: nil, bottom: nil)
+        item.edgeSpacing = NSCollectionLayoutEdgeSpacing(leading: nil, top: nil, trailing: .fixed(8), bottom: nil)
 
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .absolute(358),
@@ -115,9 +127,24 @@ extension MeatAndSeaFoodView {
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 10
         
-//        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
-//        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: collectionViewSectionHeader.className, alignment: .bottomLeading)
-//        section.boundarySupplementaryItems = [header]
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(50))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .topLeading)
+        header.pinToVisibleBounds = true
+        
+        let footerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(1))
+        let footer = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: footerSize,
+            elementKind: UICollectionView.elementKindSectionFooter,
+            alignment: .bottomLeading)
+        section.boundarySupplementaryItems = [header, footer]
+
         return section
     }
 }
@@ -143,14 +170,38 @@ extension MeatAndSeaFoodView: UICollectionViewDataSource {
             for: indexPath) as? OnboardingCollectionViewCell else { return UICollectionViewCell()}
         switch indexPath.section {
         case 0:
-//            self.collectionViewSectionHeader.viewType = .meat
             ingredientCell.configure(meatModelList[indexPath.row])
         case 1:
-//            self.collectionViewSectionHeader.viewType = .sea
             ingredientCell.configure(seaModelList[indexPath.row])
         default:
             return UICollectionViewCell()
         }
         return ingredientCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            if indexPath.section == 0 {
+                let header = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: UICollectionView.elementKindSectionHeader,
+                    withReuseIdentifier: collectionViewSectionMeat.className,
+                    for: indexPath)
+//                header.prepareForReuse()
+                return header
+            } else {
+                let header = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: UICollectionView.elementKindSectionHeader,
+                    withReuseIdentifier: collectionViewSectionSea.className,
+                    for: indexPath)
+//                header.prepareForReuse()
+                return header
+            }
+        case UICollectionView.elementKindSectionFooter:
+            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: collectionViewSectionFooter.className, for: indexPath)
+            return footer
+        default:
+            return UICollectionReusableView()
+        }
     }
 }

@@ -35,6 +35,7 @@
 		3BBE2F0A291C999100C002E4 /* FinishOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE2F09291C999100C002E4 /* FinishOnboardingView.swift */; };
 		3BBE2F0C291C9DC700C002E4 /* FinishOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE2F0B291C9DC700C002E4 /* FinishOnboardingViewController.swift */; };
 		3BC1D7452914A414007B2FA2 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1D7442914A414007B2FA2 /* UIFont+.swift */; };
+		3BC2FECD2923E8CB00D26DE4 /* OnboardingCollectionViewSectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FECC2923E8CB00D26DE4 /* OnboardingCollectionViewSectionFooter.swift */; };
 		3BC6004A291B8C2000CAA317 /* BasicIngredientCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC60049291B8C2000CAA317 /* BasicIngredientCollectionViewCell.swift */; };
 		3BC6004D291B8FAD00CAA317 /* UICollectionViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC6004C291B8FAD00CAA317 /* UICollectionViewRegisterable.swift */; };
 		3BC6004F291B8FCB00CAA317 /* UITableViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC6004E291B8FCB00CAA317 /* UITableViewRegisterable.swift */; };
@@ -105,6 +106,7 @@
 		3BBE2F09291C999100C002E4 /* FinishOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishOnboardingView.swift; sourceTree = "<group>"; };
 		3BBE2F0B291C9DC700C002E4 /* FinishOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishOnboardingViewController.swift; sourceTree = "<group>"; };
 		3BC1D7442914A414007B2FA2 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		3BC2FECC2923E8CB00D26DE4 /* OnboardingCollectionViewSectionFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewSectionFooter.swift; sourceTree = "<group>"; };
 		3BC60049291B8C2000CAA317 /* BasicIngredientCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicIngredientCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BC6004C291B8FAD00CAA317 /* UICollectionViewRegisterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewRegisterable.swift; sourceTree = "<group>"; };
 		3BC6004E291B8FCB00CAA317 /* UITableViewRegisterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRegisterable.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 				3B958E0F291A4E4500902A1D /* OnboardingTitleView.swift */,
 				3B52C54A291D26E200368728 /* ProgressBarImageView.swift */,
 				3BDE3420292295A8009FB7C6 /* OnboardingCollectionViewSectionHeader.swift */,
+				3BC2FECC2923E8CB00D26DE4 /* OnboardingCollectionViewSectionFooter.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -794,6 +797,7 @@
 				3B52C541291D00F000368728 /* SplashView.swift in Sources */,
 				4A0544A02914B102000B6B1F /* Image.swift in Sources */,
 				3B52C543291D030400368728 /* SplashViewController.swift in Sources */,
+				3BC2FECD2923E8CB00D26DE4 /* OnboardingCollectionViewSectionFooter.swift in Sources */,
 				3B958E10291A4E4500902A1D /* OnboardingTitleView.swift in Sources */,
 				3B7CB5A82918EEBC00EF73B9 /* UIButton+.swift in Sources */,
 				3BD0B3EA291FF3400084D624 /* MeatAndSeaFoodViewController.swift in Sources */,
