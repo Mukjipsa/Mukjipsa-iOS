@@ -22,7 +22,7 @@ final class RecipeTagCell: UICollectionViewCell, UICollectionViewRegisterable {
         $0.backgroundColor = .dark
     }
     private let ingredientLabel = UILabel().then {
-        $0.text = "고구마"
+        $0.text = "치즈"
         $0.font = .b2
         $0.textColor = .gray1
         $0.setLineHeightAndletterSpacing(Constant.fontSize.b2, Constant.LetterSpacing.b2)
@@ -51,16 +51,16 @@ final class RecipeTagCell: UICollectionViewCell, UICollectionViewRegisterable {
     }
     
     private func setLayout() {
-        contentView.addSubviews([ingredientIc, ingredientLabel])
+        addSubviews([ingredientIc, ingredientLabel])
         
         ingredientIc.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(4.5)
             $0.leading.equalToSuperview().inset(12)
+            $0.centerY.equalToSuperview()
             $0.height.width.equalTo(16)
         }
         
         ingredientLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(2)
+            $0.centerY.equalTo(ingredientIc)
             $0.leading.equalTo(ingredientIc.snp.trailing).offset(4)
             $0.trailing.equalToSuperview().inset(12)
         }

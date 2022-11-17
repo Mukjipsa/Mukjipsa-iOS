@@ -19,11 +19,11 @@ final class RecipeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
     // MARK: - UI Property
     
     private lazy var recipeCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createTagLayout())
 //        collectionView.showsHorizontalScrollIndicator = false
 //        collectionView.showsVerticalScrollIndicator = false
-        collectionView.backgroundColor = .blue
+        collectionView.isScrollEnabled = false
+        collectionView.backgroundColor = .clear
         return collectionView
     }()
     
@@ -61,8 +61,8 @@ final class RecipeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
         super.init(frame: frame)
         setLayout()
         setCellEffect()
-//        setDelegate()
-//        registerCell()
+        setDelegate()
+        registerCell()
 //        backgroundColor = .primary
     }
     
@@ -70,11 +70,6 @@ final class RecipeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0.0, left: 0.0, bottom: 16.0, right: 0.0))
-//    }
     
     // MARK: - Custom Method
     
@@ -84,14 +79,14 @@ final class RecipeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
         contentView.layer.applySketchShadow(color: .black, alpha: 0.1, x: 0.0, y: 0.0, blur: 10.0, spread: 0.0)
     }
     
-//    private func setDelegate() {
-//        recipeCollectionView.delegate = self
-//        recipeCollectionView.dataSource = self
-//    }
+    private func setDelegate() {
+        recipeCollectionView.delegate = self
+        recipeCollectionView.dataSource = self
+    }
     
-//    private func registerCell() {
-//        RecipeCollectionViewCell.register(target: recipeCollectionView)
-//    }
+    private func registerCell() {
+        RecipeTagCell.register(target: recipeCollectionView)
+    }
     
     private func setLayout() {
         contentView.addSubview(recipeContainerView)
@@ -134,38 +129,36 @@ final class RecipeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
         }
     }
     
-//    private func createTagLayout() -> UICollectionViewLayout {
-//        let estimatedWidth: CGFloat = 80
-//        let absoluteHeight: CGFloat = 25
-//        let itemSize = NSCollectionLayoutSize(
-//            widthDimension: .estimated(estimatedWidth),
-//            heightDimension: .absolute(absoluteHeight))
-//        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//        let groupSize = NSCollectionLayoutSize(
-//            widthDimension: .fractionalWidth(1.0),
-//            heightDimension: .absolute(absoluteHeight))
-//        let group = NSCollectionLayoutGroup.horizontal(
-//            layoutSize: groupSize,
-//            subitems: [item])
-//        group.interItemSpacing = .fixed(4)
-//        let section = NSCollectionLayoutSection(group: group)
-//        section.interGroupSpacing = 8
-//        let layout = UICollectionViewCompositionalLayout(section: section)
-//        return layout
-//    }
+    private func createTagLayout() -> UICollectionViewLayout {
+        let estimatedWidth: CGFloat = 80
+        let absoluteHeight: CGFloat = 25
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .estimated(estimatedWidth),
+            heightDimension: .absolute(absoluteHeight))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(absoluteHeight))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.interItemSpacing = .fixed(4)
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 8
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
+    }
 }
 
-//extension RecipeTableViewCell: UICollectionViewDelegate {
-//
-//}
-//
-//extension RecipeTableViewCell: UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 10
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        guard let recipeCell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCollectionViewCell.className, for: indexPath) as? RecipeCollectionViewCell else { return UICollectionViewCell() }
-//        return recipeCell
-//    }
-//}
+extension RecipeCollectionViewCell: UICollectionViewDelegate {
+
+}
+
+extension RecipeCollectionViewCell: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let recipeCell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeTagCell.className, for: indexPath) as? RecipeTagCell else { return UICollectionViewCell() }
+        return recipeCell
+    }
+}
