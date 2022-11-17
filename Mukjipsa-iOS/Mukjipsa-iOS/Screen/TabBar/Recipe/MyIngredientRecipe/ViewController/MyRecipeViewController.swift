@@ -25,7 +25,6 @@ final class MyRecipeViewController: BaseViewController {
     // MARK: - UI Property
     
     private let mainNaviView = RecipeNaviView(frame: CGRect(), mode: .mainRecipe)
-//    private lazy var recipeHeaderView = RecipeHeaderView(frame: .zero, mode: .myRecipe)
     private lazy var recipeCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createSectionLayout())
         collectionView.backgroundColor = .clear
