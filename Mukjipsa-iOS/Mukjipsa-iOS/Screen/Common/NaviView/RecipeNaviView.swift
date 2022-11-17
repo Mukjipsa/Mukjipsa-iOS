@@ -81,14 +81,14 @@ final class RecipeNaviView: UIView {
                 $0.text = "돈코츠 라멘"
                 $0.font = .h1
                 $0.textColor = .dark
-                $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.h1)
+                $0.setLineHeightAndletterSpacing(Constant.fontSize.h1, Constant.LetterSpacing.h1)
             }
         case .bookmark:
             titleLabel.do {
                 $0.text = Constant.String.Recipe.bookmark
                 $0.font = .h1
                 $0.textColor = .dark
-                $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.h1)
+                $0.setLineHeightAndletterSpacing(Constant.fontSize.h1, Constant.LetterSpacing.h1)
             }
             
             searchButton.do {
@@ -99,7 +99,7 @@ final class RecipeNaviView: UIView {
                 $0.text = Constant.String.Recipe.myIngredient
                 $0.font = .h1
                 $0.textColor = .dark
-                $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.h1)
+                $0.setLineHeightAndletterSpacing(Constant.fontSize.h1, Constant.LetterSpacing.h1)
             }
         }
     }

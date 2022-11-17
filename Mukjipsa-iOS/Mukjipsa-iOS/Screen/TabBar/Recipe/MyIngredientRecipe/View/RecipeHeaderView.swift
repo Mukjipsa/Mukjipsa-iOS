@@ -47,7 +47,7 @@ final class RecipeHeaderView: UITableViewHeaderFooterView {
                 $0.font = .sh1
                 $0.textColor = .dark
                 $0.numberOfLines = 0
-                $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh1)
+                $0.setLineHeightAndletterSpacing(Constant.fontSize.sh1, 0)
             case .totalRecipe:
                 $0.text = """
                           윤돌님,
@@ -56,7 +56,7 @@ final class RecipeHeaderView: UITableViewHeaderFooterView {
                 $0.font = .sh1
                 $0.textColor = .dark
                 $0.numberOfLines = 0
-                $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh1)
+                $0.setLineHeightAndletterSpacing(Constant.fontSize.sh1, Constant.LetterSpacing.sh1)
             }
         }
 
@@ -64,7 +64,7 @@ final class RecipeHeaderView: UITableViewHeaderFooterView {
             $0.text = "레시피 15개"
             $0.font = .b4
             $0.textColor = .dark
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.b4)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.b4, Constant.LetterSpacing.b4)
         }
 
         possibleIc.do {
@@ -75,7 +75,7 @@ final class RecipeHeaderView: UITableViewHeaderFooterView {
             $0.text = "바로 가능"
             $0.font = .b4
             $0.textColor = .dark
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.b4)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.b4, Constant.LetterSpacing.b4)
         }
     }
     

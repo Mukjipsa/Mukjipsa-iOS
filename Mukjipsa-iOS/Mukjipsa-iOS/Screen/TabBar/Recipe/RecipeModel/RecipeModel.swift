@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct RecipeModel {
+struct RecipeModel: Hashable {
     var recipeImage: UIImage?
     var channelIc: UIImage?
     var recipeName: String
