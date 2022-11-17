@@ -9,7 +9,7 @@ import UIKit
 
 extension Constant {
     static let spacing = -0.02
-    static let lineHeight = 1.5
+    static let lineHeight = 1.25
     
     struct fontSize {
         // fontSize
@@ -47,4 +47,5 @@ extension Constant {
         static let b4 = Constant.fontSize.b4 * spacing
         static let b5 = Constant.fontSize.b5 * spacing
     }
+    
 }
