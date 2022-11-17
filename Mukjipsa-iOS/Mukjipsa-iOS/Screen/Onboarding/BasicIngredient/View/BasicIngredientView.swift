@@ -88,7 +88,7 @@ class BasicIngredientView: BaseView {
 
 extension BasicIngredientView {
     private func registerCell() {
-        IngredientCollectionViewCell.register(target: ingredientCollectionView)
+        BasicIngredientCollectionViewCell.register(target: ingredientCollectionView)
     }
     
     private func setDelegate() {
@@ -122,8 +122,8 @@ extension BasicIngredientView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let ingredientCell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: IngredientCollectionViewCell.className,
-            for: indexPath) as? IngredientCollectionViewCell else { return UICollectionViewCell()}
+            withReuseIdentifier: BasicIngredientCollectionViewCell.className,
+            for: indexPath) as? BasicIngredientCollectionViewCell else { return UICollectionViewCell()}
         ingredientCell.configure(basicIngredientModelList[indexPath.row])
         return ingredientCell
     }
