@@ -10,25 +10,28 @@ import UIKit
 import SnapKit
 import Then
 
-final class RecipeHeaderView: UITableViewHeaderFooterView {
+final class RecipeHeaderView: UICollectionReusableView {
+    
+    static let identifier = "RecipeHeaderView"
     
     enum RecipeHeader {
         case myRecipe
         case totalRecipe
     }
 
-    var recipeHedaer: RecipeHeader
+    var recipeHeader: RecipeHeader = .myRecipe {
+        didSet {
+            setUI()
+        }
+    }
     
     private let recipeHeaderLabel = UILabel()
     private let recipeNumberLabel = UILabel()
     private let possibleIc = UIView()
     private let possibleLabel = UILabel()
     
-    init(reuseIdentifier: String?, mode: RecipeHeader) {
-        self.recipeHedaer = mode
-        super.init(reuseIdentifier: reuseIdentifier)
-
-        setUI(mode: recipeHedaer)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setLayout()
     }
     
@@ -36,10 +39,9 @@ final class RecipeHeaderView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setUI(mode: RecipeHeader) {
+    func setUI() {
         recipeHeaderLabel.do {
-            switch mode {
-            case .myRecipe:
+            if recipeHeader == .myRecipe {
                 $0.text = """
                           짠미님,
                           바로 해먹을 수 있어요!
@@ -47,8 +49,8 @@ final class RecipeHeaderView: UITableViewHeaderFooterView {
                 $0.font = .sh1
                 $0.textColor = .dark
                 $0.numberOfLines = 0
-                $0.setLineHeightAndletterSpacing(Constant.fontSize.sh1, 0)
-            case .totalRecipe:
+                $0.setLineHeightAndletterSpacing(Constant.fontSize.sh1, Constant.LetterSpacing.sh1)
+            } else {
                 $0.text = """
                           윤돌님,
                           오늘은 이런 메뉴 어때요?

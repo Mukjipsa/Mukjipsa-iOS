@@ -20,9 +20,6 @@ final class RecipeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
     
     private lazy var recipeCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createTagLayout())
-//        collectionView.showsHorizontalScrollIndicator = false
-//        collectionView.showsVerticalScrollIndicator = false
-        collectionView.isScrollEnabled = false
         collectionView.backgroundColor = .clear
         return collectionView
     }()
@@ -38,8 +35,11 @@ final class RecipeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
         $0.setLineHeightAndletterSpacing(Constant.fontSize.h1, Constant.LetterSpacing.h1)
     }
     
-    private let recipeIc = UIView().then {
-        $0.backgroundColor = .primary
+    private let recipeIc = UILabel().then {
+        $0.text = "아이콘"
+        $0.font = .b3
+        $0.textColor = .gray2
+        $0.setLineHeightAndletterSpacing(Constant.fontSize.b3, Constant.LetterSpacing.b3)
     }
     private let channelName = UILabel().then {
         $0.text = "채널 이름"
@@ -53,6 +53,20 @@ final class RecipeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
         $0.font = .b4
         $0.textColor = .gray3
         $0.setLineHeightAndletterSpacing(Constant.fontSize.b4, Constant.LetterSpacing.b4)
+    }
+    
+    private lazy var channelStackView = UIStackView().then {
+        $0.axis = .horizontal
+        $0.alignment = .center
+        $0.distribution = .equalSpacing
+        $0.spacing = 4
+    }
+    
+    private lazy var recipeStackView = UIStackView().then {
+        $0.axis = .vertical
+        $0.alignment = .leading
+        $0.distribution = .equalSpacing
+        $0.spacing = 2
     }
     
     // MARK: - Life Cycle
@@ -90,7 +104,12 @@ final class RecipeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
     
     private func setLayout() {
         contentView.addSubview(recipeContainerView)
-        recipeContainerView.addSubviews([recipeImage, recipeName, recipeIc, channelName, channelSite, recipeCollectionView])
+        channelStackView.addArrangedSubview(recipeIc)
+        channelStackView.addArrangedSubview(channelName)
+        channelStackView.addArrangedSubview(channelSite)
+        recipeStackView.addArrangedSubview(recipeName)
+        recipeStackView.addArrangedSubview(channelStackView)
+        recipeContainerView.addSubviews([recipeImage, recipeStackView, recipeCollectionView])
         
         recipeContainerView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -101,31 +120,16 @@ final class RecipeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
             $0.height.equalTo(201)
         }
         
-        recipeName.snp.makeConstraints {
+        recipeStackView.snp.makeConstraints {
             $0.top.equalTo(recipeImage.snp.bottom).offset(16)
             $0.leading.equalToSuperview().inset(16)
         }
         
-        recipeIc.snp.makeConstraints {
-            $0.top.equalTo(recipeName.snp.bottom).offset(3)
-            $0.leading.equalToSuperview().inset(16)
-            $0.width.height.equalTo(18)
-        }
-        
-        channelName.snp.makeConstraints {
-            $0.top.equalTo(recipeName.snp.bottom).offset(2)
-            $0.leading.equalTo(recipeIc.snp.trailing).offset(4)
-        }
-        
-        channelSite.snp.makeConstraints {
-            $0.centerY.equalTo(channelName)
-            $0.leading.equalTo(channelName.snp.trailing).offset(4)
-        }
-        
         recipeCollectionView.snp.makeConstraints {
-            $0.top.equalTo(recipeIc.snp.bottom).offset(13)
+            $0.top.equalTo(recipeStackView.snp.bottom).offset(13)
             $0.leading.trailing.equalToSuperview().inset(16)
             $0.bottom.equalToSuperview().inset(16)
+            $0.height.equalTo(58)
         }
     }
     

@@ -23,7 +23,7 @@ final class RecipeNaviView: UIView {
     var naviMode: NaviMode
     
     private let naviView = UIView()
-    private let logo = UIImageView()
+    private let logo = UIView()
     private let searchButton = UIButton()
     private let backButton = UIButton()
     private let titleLabel = UILabel()
@@ -118,6 +118,7 @@ final class RecipeNaviView: UIView {
             logo.snp.makeConstraints {
                 $0.leading.equalToSuperview().inset(16)
                 $0.centerY.equalToSuperview()
+                $0.height.width.equalTo(23.6)
             }
             
             searchButton.snp.makeConstraints {

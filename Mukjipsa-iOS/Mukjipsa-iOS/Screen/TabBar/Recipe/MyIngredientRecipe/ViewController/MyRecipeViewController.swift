@@ -25,8 +25,9 @@ final class MyRecipeViewController: BaseViewController {
     // MARK: - UI Property
     
     private let mainNaviView = RecipeNaviView(frame: CGRect(), mode: .mainRecipe)
+//    private lazy var recipeHeaderView = RecipeHeaderView(frame: .zero, mode: .myRecipe)
     private lazy var recipeCollectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: creteRecipeLayout())
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createSectionLayout())
         collectionView.backgroundColor = .clear
         return collectionView
     }()
@@ -49,6 +50,8 @@ final class MyRecipeViewController: BaseViewController {
     
     private func registerCell() {
         RecipeCollectionViewCell.register(target: recipeCollectionView)
+        
+        recipeCollectionView.register(RecipeHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: RecipeHeaderView.identifier)
     }
     
     private func setLayout() {
@@ -65,40 +68,58 @@ final class MyRecipeViewController: BaseViewController {
         }
     }
     
-    private func creteRecipeLayout() -> UICollectionViewLayout {
-        let fractionalWidth: CGFloat = 358
-        let estimatedHeight: CGFloat = 355
+    private func createSectionLayout() -> UICollectionViewLayout {
+        return UICollectionViewCompositionalLayout { (sectionNumber, _) -> NSCollectionLayoutSection? in
+            switch sectionNumber {
+            case 0:
+                return self.createRecipeLayout()
+            default:
+                return self.createRecipeLayout()
+            }
+        }
+    }
+    
+    private func createRecipeLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .estimated(estimatedHeight))
+            heightDimension: .estimated(375))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0)
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .estimated(estimatedHeight))
+            heightDimension: .absolute(375))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 1)
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        return layout
-    }
-    
-    private func setDataSource() {
-        print("보이냐")
-        dataSource = UICollectionViewDiffableDataSource<Section, RecipeModel>(collectionView: recipeCollectionView) { (collectionView, indexPath, itemIdentifier) -> UICollectionViewCell? in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCollectionViewCell.className, for: indexPath) as? RecipeCollectionViewCell else { return UICollectionViewCell() }
-            print("아 ㅅㅂ 진짜")
-            return cell
-        }
-    }
-    
-    private func updateSnapshot() {
-        snapshot = NSDiffableDataSourceSnapshot<Section, RecipeModel>()
-        snapshot.appendSections([.recipe])
-        snapshot.appendItems(recipes, toSection: .recipe)
-        dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
+        
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(152))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top)
+
+        section.boundarySupplementaryItems = [header]
+        return section
     }
 }
+    
+//    private func setDataSource() {
+//        print("보이냐")
+//        dataSource = UICollectionViewDiffableDataSource<Section, RecipeModel>(collectionView: recipeCollectionView) { (collectionView, indexPath, itemIdentifier) -> UICollectionViewCell? in
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCollectionViewCell.className, for: indexPath) as? RecipeCollectionViewCell else { return UICollectionViewCell() }
+//            return cell
+//        }
+//    }
+//
+//    private func updateSnapshot() {
+//        snapshot = NSDiffableDataSourceSnapshot<Section, RecipeModel>()
+//        snapshot.appendSections([.recipe])
+//        snapshot.appendItems(recipes, toSection: .recipe)
+//        dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
+//    }
+//}
 
 extension MyRecipeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -109,5 +130,16 @@ extension MyRecipeViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCollectionViewCell.className, for: indexPath) as? RecipeCollectionViewCell else { return UICollectionViewCell() }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: RecipeHeaderView.identifier, for: indexPath) as? RecipeHeaderView else { return UICollectionReusableView() }
+            header.recipeHeader = .myRecipe
+            return header
+        default:
+            return UICollectionReusableView()
+        }
     }
 }

@@ -41,6 +41,13 @@ final class RecipeTagCell: UICollectionViewCell, UICollectionViewRegisterable {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        ingredientIc.preferredMaxLayoutWidth = ingredientIc.frame.size.width
+//        ingredientLabel.preferredMaxLayoutWidth = ingredientLabel.frame.size.width
+//        super.layoutSubviews()
+//    }
+    
     // MARK: - Custom Method
     
     private func setCellEffect() {
