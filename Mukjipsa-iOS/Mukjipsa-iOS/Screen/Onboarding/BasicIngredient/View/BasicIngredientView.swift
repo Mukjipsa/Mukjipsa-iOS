@@ -36,14 +36,14 @@ class BasicIngredientView: BaseView {
         basicTitleLabel.do {
             $0.text = Constant.String.Onboarding.selectMessage
             $0.font = .sh1
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh1)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.sh1, Constant.LetterSpacing.sh1)
             $0.textColor = .black
         }
         
         basicSubTitleLabel.do {
             $0.text = Constant.String.Onboarding.subSelectMessage
             $0.font = .sh2
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh2)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.sh2, Constant.LetterSpacing.sh2)
             $0.textColor = UIColor(red: 118.0/255.0, green: 124.0/255.0, blue: 141.0/255.0, alpha: 1.0)
             $0.numberOfLines = 2
         }

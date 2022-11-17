@@ -95,6 +95,12 @@ class OnboardingCollectionViewSectionHeader: UICollectionReusableView {
         super.prepareForReuse()
         categoryLabel.text = viewType.category
       }
+}
+
+extension OnboardingCollectionViewSectionHeader {
+    private func setText(_ viewType: ViewType) {
+        categoryLabel.text = viewType.category
+    }
     
     private func setUI() {
         categoryImageView.do {
@@ -104,7 +110,7 @@ class OnboardingCollectionViewSectionHeader: UICollectionReusableView {
         categoryLabel.do {
             $0.font = .h1
             $0.textColor = .dark
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.h1)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.h1, Constant.LetterSpacing.h1)
             $0.text = viewType.category
         }
     }

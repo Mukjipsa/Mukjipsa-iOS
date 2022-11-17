@@ -26,14 +26,14 @@ class FinishOnboardingView: BaseView {
         finishLabel.do {
             $0.text = Constant.String.Onboarding.finishMessage
             $0.font = .sh1
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh1)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.sh1, Constant.LetterSpacing.sh1)
             $0.textColor = .dark
         }
         
         subFinishLabel.do {
             $0.text = Constant.String.Onboarding.subFinishMessage
             $0.font = .sh2
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh2)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.sh2, Constant.LetterSpacing.sh2)
             $0.textColor = .gray2
             $0.numberOfLines = 0
             $0.textAlignment = .center

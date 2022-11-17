@@ -12,6 +12,7 @@ import Then
 
 class OnboardingCollectionViewSectionFooter: UICollectionReusableView {
     // MARK: - UI Components
+    private let baseView = UIView()
     private let separatorView = UIView()
     
     override init(frame: CGRect) {
@@ -31,15 +32,31 @@ extension OnboardingCollectionViewSectionFooter {
         separatorView.do {
             $0.backgroundColor = .gray3
         }
+        
+        baseView.do {
+            $0.backgroundColor = .clear
+        }
     }
     
     private func setLayout() {
-        addSubview(separatorView)
+        addSubview(baseView)
+        baseView.addSubview(separatorView)
         
         separatorView.snp.makeConstraints {
             $0.directionalHorizontalEdges.equalToSuperview()
             $0.height.equalTo(1)
+            $0.centerY.equalToSuperview()
+        }
+        
+        baseView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+}
+
+extension OnboardingCollectionViewSectionFooter {
+    public func configure() {
+        separatorView.backgroundColor = .clear
+        
     }
 }

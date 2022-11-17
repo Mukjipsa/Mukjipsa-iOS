@@ -34,6 +34,12 @@ class OnboardingCollectionViewCell: UICollectionViewCell, UICollectionViewRegist
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override var isSelected: Bool {
+        didSet {
+            isSelected ? selectedCellUI() : unSelectedCellUI()
+        }
+    }
 }
 
 extension OnboardingCollectionViewCell {
@@ -47,22 +53,23 @@ extension OnboardingCollectionViewCell {
         
         checkImageView.do {
             $0.image = Constant.Image.Onboarding.checkIcon
+            $0.isHidden = !isSelected
         }
         
         ingredientLabel.do {
             $0.textColor = .gray3
             $0.font = .sh2
-            $0.setLineHeightAndletterSpacing(letterSpacing: Constant.LetterSpacing.sh2)
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.sh2, Constant.LetterSpacing.sh2)
         }
     }
     
     private func setLayout() {
         contentView.addSubviews([checkImageView, ingredientLabel])
         
-//        checkImageView.snp.makeConstraints {
-//            $0.directionalVerticalEdges.equalToSuperview().inset(10)
-//            $0.leading.equalToSuperview().inset(20)
-//        }
+        checkImageView.snp.makeConstraints {
+            $0.directionalVerticalEdges.equalToSuperview().inset(10)
+            $0.leading.equalToSuperview().inset(20)
+        }
         
         ingredientLabel.snp.makeConstraints {
             $0.directionalVerticalEdges.equalToSuperview().inset(6)
@@ -72,5 +79,60 @@ extension OnboardingCollectionViewCell {
     
     func configure(_ model: ingredientModel) {
         ingredientLabel.text = model.ingredientName
+    }
+    
+    private func setUnselectedUI() {
+        contentView.do {
+            $0.layer.borderColor = UIColor.gray3.cgColor
+        }
+        
+        ingredientLabel.do {
+            $0.textColor = .gray3
+            $0.font = .sh2
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.sh2, Constant.LetterSpacing.sh2)
+        }
+    }
+    
+    private func setUnselectedLayout() {
+        contentView.addSubviews([checkImageView, ingredientLabel])
+                
+        ingredientLabel.snp.remakeConstraints {
+            $0.directionalVerticalEdges.equalToSuperview().inset(6)
+            $0.directionalHorizontalEdges.equalToSuperview().inset(20)
+        }
+    }
+    
+    private func setSeletedUI() {
+        contentView.do {
+            $0.layer.borderColor = UIColor.dark.cgColor
+        }
+        
+        ingredientLabel.do {
+            $0.textColor = .dark
+            $0.font = .bu1
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.bu1, Constant.LetterSpacing.bu1)
+        }
+    }
+    
+    private func setseletedLayout() {
+        checkImageView.snp.remakeConstraints {
+            $0.directionalVerticalEdges.equalToSuperview().inset(10)
+            $0.leading.equalToSuperview().inset(20)
+        }
+
+        ingredientLabel.snp.remakeConstraints {
+            $0.directionalVerticalEdges.equalToSuperview().inset(6)
+            $0.leading.equalTo(checkImageView.snp.trailing).offset(4)
+        }
+    }
+    
+    private func selectedCellUI() {
+        setSeletedUI()
+        setseletedLayout()
+    }
+    
+    private func unSelectedCellUI() {
+        setUnselectedUI()
+        setUnselectedLayout()
     }
 }

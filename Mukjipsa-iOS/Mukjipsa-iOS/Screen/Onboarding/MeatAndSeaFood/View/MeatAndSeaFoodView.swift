@@ -11,16 +11,11 @@ import SnapKit
 import Then
 
 class MeatAndSeaFoodView: BaseView, UICollectionViewDelegate {
+    // MARK: - Properties
+    
     // MARK: - UI Components
     private let naviView = OnboardingNaviView()
     private let progressBarImageView = ProgressBarImageView()
-    private var titleView = OnboardingTitleView()
-    private var collectionViewSectionMeat = OnboardingCollectionViewSectionHeader().then {
-        $0.viewType = .meat
-    }
-    private var collectionViewSectionSea = OnboardingCollectionViewSectionHeader().then {
-        $0.viewType = .sea
-    }
     private var collectionViewSectionFooter = OnboardingCollectionViewSectionFooter()
     private lazy var ingredientCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createSectionLayout())
@@ -38,12 +33,11 @@ class MeatAndSeaFoodView: BaseView, UICollectionViewDelegate {
     override func setUI() {
         naviView.viewType = .notBasic
         progressBarImageView.viewType = .One
-        titleView.viewType = .meat
         nextButton.setTitle(Constant.String.Onboarding.nextButton, for: .normal)
     }
     
     override func setLayout() {
-        addSubviews([naviView, progressBarImageView, titleView, ingredientCollectionView, nextButton])
+        addSubviews([naviView, progressBarImageView, ingredientCollectionView, nextButton])
         
         naviView.snp.makeConstraints {
             $0.directionalHorizontalEdges.top.equalToSuperview()
@@ -55,17 +49,11 @@ class MeatAndSeaFoodView: BaseView, UICollectionViewDelegate {
             $0.top.equalTo(naviView.snp.bottom).offset(16)
             $0.directionalHorizontalEdges.equalToSuperview()
         }
-        
-        titleView.snp.makeConstraints {
-            $0.top.equalTo(progressBarImageView.snp.bottom).offset(16)
-            $0.leading.equalToSuperview().offset(16)
-            $0.height.equalTo(65)
-        }
-        
+
         ingredientCollectionView.snp.makeConstraints {
-            $0.top.equalTo(titleView.snp.bottom).offset(28)
+            $0.top.equalTo(progressBarImageView.snp.bottom).offset(16)
             $0.directionalHorizontalEdges.equalToSuperview().inset(16)
-            $0.bottom.equalTo(nextButton.snp.top).offset(-52)
+            $0.bottom.equalTo(nextButton.snp.top).offset(-8)
         }
         
         nextButton.snp.makeConstraints {
@@ -79,6 +67,7 @@ class MeatAndSeaFoodView: BaseView, UICollectionViewDelegate {
 extension MeatAndSeaFoodView {
     private func registerCell() {
         OnboardingCollectionViewCell.register(target: ingredientCollectionView)
+        OnboardingTitleViewCell.register(target: ingredientCollectionView)
         ingredientCollectionView.register(
             OnboardingCollectionViewSectionHeader.self,
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
@@ -95,16 +84,31 @@ extension MeatAndSeaFoodView {
     }
     
     private func createSectionLayout() -> UICollectionViewCompositionalLayout {
-        return UICollectionViewCompositionalLayout { (sectionNum, _) -> NSCollectionLayoutSection? in
-            switch sectionNum {
+        return UICollectionViewCompositionalLayout { (sectionNumber, _) -> NSCollectionLayoutSection? in
+            switch sectionNumber {
             case 0:
-                return self.createLayout()
-            case 1:
-                return self.createLayout()
+                return self.createTitleLayout()
             default:
                 return self.createLayout()
             }
         }
+    }
+    
+    private func createTitleLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(65))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(65))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 28, trailing: 0)
+        
+        return section
     }
     
     private func createLayout() -> NSCollectionLayoutSection {
@@ -129,21 +133,22 @@ extension MeatAndSeaFoodView {
         
         let headerSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
-            heightDimension: .absolute(50))
+            heightDimension: .absolute(30))
         let header = NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: headerSize,
             elementKind: UICollectionView.elementKindSectionHeader,
             alignment: .topLeading)
-        header.pinToVisibleBounds = true
         
         let footerSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
-            heightDimension: .absolute(1))
+            heightDimension: .absolute(64))
         let footer = NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: footerSize,
             elementKind: UICollectionView.elementKindSectionFooter,
             alignment: .bottomLeading)
+        
         section.boundarySupplementaryItems = [header, footer]
+        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 0, bottom: 0, trailing: 0)
 
         return section
     }
@@ -151,13 +156,15 @@ extension MeatAndSeaFoodView {
 
 extension MeatAndSeaFoodView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 3
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return meatModelList.count
+            return 1
         case 1:
+            return meatModelList.count
+        case 2:
             return seaModelList.count
         default:
             return 0
@@ -165,13 +172,18 @@ extension MeatAndSeaFoodView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let titleCell = collectionView.dequeueReusableCell(withReuseIdentifier: OnboardingTitleViewCell.className, for: indexPath) as? OnboardingTitleViewCell else { return UICollectionViewCell() }
         guard let ingredientCell = collectionView.dequeueReusableCell(
             withReuseIdentifier: OnboardingCollectionViewCell.className,
             for: indexPath) as? OnboardingCollectionViewCell else { return UICollectionViewCell()}
         switch indexPath.section {
         case 0:
-            ingredientCell.configure(meatModelList[indexPath.row])
+            titleCell.viewType = .meat
+            return titleCell
         case 1:
+            ingredientCell.configure(meatModelList[indexPath.row])
+        case 2:
             ingredientCell.configure(seaModelList[indexPath.row])
         default:
             return UICollectionViewCell()
@@ -182,23 +194,14 @@ extension MeatAndSeaFoodView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            if indexPath.section == 0 {
-                let header = collectionView.dequeueReusableSupplementaryView(
-                    ofKind: UICollectionView.elementKindSectionHeader,
-                    withReuseIdentifier: collectionViewSectionMeat.className,
-                    for: indexPath)
-//                header.prepareForReuse()
-                return header
-            } else {
-                let header = collectionView.dequeueReusableSupplementaryView(
-                    ofKind: UICollectionView.elementKindSectionHeader,
-                    withReuseIdentifier: collectionViewSectionSea.className,
-                    for: indexPath)
-//                header.prepareForReuse()
-                return header
-            }
+            let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionHeader,
+                withReuseIdentifier: OnboardingCollectionViewSectionHeader.className,
+                for: indexPath)
+            return header
         case UICollectionView.elementKindSectionFooter:
             let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: collectionViewSectionFooter.className, for: indexPath)
+            footer.isHidden = indexPath.section == numberOfSections(in: ingredientCollectionView)-1
             return footer
         default:
             return UICollectionReusableView()
