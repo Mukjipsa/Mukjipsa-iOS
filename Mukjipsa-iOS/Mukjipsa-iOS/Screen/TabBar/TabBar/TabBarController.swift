@@ -56,7 +56,7 @@ extension TabBarController {
 //                                    tabBarSelectedImg:  ?? UIImage(),
 //                                    renderingMode: .alwaysTemplate)
         
-        let recipeViewController = RecipeViewController()
+        let recipeViewController = MyRecipeViewController()
         let myIngredientViewController = MyIngredientViewController()
         let BookMarkViewController = BookMarkViewController()
         

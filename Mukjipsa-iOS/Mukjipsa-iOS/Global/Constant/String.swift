@@ -58,5 +58,10 @@ extension Constant {
             static let doitNowButton = "지금 하기"
             static let continueButton = "계속 하기"
         }
+        
+        struct Recipe {
+            static let myIngredient = "나의 재료"
+            static let bookmark = "북마크"
+        }
     }
 }
