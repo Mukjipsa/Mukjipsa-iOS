@@ -38,19 +38,19 @@ final class MyRecipeViewController: BaseViewController {
         
         setLayout()
         registerCell()
-//        setDataSource()
-//        updateSnapshot()
-        
-        recipeCollectionView.dataSource = self
-        recipeCollectionView.delegate = self
+        setDelegate()
     }
     
     // MARK: - Custom Method
     
     private func registerCell() {
         RecipeCollectionViewCell.register(target: recipeCollectionView)
-        
         recipeCollectionView.register(RecipeHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: RecipeHeaderView.identifier)
+    }
+    
+    private func setDelegate() {
+        recipeCollectionView.dataSource = self
+        recipeCollectionView.delegate = self
     }
     
     private func setLayout() {
@@ -65,42 +65,6 @@ final class MyRecipeViewController: BaseViewController {
             $0.top.equalTo(mainNaviView.snp.bottom)
             $0.leading.trailing.bottom.equalToSuperview()
         }
-    }
-    
-    private func createSectionLayout() -> UICollectionViewLayout {
-        return UICollectionViewCompositionalLayout { (sectionNumber, _) -> NSCollectionLayoutSection? in
-            switch sectionNumber {
-            case 0:
-                return self.createRecipeLayout()
-            default:
-                return self.createRecipeLayout()
-            }
-        }
-    }
-    
-    private func createRecipeLayout() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .estimated(375))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0)
-        let groupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(375))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 1)
-        let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
-        
-        let headerSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(152))
-        let header = NSCollectionLayoutBoundarySupplementaryItem(
-            layoutSize: headerSize,
-            elementKind: UICollectionView.elementKindSectionHeader,
-            alignment: .top)
-
-        section.boundarySupplementaryItems = [header]
-        return section
     }
 }
     
