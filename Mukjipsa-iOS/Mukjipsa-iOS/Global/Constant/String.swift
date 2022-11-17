@@ -43,6 +43,7 @@ extension Constant {
                                           맞춤 레시피를 알려드릴게요
                                           """
             static let gotoMyRecipe = "맞춤 레시피 보러가기"
+            static let selectHaveIngredient = "가지고 있는 재료를 선택해요!"
         }
         
         struct Alert {

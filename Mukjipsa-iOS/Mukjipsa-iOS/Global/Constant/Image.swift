@@ -21,5 +21,13 @@ extension Constant {
         struct Splash {
             static let MJSlogo = UIImage(named: "MJSlogo")
         }
+        
+        struct Onboarding {
+            static let progressBarImageOne = UIImage(named: "progressBarOne")
+            static let progressBarImageTwo = UIImage(named: "progressBarTwo")
+            static let progressBarImageThree = UIImage(named: "progressBarThree")
+            static let progressBarImageFour = UIImage(named: "progressBarFour")
+            static let checkIcon = UIImage(named: "icCheck")
+        }
     }
 }

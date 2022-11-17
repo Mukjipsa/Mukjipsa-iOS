@@ -10,7 +10,8 @@ import UIKit
 import SnapKit
 import Then
 
-class OnboardingTitleView: BaseView {
+class OnboardingTitleViewCell: UICollectionViewCell, UICollectionViewRegisterable {
+    
     // MARK: - View Style
     enum ViewType {
         case meat
@@ -33,7 +34,8 @@ class OnboardingTitleView: BaseView {
     }
     
     // MARK: - Properties
-    var viewType: ViewType = .meat {
+    static var isFromNib: Bool = false
+    var viewType: ViewType = .saurce {
         didSet {
             setText()
         }
@@ -42,8 +44,22 @@ class OnboardingTitleView: BaseView {
     // MARK: - UIComponents
     private let titleView = UIView()
     private let titleLabel = UILabel()
+    private let explainLabel = UILabel()
     
-    override func setUI() {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUI()
+        setLayout()
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension OnboardingTitleViewCell {
+    private func setUI() {
         titleView.do {
             $0.backgroundColor = .gray4
             $0.layer.cornerRadius = 6
@@ -55,25 +71,36 @@ class OnboardingTitleView: BaseView {
             $0.setLineHeightAndletterSpacing(Constant.fontSize.h2, Constant.LetterSpacing.h2)
             $0.text = viewType.setText
         }
+        
+        explainLabel.do {
+            $0.textColor = .gray1
+            $0.font = .sh2
+            $0.text = Constant.String.Onboarding.selectHaveIngredient
+            $0.setLineHeightAndletterSpacing(Constant.fontSize.sh2, Constant.LetterSpacing.sh2)
+        }
     }
     
-    override func setLayout() {
+    private func setLayout() {
         titleView.addSubview(titleLabel)
-        addSubview(titleView)
+        addSubviews([titleView, explainLabel])
         
         titleView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
             $0.height.equalTo(35)
+            $0.top.leading.equalToSuperview()
             $0.width.greaterThanOrEqualTo(titleLabel.snp.width).offset(20)
         }
         
         titleLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
+            $0.centerX.equalToSuperview()
+        }
+        
+        explainLabel.snp.makeConstraints {
+            $0.top.equalTo(titleView.snp.bottom).offset(6)
+            $0.directionalHorizontalEdges.equalToSuperview()
         }
     }
-}
-
-extension OnboardingTitleView {
+    
     private func setText() {
         titleLabel.text = viewType.setText
     }
