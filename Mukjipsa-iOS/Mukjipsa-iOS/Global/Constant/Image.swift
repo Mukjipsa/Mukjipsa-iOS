@@ -23,8 +23,6 @@ extension Constant {
         }
         
         struct Onboarding {
-//            static func progressBarImage(at number: String) -> UIImage? {
-//               return UIImage(named: "progressBar\(number)") }
             static let progressBarImageOne = UIImage(named: "progressBarOne")
             static let progressBarImageTwo = UIImage(named: "progressBarTwo")
             static let progressBarImageThree = UIImage(named: "progressBarThree")

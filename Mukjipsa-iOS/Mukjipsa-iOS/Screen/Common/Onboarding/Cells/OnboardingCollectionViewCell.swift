@@ -37,7 +37,7 @@ class OnboardingCollectionViewCell: UICollectionViewCell, UICollectionViewRegist
     
     override var isSelected: Bool {
         didSet {
-            isSelected ? selectedCellUI() : unSelectedCellUI()
+            isSelected ? setSeletedUI() : setUnselectedUI()
         }
     }
 }
@@ -66,14 +66,10 @@ extension OnboardingCollectionViewCell {
     private func setLayout() {
         contentView.addSubviews([checkImageView, ingredientLabel])
         
-        checkImageView.snp.makeConstraints {
-            $0.directionalVerticalEdges.equalToSuperview().inset(10)
-            $0.leading.equalToSuperview().inset(20)
-        }
-        
         ingredientLabel.snp.makeConstraints {
             $0.directionalVerticalEdges.equalToSuperview().inset(6)
-            $0.directionalHorizontalEdges.equalToSuperview().inset(20)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().inset(20)
         }
     }
     
@@ -93,18 +89,13 @@ extension OnboardingCollectionViewCell {
         }
     }
     
-    private func setUnselectedLayout() {
-        contentView.addSubviews([checkImageView, ingredientLabel])
-                
-        ingredientLabel.snp.remakeConstraints {
-            $0.directionalVerticalEdges.equalToSuperview().inset(6)
-            $0.directionalHorizontalEdges.equalToSuperview().inset(20)
-        }
-    }
-    
     private func setSeletedUI() {
         contentView.do {
             $0.layer.borderColor = UIColor.dark.cgColor
+        }
+        
+        checkImageView.do {
+            $0.image = Constant.Image.Onboarding.checkIcon
         }
         
         ingredientLabel.do {
@@ -112,27 +103,5 @@ extension OnboardingCollectionViewCell {
             $0.font = .bu1
             $0.setLineHeightAndletterSpacing(Constant.fontSize.bu1, Constant.LetterSpacing.bu1)
         }
-    }
-    
-    private func setseletedLayout() {
-        checkImageView.snp.remakeConstraints {
-            $0.directionalVerticalEdges.equalToSuperview().inset(10)
-            $0.leading.equalToSuperview().inset(20)
-        }
-
-        ingredientLabel.snp.remakeConstraints {
-            $0.directionalVerticalEdges.equalToSuperview().inset(6)
-            $0.leading.equalTo(checkImageView.snp.trailing).offset(4)
-        }
-    }
-    
-    private func selectedCellUI() {
-        setSeletedUI()
-        setseletedLayout()
-    }
-    
-    private func unSelectedCellUI() {
-        setUnselectedUI()
-        setUnselectedLayout()
     }
 }

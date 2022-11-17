@@ -19,6 +19,7 @@ class MeatAndSeaFoodView: BaseView, UICollectionViewDelegate {
     private var collectionViewSectionFooter = OnboardingCollectionViewSectionFooter()
     private lazy var ingredientCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createSectionLayout())
+        collectionView.allowsMultipleSelection = true
         return collectionView
     }()
     private let nextButton = MJSButton()
@@ -112,7 +113,7 @@ extension MeatAndSeaFoodView {
     }
     
     private func createLayout() -> NSCollectionLayoutSection {
-        let ingredientCellWidth: CGFloat = 81
+        let ingredientCellWidth: CGFloat = 100
         let ingredientCellHeight: CGFloat = 36
 
         let itemSize = NSCollectionLayoutSize(
