@@ -1,8 +1,8 @@
 //
-//  MyIngredientRecipeViewController.swift
+//  TotalRecipeViewController.swift
 //  Mukjipsa-iOS
 //
-//  Created by 황찬미 on 2022/11/16.
+//  Created by 황찬미 on 2022/11/18.
 //
 
 import UIKit
@@ -10,20 +10,9 @@ import UIKit
 import SnapKit
 import Then
 
-enum Section: CaseIterable {
-    case recipe
-}
-
-final class MyRecipeViewController: BaseViewController {
-    
-    // MARK: - Property
-    
-    private var dataSource: UICollectionViewDiffableDataSource<Section, RecipeModel>!
-    private var snapshot: NSDiffableDataSourceSnapshot<Section, RecipeModel>!
-    private var recipes: [RecipeModel] = []
+final class TotalRecipeViewController: BaseViewController {
     
     // MARK: - UI Property
-    
     private let mainNaviView = RecipeNaviView(frame: CGRect(), mode: .mainRecipe)
     private lazy var recipeCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createSectionLayout())
@@ -45,6 +34,7 @@ final class MyRecipeViewController: BaseViewController {
     
     private func registerCell() {
         RecipeCollectionViewCell.register(target: recipeCollectionView)
+        
         recipeCollectionView.register(RecipeHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: RecipeHeaderView.identifier)
     }
     
@@ -67,24 +57,8 @@ final class MyRecipeViewController: BaseViewController {
         }
     }
 }
-    
-//    private func setDataSource() {
-//        print("보이냐")
-//        dataSource = UICollectionViewDiffableDataSource<Section, RecipeModel>(collectionView: recipeCollectionView) { (collectionView, indexPath, itemIdentifier) -> UICollectionViewCell? in
-//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCollectionViewCell.className, for: indexPath) as? RecipeCollectionViewCell else { return UICollectionViewCell() }
-//            return cell
-//        }
-//    }
-//
-//    private func updateSnapshot() {
-//        snapshot = NSDiffableDataSourceSnapshot<Section, RecipeModel>()
-//        snapshot.appendSections([.recipe])
-//        snapshot.appendItems(recipes, toSection: .recipe)
-//        dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
-//    }
-//}
 
-extension MyRecipeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension TotalRecipeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 15
@@ -99,7 +73,7 @@ extension MyRecipeViewController: UICollectionViewDelegate, UICollectionViewData
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: RecipeHeaderView.identifier, for: indexPath) as? RecipeHeaderView else { return UICollectionReusableView() }
-            header.recipeHeader = .myRecipe
+            header.recipeHeader = .totalRecipe
             return header
         default:
             return UICollectionReusableView()
