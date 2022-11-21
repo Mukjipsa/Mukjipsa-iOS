@@ -22,51 +22,42 @@ class TabBarController: UITabBarController {
 
 extension TabBarController {
     private func makeTabBar(viewController: UIViewController,
+                            title: String,
                             tabBarImg: UIImage,
                             tabBarSelectedImg: UIImage,
                             renderingMode: UIImage.RenderingMode) -> UIViewController {
         
         let tab = UINavigationController(rootViewController: viewController)
         tab.isNavigationBarHidden = true
-        tab.tabBarItem = UITabBarItem(title: "",
+        tab.tabBarItem = UITabBarItem(title: title,
                                       image: tabBarImg.withRenderingMode(renderingMode),
                                       selectedImage: tabBarSelectedImg.withRenderingMode(renderingMode))
         return tab
     }
     
     private func setTabBar() {
-//        let friendTab = makeTabBar(viewController: FriendViewController(),
-//                                   tabBarImg:  ?? UIImage(),
-//                                   tabBarSelectedImg:  ?? UIImage(),
-//                                   renderingMode: .alwaysTemplate)
-//        let talkTab = makeTabBar(viewController: TalkViewController(),
-//                                 tabBarImg:  ?? UIImage(),
-//                                 tabBarSelectedImg:  ?? UIImage(),
-//                                 renderingMode: .alwaysTemplate)
-//        let viewTab = makeTabBar(viewController: ViewViewController(),
-//                                 tabBarImg:  ?? UIImage(),
-//                                 tabBarSelectedImg:  ?? UIImage(),
-//                                 renderingMode: .alwaysTemplate)
-//        let shopTab = makeTabBar(viewController: ShopViewController(),
-//                                 tabBarImg:  ?? UIImage(),
-//                                 tabBarSelectedImg:  ?? UIImage(),
-//                                 renderingMode: .alwaysTemplate)
-//        let settingTab = makeTabBar(viewController: SettingViewController(),
-//                                    tabBarImg:  ?? UIImage(),
-//                                    tabBarSelectedImg:  ?? UIImage(),
-//                                    renderingMode: .alwaysTemplate)
+        let recipeTab = makeTabBar(viewController: MyRecipeViewController(),
+                                   title: "레시피",
+                                   tabBarImg: Constant.Image.tabbarRecipe ?? UIImage(),
+                                   tabBarSelectedImg: Constant.Image.tabbarRecipeSelected ?? UIImage(),
+                                   renderingMode: .alwaysTemplate)
+        let ingredientTap = makeTabBar(viewController: MyIngredientViewController(),
+                                       title: "나의 재료",
+                                       tabBarImg: Constant.Image.tabbarIngredient ?? UIImage(),
+                                 tabBarSelectedImg: Constant.Image.tabbarIngredientSelected ?? UIImage(),
+                                 renderingMode: .alwaysTemplate)
+        let bookmarkTap = makeTabBar(viewController: BookmarkViewController(),
+                                     title: "북마크",
+                                     tabBarImg: Constant.Image.tabbarBookmark ?? UIImage(),
+                                 tabBarSelectedImg: Constant.Image.tabbarBookmarkSelected ?? UIImage(),
+                                 renderingMode: .alwaysTemplate)
         
-        let recipeViewController = MyRecipeViewController()
-        let myIngredientViewController = MyIngredientViewController()
-        let BookMarkViewController = BookmarkViewController()
-        
-        let tabs = [myIngredientViewController, recipeViewController, BookMarkViewController]
+        let tabs = [recipeTab, ingredientTap, bookmarkTap]
     
         self.setViewControllers(tabs, animated: false)
         
-        tabBar.backgroundColor = .systemGray6
+        tabBar.backgroundColor = .white
         tabBar.tintColor = .black
-        tabBar.unselectedItemTintColor = .black
     }
     
     private func setRootTabBar() {
