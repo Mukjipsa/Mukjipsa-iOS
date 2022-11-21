@@ -27,6 +27,11 @@ extension Constant {
             static let checkIcon = UIImage(named: "icCheck")
         }
         
+        // MARK: - Btn
+        
+        static let btnPossible = UIImage(named: "btnPossible")
+        static let btnPossibleSelected = UIImage(named: "btnPossibleSelected")
+        
         // MARK: - Tabbar
         
         static let tabbarBookmark = UIImage(named: "tabbarBookmark")
