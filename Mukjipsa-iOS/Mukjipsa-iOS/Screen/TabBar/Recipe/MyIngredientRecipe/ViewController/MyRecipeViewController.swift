@@ -92,18 +92,18 @@ extension MyRecipeViewController {
 //    private var snapshot: NSDiffableDataSourceSnapshot<Section, RecipeModel>!
 //    private var recipes: [RecipeModel] = []
     
-    private func setDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Section, RecipeModel>(collectionView: recipeCollectionView) { (collectionView, indexPath, itemIdentifier) -> UICollectionViewCell? in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCollectionViewCell.className, for: indexPath) as? RecipeCollectionViewCell else { return UICollectionViewCell() }
-            return cell
-        }
-    }
-    
-    private func updateSnapshot() {
-        snapshot = NSDiffableDataSourceSnapshot<Section, RecipeModel>()
-        snapshot.appendSections([.recipe])
-        snapshot.appendItems(recipes, toSection: .recipe)
-        dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
-    }
+//    private func setDataSource() {
+//        dataSource = UICollectionViewDiffableDataSource<Section, RecipeModel>(collectionView: recipeCollectionView) { (collectionView, indexPath, itemIdentifier) -> UICollectionViewCell? in
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCollectionViewCell.className, for: indexPath) as? RecipeCollectionViewCell else { return UICollectionViewCell() }
+//            return cell
+//        }
+//    }
+//    
+//    private func updateSnapshot() {
+//        snapshot = NSDiffableDataSourceSnapshot<Section, RecipeModel>()
+//        snapshot.appendSections([.recipe])
+//        snapshot.appendItems(recipes, toSection: .recipe)
+//        dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
+//    }
 }
 

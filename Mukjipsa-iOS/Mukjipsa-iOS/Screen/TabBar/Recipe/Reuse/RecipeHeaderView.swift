@@ -27,8 +27,7 @@ final class RecipeHeaderView: UICollectionReusableView {
     
     private let recipeHeaderLabel = UILabel()
     private let recipeNumberLabel = UILabel()
-    private let possibleIc = UIView()
-    private let possibleLabel = UILabel()
+    private let possibleIc = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -70,19 +69,12 @@ final class RecipeHeaderView: UICollectionReusableView {
         }
 
         possibleIc.do {
-            $0.backgroundColor = .dark
-        }
-
-        possibleLabel.do {
-            $0.text = "바로 가능"
-            $0.font = .b4
-            $0.textColor = .dark
-            $0.setLineHeightAndletterSpacing(Constant.fontSize.b4, Constant.LetterSpacing.b4)
+            $0.image = Constant.Image.btnPossibleSelected
         }
     }
     
     private func setLayout() {
-        addSubviews([recipeHeaderLabel, recipeNumberLabel, possibleIc, possibleLabel])
+        addSubviews([recipeHeaderLabel, recipeNumberLabel, possibleIc])
         
         recipeHeaderLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(16)
@@ -96,12 +88,6 @@ final class RecipeHeaderView: UICollectionReusableView {
         }
         
         possibleIc.snp.makeConstraints {
-            $0.top.equalTo(recipeHeaderLabel.snp.bottom).offset(24)
-            $0.trailing.equalTo(possibleLabel.snp.leading).offset(-6)
-            $0.height.width.equalTo(18)
-        }
-        
-        possibleLabel.snp.makeConstraints {
             $0.top.equalTo(recipeHeaderLabel.snp.bottom).offset(24)
             $0.trailing.equalToSuperview()
         }
