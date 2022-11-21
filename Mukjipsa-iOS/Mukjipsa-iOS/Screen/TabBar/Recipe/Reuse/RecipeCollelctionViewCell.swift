@@ -77,7 +77,6 @@ final class RecipeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
         setCellEffect()
         setDelegate()
         registerCell()
-//        backgroundColor = .primary
     }
     
     @available(*, unavailable)

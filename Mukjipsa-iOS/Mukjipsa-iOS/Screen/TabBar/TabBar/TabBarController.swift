@@ -58,7 +58,7 @@ extension TabBarController {
         
         let recipeViewController = MyRecipeViewController()
         let myIngredientViewController = MyIngredientViewController()
-        let BookMarkViewController = BookMarkViewController()
+        let BookMarkViewController = BookmarkViewController()
         
         let tabs = [myIngredientViewController, recipeViewController, BookMarkViewController]
     

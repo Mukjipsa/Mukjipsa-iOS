@@ -59,6 +59,7 @@
 		4A634410290297CF006E19E6 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A63440F290297CF006E19E6 /* .swiftlint.yml */; };
 		4A699305292697C3001F9FAD /* TotalRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A699304292697C3001F9FAD /* TotalRecipeViewController.swift */; };
 		4A699308292699CF001F9FAD /* ReuseRecipeCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A699307292699CF001F9FAD /* ReuseRecipeCollectionLayout.swift */; };
+		4A69930D2926A42D001F9FAD /* BookmarkHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A69930C2926A42D001F9FAD /* BookmarkHeaderView.swift */; };
 		4A8321B4291D5C0200A0EDBF /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8321B3291D5C0200A0EDBF /* RecipeModel.swift */; };
 		4A8321B6291D5DB400A0EDBF /* RecipeCollelctionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8321B5291D5DB400A0EDBF /* RecipeCollelctionViewCell.swift */; };
 		4A90A2C82900207C006BC1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90A2C72900207C006BC1B2 /* AppDelegate.swift */; };
@@ -80,7 +81,7 @@
 		4AF80C1F290D850100B084CA /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C1E290D850100B084CA /* GeneralResponse.swift */; };
 		4AF80C21290D95E100B084CA /* GeneralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C20290D95E100B084CA /* GeneralService.swift */; };
 		4AF80C2A29111AF800B084CA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C2929111AF800B084CA /* TabBarController.swift */; };
-		4AF80C3029111C5300B084CA /* BookMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C2F29111C5300B084CA /* BookMarkViewController.swift */; };
+		4AF80C3029111C5300B084CA /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C2F29111C5300B084CA /* BookmarkViewController.swift */; };
 		4AF80C3429111CD800B084CA /* MyIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C3329111CD800B084CA /* MyIngredientViewController.swift */; };
 		4AF9CD372924F7FD00623BF9 /* MyRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9CD362924F7FD00623BF9 /* MyRecipeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -132,6 +133,7 @@
 		4A63440F290297CF006E19E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4A699304292697C3001F9FAD /* TotalRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalRecipeViewController.swift; sourceTree = "<group>"; };
 		4A699307292699CF001F9FAD /* ReuseRecipeCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseRecipeCollectionLayout.swift; sourceTree = "<group>"; };
+		4A69930C2926A42D001F9FAD /* BookmarkHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkHeaderView.swift; sourceTree = "<group>"; };
 		4A8321B3291D5C0200A0EDBF /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		4A8321B5291D5DB400A0EDBF /* RecipeCollelctionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollelctionViewCell.swift; sourceTree = "<group>"; };
 		4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mukjipsa-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +157,7 @@
 		4AF80C1E290D850100B084CA /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
 		4AF80C20290D95E100B084CA /* GeneralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralService.swift; sourceTree = "<group>"; };
 		4AF80C2929111AF800B084CA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		4AF80C2F29111C5300B084CA /* BookMarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkViewController.swift; sourceTree = "<group>"; };
+		4AF80C2F29111C5300B084CA /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		4AF80C3329111CD800B084CA /* MyIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngredientViewController.swift; sourceTree = "<group>"; };
 		4AF9CD362924F7FD00623BF9 /* MyRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -499,6 +501,22 @@
 			path = Reuse;
 			sourceTree = "<group>";
 		};
+		4A69930B2926A41D001F9FAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A69930C2926A42D001F9FAD /* BookmarkHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A69930E2926A723001F9FAD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AF80C2F29111C5300B084CA /* BookmarkViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		4A8321B2291D5BC800A0EDBF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -730,7 +748,8 @@
 		4AF80C2D29111B9C00B084CA /* BookMark */ = {
 			isa = PBXGroup;
 			children = (
-				4AF80C2F29111C5300B084CA /* BookMarkViewController.swift */,
+				4A69930E2926A723001F9FAD /* ViewController */,
+				4A69930B2926A41D001F9FAD /* View */,
 			);
 			path = BookMark;
 			sourceTree = "<group>";
@@ -896,7 +915,7 @@
 				4A950999292222B400A1B743 /* RecipeTagCell.swift in Sources */,
 				3B2A9973291BD27E00479C86 /* LoginView.swift in Sources */,
 				4A90A2C82900207C006BC1B2 /* AppDelegate.swift in Sources */,
-				4AF80C3029111C5300B084CA /* BookMarkViewController.swift in Sources */,
+				4AF80C3029111C5300B084CA /* BookmarkViewController.swift in Sources */,
 				4A39D50B2919473400554DF4 /* BaseView.swift in Sources */,
 				3BC1D7452914A414007B2FA2 /* UIFont+.swift in Sources */,
 				3B958E032919FB9C00902A1D /* BasicIngredientView.swift in Sources */,
@@ -911,6 +930,7 @@
 				4A90A2F129002507006BC1B2 /* API.swift in Sources */,
 				3BDE3421292295A8009FB7C6 /* OnboardingCollectionViewSectionHeader.swift in Sources */,
 				3BD0B3EC2920051B0084D624 /* MeatAndSeaModel.swift in Sources */,
+				4A69930D2926A42D001F9FAD /* BookmarkHeaderView.swift in Sources */,
 				4AF80C0D290D6E0600B084CA /* UIView+.swift in Sources */,
 				3B958E05291A10D300902A1D /* OnboardingNaviView.swift in Sources */,
 				4A90A2CA2900207C006BC1B2 /* SceneDelegate.swift in Sources */,

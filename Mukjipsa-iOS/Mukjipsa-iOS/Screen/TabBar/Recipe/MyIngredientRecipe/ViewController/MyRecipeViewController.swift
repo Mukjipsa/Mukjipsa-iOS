@@ -10,17 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-enum Section: CaseIterable {
-    case recipe
-}
-
 final class MyRecipeViewController: BaseViewController {
-    
-    // MARK: - Property
-    
-    private var dataSource: UICollectionViewDiffableDataSource<Section, RecipeModel>!
-    private var snapshot: NSDiffableDataSourceSnapshot<Section, RecipeModel>!
-    private var recipes: [RecipeModel] = []
     
     // MARK: - UI Property
     
@@ -67,22 +57,6 @@ final class MyRecipeViewController: BaseViewController {
         }
     }
 }
-    
-//    private func setDataSource() {
-//        print("보이냐")
-//        dataSource = UICollectionViewDiffableDataSource<Section, RecipeModel>(collectionView: recipeCollectionView) { (collectionView, indexPath, itemIdentifier) -> UICollectionViewCell? in
-//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCollectionViewCell.className, for: indexPath) as? RecipeCollectionViewCell else { return UICollectionViewCell() }
-//            return cell
-//        }
-//    }
-//
-//    private func updateSnapshot() {
-//        snapshot = NSDiffableDataSourceSnapshot<Section, RecipeModel>()
-//        snapshot.appendSections([.recipe])
-//        snapshot.appendItems(recipes, toSection: .recipe)
-//        dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
-//    }
-//}
 
 extension MyRecipeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -106,3 +80,30 @@ extension MyRecipeViewController: UICollectionViewDelegate, UICollectionViewData
         }
     }
 }
+
+// 추후에 diffable 적용할 코드
+
+extension MyRecipeViewController {
+    enum Section: CaseIterable {
+        case recipe
+    }
+    
+//    private var dataSource: UICollectionViewDiffableDataSource<Section, RecipeModel>!
+//    private var snapshot: NSDiffableDataSourceSnapshot<Section, RecipeModel>!
+//    private var recipes: [RecipeModel] = []
+    
+    private func setDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, RecipeModel>(collectionView: recipeCollectionView) { (collectionView, indexPath, itemIdentifier) -> UICollectionViewCell? in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCollectionViewCell.className, for: indexPath) as? RecipeCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        }
+    }
+    
+    private func updateSnapshot() {
+        snapshot = NSDiffableDataSourceSnapshot<Section, RecipeModel>()
+        snapshot.appendSections([.recipe])
+        snapshot.appendItems(recipes, toSection: .recipe)
+        dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
+    }
+}
+
