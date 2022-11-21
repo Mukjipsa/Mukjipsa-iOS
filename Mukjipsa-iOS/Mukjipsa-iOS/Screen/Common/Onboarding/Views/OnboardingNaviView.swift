@@ -32,7 +32,7 @@ class OnboardingNaviView: BaseView {
     
     override func setUI() {
         backButton.do {
-            $0.setImage(Constant.Image.backButton, for: .normal)
+            $0.setImage(Constant.Image.icBack, for: .normal)
         }
         
         laterButton.do {
