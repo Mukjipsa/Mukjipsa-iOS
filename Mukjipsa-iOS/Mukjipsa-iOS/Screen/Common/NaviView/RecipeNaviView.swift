@@ -22,11 +22,12 @@ final class RecipeNaviView: UIView {
     
     var naviMode: NaviMode
     
-    private let naviView = UIView()
-    private let logo = UIView()
-    private let searchButton = UIButton()
-    private let backButton = UIButton()
-    private let titleLabel = UILabel()
+    let naviView = UIView()
+    
+    let logo = UIImageView()
+    let searchButton = UIButton()
+    let backButton = UIButton()
+    let titleLabel = UILabel()
     
     init(frame: CGRect, mode: NaviMode) {
         self.naviMode = mode
@@ -64,14 +65,14 @@ final class RecipeNaviView: UIView {
         switch mode {
         case .mainRecipe:
             logo.do {
-                $0.backgroundColor = .purple
+                $0.image = Constant.Image.logo
             }
             searchButton.do {
-                $0.backgroundColor = .yellow
+                $0.setImage(Constant.Image.icSearch, for: .normal)
             }
         case .search:
             searchButton.do {
-                $0.backgroundColor = .primary
+                $0.setImage(Constant.Image.icSearch, for: .normal)
             }
         case .detailRecipe:
             backButton.do {
@@ -90,7 +91,6 @@ final class RecipeNaviView: UIView {
                 $0.textColor = .dark
                 $0.setLineHeightAndletterSpacing(Constant.fontSize.h1, Constant.LetterSpacing.h1)
             }
-            
             searchButton.do {
                 $0.backgroundColor = .primary
             }
@@ -118,7 +118,6 @@ final class RecipeNaviView: UIView {
             logo.snp.makeConstraints {
                 $0.leading.equalToSuperview().inset(16)
                 $0.centerY.equalToSuperview()
-                $0.height.width.equalTo(23.6)
             }
             
             searchButton.snp.makeConstraints {
