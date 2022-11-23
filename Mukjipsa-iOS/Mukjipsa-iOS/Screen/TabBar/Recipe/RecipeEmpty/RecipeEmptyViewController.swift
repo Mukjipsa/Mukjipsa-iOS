@@ -42,8 +42,7 @@ final class RecipeEmptyViewController: BaseViewController {
 
         recipeEmptyView.snp.makeConstraints {
             $0.top.equalTo(mainNaviView.snp.bottom)
-            $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(123)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
     }
     
