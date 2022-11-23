@@ -23,7 +23,6 @@ final class RecipeNaviView: UIView {
     var naviMode: NaviMode
     
     let naviView = UIView()
-    
     let logo = UIImageView()
     let searchButton = UIButton()
     let backButton = UIButton()
@@ -76,7 +75,7 @@ final class RecipeNaviView: UIView {
             }
         case .detailRecipe:
             backButton.do {
-                $0.backgroundColor = .purple
+                $0.setImage(Constant.Image.icBack, for: .normal)
             }
             titleLabel.do {
                 $0.text = "돈코츠 라멘"
