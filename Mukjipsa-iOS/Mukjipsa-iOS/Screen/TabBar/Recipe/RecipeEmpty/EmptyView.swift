@@ -12,13 +12,13 @@ import Then
 
 final class EmptyView: UIView {
     
-    enum EmptyView {
+    enum EmptyMode {
         case recipeEmpty
         case searchEmpty
         case bookmarkEmpty
     }
     
-    var emptyView: EmptyView = .recipeEmpty {
+    var emptyMode: EmptyMode = .recipeEmpty {
         didSet {
             setUI()
             setLayout()
@@ -45,14 +45,22 @@ final class EmptyView: UIView {
     let emptyImage = UIView()
     let headerLabel = UILabel()
     let subLabel = UILabel()
-    let ingredientSelectedbutton = MJSButton().then {
+    let ingredientSelectedbutton = UIButton().then {
         $0.setTitle("재료 입력하기", for: .normal)
+        $0.backgroundColor = .primary
+        $0.setTitleColor(.white, for: .normal)
+        $0.titleLabel?.font = .bu1
+        $0.layer.cornerRadius = 8
+        $0.titleLabel?.textAlignment = .center
+        $0.setLineHeightAndletterSpacing(Constant.fontSize.bu1, Constant.LetterSpacing.bu1)
     }
     
     // MARK: - Initialize
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setUI()
+        setLayout()
     }
     
     @available(*, unavailable)
@@ -62,8 +70,8 @@ final class EmptyView: UIView {
     
     // MARK: - func
     
-    func setUI() {
-        if emptyView == .recipeEmpty {
+    private func setUI() {
+        if emptyMode == .recipeEmpty {
             emptyImage.do {
                 $0.backgroundColor = .dark
             }
@@ -84,7 +92,7 @@ final class EmptyView: UIView {
                 $0.setLineHeightAndletterSpacing(Constant.fontSize.b2, Constant.LetterSpacing.b2)
                 $0.textAlignment = .center
             }
-        } else if emptyView == .bookmarkEmpty {
+        } else if emptyMode == .bookmarkEmpty {
             emptyImage.do {
                 $0.backgroundColor = .dark
             }
@@ -105,7 +113,7 @@ final class EmptyView: UIView {
                 $0.setLineHeightAndletterSpacing(Constant.fontSize.b2, Constant.LetterSpacing.b2)
                 $0.textAlignment = .center
             }
-        } else if emptyView == .searchEmpty {
+        } else if emptyMode == .searchEmpty {
             emptyImage.do {
                 $0.backgroundColor = .blue
             }
@@ -123,10 +131,10 @@ final class EmptyView: UIView {
         }
     }
     
-    func setLayout() {
+    private func setLayout() {
         addSubviews([recipeNumberLabel, possibleButton, emptyImage, headerLabel, subLabel, ingredientSelectedbutton])
         
-        if emptyView == .recipeEmpty {
+        if emptyMode == .recipeEmpty {
             recipeNumberLabel.snp.makeConstraints {
                 $0.top.leading.equalToSuperview().inset(16)
             }
@@ -137,6 +145,7 @@ final class EmptyView: UIView {
             
             emptyImage.snp.makeConstraints {
                 $0.top.equalTo(recipeNumberLabel.snp.bottom).offset(96)
+                $0.centerX.equalToSuperview()
                 $0.width.equalTo(358)
                 $0.height.equalTo(200)
             }
@@ -154,8 +163,9 @@ final class EmptyView: UIView {
             ingredientSelectedbutton.snp.makeConstraints {
                 $0.top.equalTo(subLabel.snp.bottom).offset(40)
                 $0.leading.trailing.equalToSuperview().inset(110)
+                $0.height.equalTo(44)
             }
-        } else if emptyView == .bookmarkEmpty {
+        } else if emptyMode == .bookmarkEmpty {
             recipeNumberLabel.snp.makeConstraints {
                 $0.top.leading.equalToSuperview().inset(16)
             }
@@ -175,7 +185,7 @@ final class EmptyView: UIView {
                 $0.top.equalTo(headerLabel.snp.bottom).offset(16)
                 $0.centerX.equalToSuperview()
             }
-        } else if emptyView == .searchEmpty {
+        } else if emptyMode == .searchEmpty {
                 recipeNumberLabel.snp.makeConstraints {
                     $0.top.leading.equalToSuperview().inset(16)
                 }
