@@ -13,8 +13,9 @@ import Then
 final class RecipeEmptyViewController: BaseViewController {
     
     // MARK: - UI Property
-    var mainNaviView = RecipeNaviView(frame: .zero, mode: .mainRecipe)
-    var recipeEmptyView = EmptyView()
+    
+    let mainNaviView = RecipeNaviView(frame: .zero, mode: .mainRecipe)
+    let recipeEmptyView = EmptyView(frame: .zero, mode: .recipeEmpty)
     
     // MARK: - Life Cycle
     
@@ -31,8 +32,6 @@ final class RecipeEmptyViewController: BaseViewController {
     // MARK: - @objc
     
     private func setLayout() {
-        recipeEmptyView.emptyMode = .bookmarkEmpty
-        
         view.addSubviews([mainNaviView, recipeEmptyView])
         
         mainNaviView.snp.makeConstraints {

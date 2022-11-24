@@ -14,7 +14,7 @@ final class SearchEmptyViewController: BaseViewController {
     
     // MARK: - UI Property
     
-    let searchEmptyView = EmptyView()
+    let searchEmptyView = EmptyView(frame: .zero, mode: .searchEmpty)
     let searchHeaderView = SearchHeaderView()
     
     // MARK: - Life Cycle
@@ -33,7 +33,6 @@ final class SearchEmptyViewController: BaseViewController {
     }
     
     private func setLayout() {
-        searchEmptyView.emptyMode = .searchEmpty
         view.addSubviews([searchHeaderView, searchEmptyView])
         
         searchHeaderView.snp.makeConstraints {

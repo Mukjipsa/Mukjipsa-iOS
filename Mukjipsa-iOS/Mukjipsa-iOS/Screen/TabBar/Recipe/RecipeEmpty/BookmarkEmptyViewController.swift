@@ -14,7 +14,7 @@ final class BookmarkEmptyViewController: BaseViewController {
     // MARK: - UI Property
     
     let bookmarkNaviView = RecipeNaviView(frame: .zero, mode: .bookmark)
-    let bookmarkEmptyView = EmptyView()
+    let bookmarkEmptyView = EmptyView(frame: .zero, mode: .bookmarkEmpty)
     
     // MARK: - Life Cycle
     
