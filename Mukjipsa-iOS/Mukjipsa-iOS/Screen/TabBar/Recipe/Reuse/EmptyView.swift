@@ -18,12 +18,7 @@ final class EmptyView: UIView {
         case bookmarkEmpty
     }
     
-    var emptyMode: EmptyMode = .recipeEmpty {
-        didSet {
-            setUI()
-            setLayout()
-        }
-    }
+    var emptyMode: EmptyMode
     
     // MARK: - UIComponents
     
@@ -57,10 +52,12 @@ final class EmptyView: UIView {
     
     // MARK: - Initialize
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, mode: EmptyMode) {
+        self.emptyMode = mode
         super.init(frame: frame)
-        setUI()
-        setLayout()
+        
+        setUI(mode: mode)
+        setLayout(mode: mode)
     }
     
     @available(*, unavailable)
@@ -68,16 +65,16 @@ final class EmptyView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - func
+    // MARK: - Custom Method
     
-    private func setUI() {
-        if emptyMode == .recipeEmpty {
+    private func setUI(mode: EmptyMode) {
+        switch mode {
+        case .recipeEmpty:
             emptyImage.do {
                 $0.backgroundColor = .dark
             }
             headerLabel.do {
                 $0.text = "입력하지 않은 재료가 있나요?"
-                $0.font = .h3
                 $0.textColor = .dark
                 $0.setLineHeightAndletterSpacing(Constant.fontSize.h3, Constant.LetterSpacing.h3)
                 $0.textAlignment = .center
@@ -87,33 +84,32 @@ final class EmptyView: UIView {
                           레시피를 추천할 수 있도록
                           가지고 있는 재료를 모두 입력해 주세요
                           """
-                $0.font = .b2
                 $0.textColor = .gray2
                 $0.setLineHeightAndletterSpacing(Constant.fontSize.b2, Constant.LetterSpacing.b2)
+                $0.numberOfLines = 2
                 $0.textAlignment = .center
             }
-        } else if emptyMode == .bookmarkEmpty {
+        case .bookmarkEmpty:
             emptyImage.do {
                 $0.backgroundColor = .dark
             }
             headerLabel.do {
-                $0.text = "입력하지 않은 재료가 있나요?"
-                $0.font = .h3
+                $0.text = "레시피를 북마크 해보세요!"
                 $0.textColor = .dark
                 $0.setLineHeightAndletterSpacing(Constant.fontSize.h3, Constant.LetterSpacing.h3)
                 $0.textAlignment = .center
             }
             subLabel.do {
                 $0.text = """
-                          레시피를 추천할 수 있도록
-                          가지고 있는 재료를 모두 입력해 주세요
+                          마음에 드는 레시피를 북마크하면
+                          쉽게 다시 볼 수 있어요
                           """
-                $0.font = .b2
                 $0.textColor = .gray2
                 $0.setLineHeightAndletterSpacing(Constant.fontSize.b2, Constant.LetterSpacing.b2)
+                $0.numberOfLines = 2
                 $0.textAlignment = .center
             }
-        } else if emptyMode == .searchEmpty {
+        case .searchEmpty:
             emptyImage.do {
                 $0.backgroundColor = .blue
             }
@@ -122,19 +118,19 @@ final class EmptyView: UIView {
                           수제버거에 해당하는 레시피가 없어요
                           다른 메뉴를 검색해 보세요
                           """
-                $0.font = .b2
                 $0.textColor = .gray2
                 $0.setLineHeightAndletterSpacing(Constant.fontSize.b2, Constant.LetterSpacing.b2)
+                $0.numberOfLines = 2
                 $0.textAlignment = .center
             }
-            ingredientSelectedbutton.isHidden = true
         }
     }
     
-    private func setLayout() {
-        addSubviews([recipeNumberLabel, possibleButton, emptyImage, headerLabel, subLabel, ingredientSelectedbutton])
-        
-        if emptyMode == .recipeEmpty {
+    private func setLayout(mode: EmptyMode) {
+        switch mode {
+        case .recipeEmpty:
+            addSubviews([recipeNumberLabel, possibleButton, emptyImage, headerLabel, subLabel, ingredientSelectedbutton])
+            
             recipeNumberLabel.snp.makeConstraints {
                 $0.top.leading.equalToSuperview().inset(16)
             }
@@ -165,13 +161,16 @@ final class EmptyView: UIView {
                 $0.leading.trailing.equalToSuperview().inset(110)
                 $0.height.equalTo(44)
             }
-        } else if emptyMode == .bookmarkEmpty {
+        case .bookmarkEmpty:
+            addSubviews([recipeNumberLabel, emptyImage, headerLabel, subLabel])
+            
             recipeNumberLabel.snp.makeConstraints {
                 $0.top.leading.equalToSuperview().inset(16)
             }
             
             emptyImage.snp.makeConstraints {
                 $0.top.equalTo(recipeNumberLabel.snp.bottom).offset(132)
+                $0.centerX.equalToSuperview()
                 $0.width.equalTo(358)
                 $0.height.equalTo(200)
             }
@@ -185,7 +184,8 @@ final class EmptyView: UIView {
                 $0.top.equalTo(headerLabel.snp.bottom).offset(16)
                 $0.centerX.equalToSuperview()
             }
-        } else if emptyMode == .searchEmpty {
+        case .searchEmpty:
+            addSubviews([recipeNumberLabel, possibleButton, emptyImage, subLabel])
                 recipeNumberLabel.snp.makeConstraints {
                     $0.top.leading.equalToSuperview().inset(16)
                 }
@@ -196,6 +196,7 @@ final class EmptyView: UIView {
                 
                 emptyImage.snp.makeConstraints {
                     $0.top.equalTo(recipeNumberLabel.snp.bottom).offset(132)
+                    $0.centerX.equalToSuperview()
                     $0.width.equalTo(358)
                     $0.height.equalTo(200)
                 }
