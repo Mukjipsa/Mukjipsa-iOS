@@ -47,6 +47,9 @@
 		4A05449E2914AB31000B6B1F /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449D2914AB31000B6B1F /* UIColor+.swift */; };
 		4A0544A02914B102000B6B1F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449F2914B102000B6B1F /* Image.swift */; };
 		4A0CEC1D291A50F900372D46 /* MJSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0CEC1C291A50F900372D46 /* MJSButton.swift */; };
+		4A14248029333D3E00892C90 /* onboardingStart.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A14247D29333D3E00892C90 /* onboardingStart.json */; };
+		4A14248129333D3E00892C90 /* onboardingEnd.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A14247E29333D3E00892C90 /* onboardingEnd.json */; };
+		4A14248229333D3E00892C90 /* popup.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A14247F29333D3E00892C90 /* popup.json */; };
 		4A142DB8291CA436008A477F /* RecipeNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A142DB7291CA436008A477F /* RecipeNaviView.swift */; };
 		4A27B320292BC9FC00FDE062 /* RecipeEmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A27B31F292BC9FC00FDE062 /* RecipeEmptyViewController.swift */; };
 		4A27B322292CA25200FDE062 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A27B321292CA25200FDE062 /* EmptyView.swift */; };
@@ -78,6 +81,8 @@
 		4A953D62292F947400F37772 /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A953D61292F947400F37772 /* SearchHeaderView.swift */; };
 		4AD553D2291E970000225005 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD553D1291E970000225005 /* CALayer+.swift */; };
 		4AD553D4291EAF0D00225005 /* RecipeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD553D3291EAF0D00225005 /* RecipeHeaderView.swift */; };
+		4AD913B429332F0F00B61386 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4AD913B329332F0F00B61386 /* Lottie */; };
+		4AD913BD2933342A00B61386 /* Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD913BC2933342A00B61386 /* Lottie.swift */; };
 		4AF80C0D290D6E0600B084CA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C0C290D6E0600B084CA /* UIView+.swift */; };
 		4AF80C0F290D6F0C00B084CA /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C0E290D6F0C00B084CA /* UIScreen+.swift */; };
 		4AF80C11290D6F5000B084CA /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF80C10290D6F5000B084CA /* UIViewController+.swift */; };
@@ -132,6 +137,9 @@
 		4A05449D2914AB31000B6B1F /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4A05449F2914B102000B6B1F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		4A0CEC1C291A50F900372D46 /* MJSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJSButton.swift; sourceTree = "<group>"; };
+		4A14247D29333D3E00892C90 /* onboardingStart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = onboardingStart.json; path = "../../../../../../../../Downloads/먹집사2/onboardingStart.json"; sourceTree = "<group>"; };
+		4A14247E29333D3E00892C90 /* onboardingEnd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = onboardingEnd.json; path = "../../../../../../../../Downloads/먹집사2/onboardingEnd.json"; sourceTree = "<group>"; };
+		4A14247F29333D3E00892C90 /* popup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = popup.json; path = "../../../../../../../../Downloads/먹집사2/popup.json"; sourceTree = "<group>"; };
 		4A142DB7291CA436008A477F /* RecipeNaviView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeNaviView.swift; sourceTree = "<group>"; };
 		4A27B31F292BC9FC00FDE062 /* RecipeEmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEmptyViewController.swift; sourceTree = "<group>"; };
 		4A27B321292CA25200FDE062 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
@@ -159,6 +167,7 @@
 		4A953D61292F947400F37772 /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 		4AD553D1291E970000225005 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		4AD553D3291EAF0D00225005 /* RecipeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHeaderView.swift; sourceTree = "<group>"; };
+		4AD913BC2933342A00B61386 /* Lottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottie.swift; sourceTree = "<group>"; };
 		4AF80C0C290D6E0600B084CA /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		4AF80C0E290D6F0C00B084CA /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
 		4AF80C10290D6F5000B084CA /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -178,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A63440529002DCC006E19E6 /* Alamofire in Frameworks */,
+				4AD913B429332F0F00B61386 /* Lottie in Frameworks */,
 				4A63440129002DB5006E19E6 /* Kingfisher in Frameworks */,
 				4A6343FB29002DA1006E19E6 /* RxSwift in Frameworks */,
 				4A39D5032919451600554DF4 /* SnapKit in Frameworks */,
@@ -460,6 +470,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		4A14247C29333CFC00892C90 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				4A14247E29333D3E00892C90 /* onboardingEnd.json */,
+				4A14247D29333D3E00892C90 /* onboardingStart.json */,
+				4A14247F29333D3E00892C90 /* popup.json */,
+			);
+			path = Lottie;
 		4A27B31E292BC9E800FDE062 /* RecipeEmpty */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,6 +597,7 @@
 		4A90A2DB29002434006BC1B2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				4A14247C29333CFC00892C90 /* Lottie */,
 				3B52C527291CC93300368728 /* Font */,
 				4A90A2E3290024AD006BC1B2 /* Color */,
 				4A90A2E2290024A8006BC1B2 /* Support */,
@@ -691,6 +710,7 @@
 				4A05449F2914B102000B6B1F /* Image.swift */,
 				3BB2B38329194623004EE3C0 /* Number.swift */,
 				3B958E0B291A372700902A1D /* String.swift */,
+				4AD913BC2933342A00B61386 /* Lottie.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -809,6 +829,7 @@
 				4A63440029002DB5006E19E6 /* Kingfisher */,
 				4A63440429002DCC006E19E6 /* Alamofire */,
 				4A39D5022919451600554DF4 /* SnapKit */,
+				4AD913B329332F0F00B61386 /* Lottie */,
 			);
 			productName = "Mukjipsa-iOS";
 			productReference = 4A90A2C42900207C006BC1B2 /* Mukjipsa-iOS.app */;
@@ -844,6 +865,7 @@
 				4A6343FF29002DB5006E19E6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				4A63440329002DCC006E19E6 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3B754B8029192564007A90C5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4AD913B229332F0F00B61386 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 4A90A2C52900207C006BC1B2 /* Products */;
 			projectDirPath = "";
@@ -864,8 +886,11 @@
 				3B52C52F291CC99A00368728 /* Pretendard-SemiBold.otf in Resources */,
 				3B52C52B291CC98400368728 /* Pretendard-Medium.otf in Resources */,
 				3B52C529291CC96000368728 /* Pretendard-Light.otf in Resources */,
+				4A14248029333D3E00892C90 /* onboardingStart.json in Resources */,
+				4A14248229333D3E00892C90 /* popup.json in Resources */,
 				4A90A2D42900207D006BC1B2 /* LaunchScreen.storyboard in Resources */,
 				4A90A2D12900207D006BC1B2 /* Assets.xcassets in Resources */,
+				4A14248129333D3E00892C90 /* onboardingEnd.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,6 +989,7 @@
 				4A90A2CA2900207C006BC1B2 /* SceneDelegate.swift in Sources */,
 				4AF80C21290D95E100B084CA /* GeneralService.swift in Sources */,
 				3B958E0C291A372700902A1D /* String.swift in Sources */,
+				4AD913BD2933342A00B61386 /* Lottie.swift in Sources */,
 				4A90A2FC29002537006BC1B2 /* Constant.swift in Sources */,
 				3B52C548291D0B0400368728 /* MeatAndSeaFoodView.swift in Sources */,
 				3BD0B3F429200C520084D624 /* OnboardingCollectionViewCell.swift in Sources */,
@@ -1218,6 +1244,14 @@
 				kind = branch;
 			};
 		};
+		4AD913B229332F0F00B61386 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1249,6 +1283,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4A63440329002DCC006E19E6 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		4AD913B329332F0F00B61386 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AD913B229332F0F00B61386 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

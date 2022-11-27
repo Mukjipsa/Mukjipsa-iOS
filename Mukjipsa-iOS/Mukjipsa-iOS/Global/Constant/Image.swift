@@ -89,6 +89,12 @@ extension Constant {
         static let icEtc24 = UIImage(named: "icEtc24")
         static let icEtc32 = UIImage(named: "icEtc32")
         
+        // MARK: - Image
+        
+        static let imgEmptyBookmark = UIImage(named: "imgEmptyBookmark")
+        static let imgEmptySearch = UIImage(named: "imgEmptySearch")
+        static let imgEmptyRecipe = UIImage(named: "imgEmptyRecipe")
+        
         // MARK: - etc ic
         
         static let icSearch = UIImage(named: "icSearch")
@@ -97,5 +103,6 @@ extension Constant {
         static let icBack = UIImage(named: "icBack")
         static let icHeart = UIImage(named: "icHeart")
         static let icHeartSelected = UIImage(named: "icHeartSelected")
+        
     }
 }
