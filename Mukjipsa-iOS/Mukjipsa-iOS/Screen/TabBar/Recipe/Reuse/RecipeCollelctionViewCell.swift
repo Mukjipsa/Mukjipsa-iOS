@@ -87,9 +87,11 @@ final class RecipeCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
     // MARK: - Custom Method
     
     private func setCellEffect() {
-        contentView.layer.cornerRadius = 20
-        contentView.layer.borderWidth = 0.01
-        contentView.layer.applySketchShadow(color: .black, alpha: 0.1, x: 0.0, y: 0.0, blur: 10.0, spread: 0.0)
+        self.layer.cornerRadius = 20
+        self.layer.shadowOpacity = 1
+        self.layer.borderWidth = 0.01
+        self.layer.masksToBounds = true
+        self.layer.applySketchShadow(color: .black, alpha: 0.1, x: 0.0, y: 0.0, blur: 10.0, spread: 0.0)
     }
     
     private func setDelegate() {
