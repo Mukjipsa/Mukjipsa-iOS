@@ -478,6 +478,8 @@
 				4A14247F29333D3E00892C90 /* popup.json */,
 			);
 			path = Lottie;
+			sourceTree = "<group>";
+		};
 		4A27B31E292BC9E800FDE062 /* RecipeEmpty */ = {
 			isa = PBXGroup;
 			children = (
