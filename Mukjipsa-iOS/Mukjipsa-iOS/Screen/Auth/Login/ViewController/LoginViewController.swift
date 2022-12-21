@@ -7,6 +7,9 @@
 
 import UIKit
 
+import RxSwift
+import KakaoSDKUser
+import RxKakaoSDKUser
 import SnapKit
 import Then
 
@@ -14,10 +17,28 @@ final class LoginViewController: BaseViewController {
     
     // MARK: - UI Components
     private let loginView = LoginView()
+    private lazy var loginButton = loginView.kakaoLoginButton
+    
+    private lazy var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
+    }
+    
+    override func bind() {
+//        loginButton.rx.tap
+//            .bind(onNext: {
+//                UserApi.shared.rx.loginWithKakaoAccount()
+//                    .subscribe(onNext: { oauthToken in
+//                        print("loginWithKakaoAccount() success.")
+//                        print(oauthToken.accessToken)
+//                        _ = oauthToken
+//                    }, onError: {error in
+//                        print(error)
+//                    })
+//                    .disposed(by: self.disposeBag)
+//            })
     }
 }
 

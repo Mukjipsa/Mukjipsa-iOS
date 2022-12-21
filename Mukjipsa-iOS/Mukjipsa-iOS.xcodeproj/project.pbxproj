@@ -56,6 +56,7 @@
 		4A3336A1291C881A009BB692 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3336A0291C881A009BB692 /* BaseViewController.swift */; };
 		4A39D5032919451600554DF4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4A39D5022919451600554DF4 /* SnapKit */; };
 		4A39D50B2919473400554DF4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39D50A2919473400554DF4 /* BaseView.swift */; };
+		4A623816295376BD00471DDA /* Environmnet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A623815295376BD00471DDA /* Environmnet.swift */; };
 		4A6343F929002DA1006E19E6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343F829002DA1006E19E6 /* RxCocoa */; };
 		4A6343FB29002DA1006E19E6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343FA29002DA1006E19E6 /* RxSwift */; };
 		4A6343FE29002DAC006E19E6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6343FD29002DAC006E19E6 /* Then */; };
@@ -148,6 +149,7 @@
 		4A27B321292CA25200FDE062 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		4A3336A0291C881A009BB692 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4A39D50A2919473400554DF4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		4A623815295376BD00471DDA /* Environmnet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environmnet.swift; sourceTree = "<group>"; };
 		4A63440F290297CF006E19E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4A699304292697C3001F9FAD /* TotalRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalRecipeViewController.swift; sourceTree = "<group>"; };
 		4A699307292699CF001F9FAD /* ReuseRecipeCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseRecipeCollectionLayout.swift; sourceTree = "<group>"; };
@@ -707,6 +709,7 @@
 				4AF80C1C290D84B300B084CA /* NetworkResult.swift */,
 				4AF80C1E290D850100B084CA /* GeneralResponse.swift */,
 				4AF80C20290D95E100B084CA /* GeneralService.swift */,
+				4A623815295376BD00471DDA /* Environmnet.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -935,6 +938,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A142DB8291CA436008A477F /* RecipeNaviView.swift in Sources */,
+				4A623816295376BD00471DDA /* Environmnet.swift in Sources */,
 				3BC60054291B9A1000CAA317 /* BasicIngredientModel.swift in Sources */,
 				4AD553D4291EAF0D00225005 /* RecipeHeaderView.swift in Sources */,
 				3BBE2F03291C90DF00C002E4 /* GuideView.swift in Sources */,
@@ -1143,7 +1147,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 665TA4D5B9;
+				DEVELOPMENT_TEAM = J5UBGNBDYX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mukjipsa-iOS/Resource/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1156,6 +1160,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NATIVE_APP_KEY = 83b3bf44a1ce4780c1c9815029f03258;
 				PRODUCT_BUNDLE_IDENTIFIER = "cchanmi.Mukjipsa-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1171,7 +1176,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 665TA4D5B9;
+				DEVELOPMENT_TEAM = J5UBGNBDYX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mukjipsa-iOS/Resource/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1184,6 +1189,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NATIVE_APP_KEY = 83b3bf44a1ce4780c1c9815029f03258;
 				PRODUCT_BUNDLE_IDENTIFIER = "cchanmi.Mukjipsa-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

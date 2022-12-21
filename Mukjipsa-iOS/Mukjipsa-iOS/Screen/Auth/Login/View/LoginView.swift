@@ -13,7 +13,7 @@ import Then
 class LoginView: BaseView {
     // MARK: - UI Components
     private let logoImageView = UIImageView()
-    private let kakaoLoginButton = UIButton()
+    let kakaoLoginButton = UIButton()
     
     override func setUI() {
         logoImageView.image = Constant.Image.Auth.logoImage
